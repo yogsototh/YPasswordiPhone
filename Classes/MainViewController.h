@@ -8,11 +8,13 @@
 
 #import "FlipsideViewController.h"
 #import "DetailViewController.h"
+#import "WebsiteListViewController.h"
 #import <CoreData/CoreData.h>
 
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, DetailViewControllerDelegate> {
-    IBOutlet UITextField *loginTextField;
-    IBOutlet UITextField *urlTextField;
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, 
+													DetailViewControllerDelegate> {
+    IBOutlet UILabel *loginLabel;
+    IBOutlet UILabel *urlLabel;
 	IBOutlet UILabel *passwordLabel;
     NSManagedObjectContext *managedObjectContext;	    
 }
@@ -21,5 +23,6 @@
 
 - (IBAction)showInfo:(id)sender;
 - (IBAction)adjustProperties:(id)sender;
+- (IBAction)chooseWebsite:(id)sender;
 
 @end

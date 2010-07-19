@@ -7,11 +7,13 @@
 //
 
 #import "DetailViewController.h"
-
+#import "Website.h"
 
 @implementation DetailViewController
 
 @synthesize delegate;
+
+@synthesize managedObjectContext;
 
 - (IBAction)next:(id)sender {
     NSLog(@"next");    
@@ -38,6 +40,28 @@
 		NSLog(@"Base16");
 	}
 
+}
+
+
+#pragma mark Action With Entities
+
+- (IBAction)urlTextFieldChanged:(id)sender {
+	NSLog(@"urlTextFieldChanged:");
+	
+	// add a new website
+	Website *website=(Website *)[NSEntityDescription insertNewObjectForEntityForName:@"Website" inManagedObjectContext:managedObjectContext];
+	[website setUrl:[urlTextField text]];
+	[website setLogin:[loginTextField text]];
+	
+	NSError *error;
+	if (![managedObjectContext save:&error]) {
+		// Handle the error
+		NSLog(@"Error while saving new website");
+	}
+}
+
+- (IBAction)loginTextFieldChanged:(id)sender {
+	NSLog(@"loginTextFieldChanged");
 }
 
 - (IBAction)done:(id)sender {
@@ -87,5 +111,11 @@
     [super dealloc];
 }
 
+#pragma mark UITextField delegate
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+	[textField resignFirstResponder];
+	return NO;
+}
 
 @end

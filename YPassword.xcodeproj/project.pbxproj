@@ -21,6 +21,11 @@
 		289233B00DB2D0DB0083E9F9 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233AD0DB2D0DB0083E9F9 /* FlipsideViewController.m */; };
 		F82C93F311EDAA0300F00BF4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82C93F111EDAA0300F00BF4 /* DetailViewController.m */; };
 		F82C93F411EDAA0300F00BF4 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F82C93F211EDAA0300F00BF4 /* DetailView.xib */; };
+		F885EBA411F4562000B6B3B3 /* WebsiteListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F885EBA311F4562000B6B3B3 /* WebsiteListView.xib */; };
+		F885EBCA11F458C400B6B3B3 /* WebsiteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F885EBC911F458C400B6B3B3 /* WebsiteListViewController.m */; };
+		F8EB82AA11F31E8E0035424C /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EB82A911F31E8E0035424C /* Website.m */; };
+		F8EB831511F332910035424C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F8EB831411F332910035424C /* background.png */; };
+		F8EB831811F333BF0035424C /* backgroundClair.png in Resources */ = {isa = PBXBuildFile; fileRef = F8EB831711F333BF0035424C /* backgroundClair.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +50,13 @@
 		F82C93F011EDAA0300F00BF4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F82C93F111EDAA0300F00BF4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F82C93F211EDAA0300F00BF4 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		F885EBA311F4562000B6B3B3 /* WebsiteListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebsiteListView.xib; sourceTree = "<group>"; };
+		F885EBC811F458C400B6B3B3 /* WebsiteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebsiteListViewController.h; path = Classes/WebsiteListViewController.h; sourceTree = "<group>"; };
+		F885EBC911F458C400B6B3B3 /* WebsiteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebsiteListViewController.m; path = Classes/WebsiteListViewController.m; sourceTree = "<group>"; };
+		F8EB82A811F31E8E0035424C /* Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Website.h; path = Classes/Website.h; sourceTree = "<group>"; };
+		F8EB82A911F31E8E0035424C /* Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Website.m; path = Classes/Website.m; sourceTree = "<group>"; };
+		F8EB831411F332910035424C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		F8EB831711F333BF0035424C /* backgroundClair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundClair.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				F8EB832E11F367AF0035424C /* Website List View */,
+				F8EB82B411F31EAA0035424C /* Entities */,
 				F82C93ED11EDA9CE00F00BF4 /* Detail View */,
 				289233A00DB2D0730083E9F9 /* Main View */,
 				281C6CD70DB2D82200F60ACC /* Flipside View */,
@@ -125,12 +139,14 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F8EB834611F37BF40035424C /* images */,
 				F82C93F211EDAA0300F00BF4 /* DetailView.xib */,
-				28193032112F806B00ECF9B4 /* YPassword.xcdatamodeld */,
 				280E754A0DD40C5E005A515E /* FlipsideView.xib */,
-				280E754B0DD40C5E005A515E /* MainView.xib */,
 				280E754C0DD40C5E005A515E /* MainWindow.xib */,
+				280E754B0DD40C5E005A515E /* MainView.xib */,
+				28193032112F806B00ECF9B4 /* YPassword.xcdatamodeld */,
 				8D1107310486CEB800E47090 /* YPassword-Info.plist */,
+				F885EBA311F4562000B6B3B3 /* WebsiteListView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -153,6 +169,33 @@
 				F82C93F111EDAA0300F00BF4 /* DetailViewController.m */,
 			);
 			name = "Detail View";
+			sourceTree = "<group>";
+		};
+		F8EB82B411F31EAA0035424C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F8EB82A811F31E8E0035424C /* Website.h */,
+				F8EB82A911F31E8E0035424C /* Website.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		F8EB832E11F367AF0035424C /* Website List View */ = {
+			isa = PBXGroup;
+			children = (
+				F885EBC811F458C400B6B3B3 /* WebsiteListViewController.h */,
+				F885EBC911F458C400B6B3B3 /* WebsiteListViewController.m */,
+			);
+			name = "Website List View";
+			sourceTree = "<group>";
+		};
+		F8EB834611F37BF40035424C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F8EB831411F332910035424C /* background.png */,
+				F8EB831711F333BF0035424C /* backgroundClair.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +251,9 @@
 				280E754E0DD40C5E005A515E /* MainView.xib in Resources */,
 				280E754F0DD40C5E005A515E /* MainWindow.xib in Resources */,
 				F82C93F411EDAA0300F00BF4 /* DetailView.xib in Resources */,
+				F8EB831511F332910035424C /* background.png in Resources */,
+				F8EB831811F333BF0035424C /* backgroundClair.png in Resources */,
+				F885EBA411F4562000B6B3B3 /* WebsiteListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +270,8 @@
 				289233B00DB2D0DB0083E9F9 /* FlipsideViewController.m in Sources */,
 				28193033112F806B00ECF9B4 /* YPassword.xcdatamodeld in Sources */,
 				F82C93F311EDAA0300F00BF4 /* DetailViewController.m in Sources */,
+				F8EB82AA11F31E8E0035424C /* Website.m in Sources */,
+				F885EBCA11F458C400B6B3B3 /* WebsiteListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
