@@ -62,8 +62,8 @@
 }
 - (IBAction)chooseWebsite:(id)sender {
     WebsiteListViewController *controller = [[WebsiteListViewController alloc] initWithNibName:@"WebsiteListView" bundle:nil];
-	// controller.delegate = self;
-	// controller.managedObjectContext=managedObjectContext;
+	controller.delegate = self;
+	controller.managedObjectContext=managedObjectContext;
 	
 	controller.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
 	[self presentModalViewController:controller animated:YES];

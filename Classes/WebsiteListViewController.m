@@ -9,7 +9,8 @@
 #import "WebsiteListNavigationController.h"
 
 @implementation WebsiteListViewController
-
+@synthesize delegate;
+@synthesize managedObjectContext;
 - (void)viewDidLoad {
 	[self.view addSubview:[navigationController view]];
 }

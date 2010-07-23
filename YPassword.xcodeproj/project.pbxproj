@@ -191,8 +191,8 @@
 			children = (
 				F8420AEA11F8F8BB007979B0 /* WebsiteListViewController.h */,
 				F8420AEB11F8F8BB007979B0 /* WebsiteListViewController.m */,
-				F8420AED11F8F8C6007979B0 /* WebsiteListNavigationController.m */,
 				F8420AEE11F8F8C6007979B0 /* WebsiteListNavigationController.h */,
+				F8420AED11F8F8C6007979B0 /* WebsiteListNavigationController.m */,
 				F8420AF011F8F8D0007979B0 /* WebsiteListTableViewController.h */,
 				F8420AF111F8F8D0007979B0 /* WebsiteListTableViewController.m */,
 			);
