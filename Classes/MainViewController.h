@@ -12,14 +12,15 @@
 #import <CoreData/CoreData.h>
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate, 
-													DetailViewControllerDelegate> {
+													DetailViewControllerDelegate,
+													WebsiteListViewControllerDelegate> {
     IBOutlet UILabel *loginLabel;
     IBOutlet UILabel *urlLabel;
 	IBOutlet UILabel *passwordLabel;
     NSManagedObjectContext *managedObjectContext;	    
 }
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, assign) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)showInfo:(id)sender;
 - (IBAction)adjustProperties:(id)sender;

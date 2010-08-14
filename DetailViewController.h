@@ -22,7 +22,7 @@
     NSManagedObjectContext *managedObjectContext;	
 }
 @property (nonatomic,assign) id delegate;
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, assign) NSManagedObjectContext *managedObjectContext;
 - (IBAction)next:(id)sender;
 - (IBAction)previous:(id)sender;
 - (IBAction)reset:(id)sender;

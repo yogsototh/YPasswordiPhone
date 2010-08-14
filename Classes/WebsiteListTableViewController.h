@@ -8,13 +8,16 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "WebsiteListViewController.h"
 
 @interface WebsiteListTableViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate> {
-    IBOutlet id websiteListViewController;
+    IBOutlet WebsiteListViewController *websiteListViewController;
     NSManagedObjectContext *managedObjectContext;
+	NSMutableArray *websiteArray;
 }
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) NSMutableArray *websiteArray;
+@property (nonatomic, assign) NSManagedObjectContext *managedObjectContext;
 - (IBAction)add:(id)sender;
-- (IBAction)edit:(id)sender;
+- (IBAction)cancel:(id)sender;
 @end

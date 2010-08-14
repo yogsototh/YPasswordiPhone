@@ -19,7 +19,7 @@
     NSManagedObjectContext *managedObjectContext;
 }
 @property (nonatomic,assign) id delegate;
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, assign) NSManagedObjectContext *managedObjectContext;
 @end
 
 @protocol WebsiteListViewControllerDelegate
