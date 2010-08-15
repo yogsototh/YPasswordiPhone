@@ -19,6 +19,7 @@
     IBOutlet UILabel *loginLabel;
     IBOutlet UILabel *urlLabel;
 	IBOutlet UILabel *passwordLabel;
+	IBOutlet UIButton *detailViewButton;
 	Website *website;
 	NSManagedObjectContext *managedObjectContext;
 }
@@ -28,6 +29,7 @@
 
 - (IBAction)showInfo:(id)sender;
 - (IBAction)adjustProperties:(id)sender;
+- (IBAction)addWebsite:(id)sender;
 - (IBAction)chooseWebsite:(id)sender;
 
 @end
