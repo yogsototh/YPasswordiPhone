@@ -68,6 +68,11 @@
 	[request release];
 }
 
+- (void)viewDidUnload {
+	[websiteArray release];
+	websiteArray=nil;
+}
+
 #pragma mark UITableViewDataSource
 // required
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -90,5 +95,13 @@
 	return cell;
 }
 
+#pragma mark UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"WebsiteListTableViewController::didSelectRowAtIndexPath:");
+	Website *website = [websiteArray objectAtIndex:indexPath.row];
+	NSLog(@" ==> website = %@, %@", website.url, website.login);
+	[[websiteListViewController delegate] setWebsite:website];
+	[[websiteListViewController delegate] websiteListViewControllerDidFinish:websiteListViewController];
+}
 
 @end

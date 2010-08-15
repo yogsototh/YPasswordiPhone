@@ -15,6 +15,8 @@
 
 @synthesize managedObjectContext;
 
+@synthesize website;
+
 - (IBAction)next:(id)sender {
     NSLog(@"next");    
 }
@@ -49,15 +51,15 @@
 	NSLog(@"urlTextFieldChanged:");
 	
 	// add a new website
-	Website *website=(Website *)[NSEntityDescription insertNewObjectForEntityForName:@"Website" inManagedObjectContext:managedObjectContext];
-	[website setUrl:[urlTextField text]];
-	[website setLogin:[loginTextField text]];
+	// Website *website=(Website *)[NSEntityDescription insertNewObjectForEntityForName:@"Website" inManagedObjectContext:managedObjectContext];
+	// [website setUrl:[urlTextField text]];
+	// [website setLogin:[loginTextField text]];
 	
-	NSError *error;
-	if (![managedObjectContext save:&error]) {
-		// Handle the error
-		NSLog(@"Error while saving new website");
-	}
+	// NSError *error;
+	// if (![managedObjectContext save:&error]) {
+	// 	// Handle the error
+	// 	NSLog(@"Error while saving new website");
+	// }
 }
 
 - (IBAction)loginTextFieldChanged:(id)sender {
@@ -78,12 +80,17 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+	[urlTextField setText:website.url];
+	[loginTextField setText:website.login];
+	[lengthLabel setText:[NSString stringWithFormat:@"%d", website.passwordLength]];
+
+	[slider setValue:[website.passwordLength floatValue]];
+	
     [super viewDidLoad];
 }
-*/
 
 /*
 // Override to allow orientations other than the default portrait orientation.

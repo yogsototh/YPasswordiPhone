@@ -11,7 +11,7 @@
 @implementation MainViewController
 
 @synthesize managedObjectContext;
-
+@synthesize website;
 
 /*
  // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -22,6 +22,12 @@
 
  // Implement viewWillAppear: to do additional setup before the view is presented. You might, for example, fetch objects from the managed object context if necessary.
 - (void)viewWillAppear:(BOOL)animated {
+	NSLog(@"MainViewController::viewWillAppear");
+	if ([self website] != nil) {
+		NSLog(@"  website in delegate: %@, %@", website.url, website.login);
+		[urlLabel setText:website.url];
+		[loginLabel setText:website.login];
+	}
     [super viewWillAppear:animated];
 }
 
@@ -48,6 +54,7 @@
 - (IBAction)adjustProperties:(id)sender {
     DetailViewController *controller = [[DetailViewController alloc] initWithNibName:@"DetailView" bundle:nil];
 	controller.delegate = self;
+	controller.website = website;
 	controller.managedObjectContext=managedObjectContext;
 
 	controller.modalTransitionStyle = UIModalTransitionStyleCoverVertical;

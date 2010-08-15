@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Website.h"
 
 @protocol WebsiteListViewControllerDelegate;
 
@@ -24,4 +25,5 @@
 
 @protocol WebsiteListViewControllerDelegate
 - (void)websiteListViewControllerDidFinish:(WebsiteListViewController *)controller;
+- (void)setWebsite:(Website *)website;
 @end

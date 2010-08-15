@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "Website.h"
 
 @protocol DetailViewControllerDelegate;
 
@@ -18,10 +19,12 @@
     IBOutlet UILabel *lengthLabel;
 	IBOutlet UITextField *urlTextField;
 	IBOutlet UITextField *loginTextField;
+	Website *website;
 	id <DetailViewControllerDelegate> delegate;
     NSManagedObjectContext *managedObjectContext;	
 }
 @property (nonatomic,assign) id delegate;
+@property (nonatomic, assign) Website *website;
 @property (nonatomic, assign) NSManagedObjectContext *managedObjectContext;
 - (IBAction)next:(id)sender;
 - (IBAction)previous:(id)sender;

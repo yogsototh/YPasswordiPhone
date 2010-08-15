@@ -9,18 +9,22 @@
 #import "FlipsideViewController.h"
 #import "DetailViewController.h"
 #import "WebsiteListViewController.h"
+#import "Website.h"
 #import <CoreData/CoreData.h>
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate, 
 													DetailViewControllerDelegate,
-													WebsiteListViewControllerDelegate> {
+													WebsiteListViewControllerDelegate> 
+{
     IBOutlet UILabel *loginLabel;
     IBOutlet UILabel *urlLabel;
 	IBOutlet UILabel *passwordLabel;
-    NSManagedObjectContext *managedObjectContext;	    
+	Website *website;
+	NSManagedObjectContext *managedObjectContext;
 }
 
 @property (nonatomic, assign) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) Website *website;
 
 - (IBAction)showInfo:(id)sender;
 - (IBAction)adjustProperties:(id)sender;
