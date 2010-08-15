@@ -25,5 +25,6 @@
 
 @protocol WebsiteListViewControllerDelegate
 - (void)websiteListViewControllerDidFinish:(WebsiteListViewController *)controller;
+- (Website *)website;
 - (void)setWebsite:(Website *)website;
 @end

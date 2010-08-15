@@ -94,6 +94,33 @@
 	cell.textLabel.text=[[[self websiteArray] objectAtIndex:indexPath.row] url];
 	return cell;
 }
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+	if ( editingStyle == UITableViewCellEditingStyleDelete ) {
+		
+		
+		// Delete the managed object at the given index path.
+		NSManagedObject *websiteToDelete = [websiteArray objectAtIndex:indexPath.row];
+		[managedObjectContext deleteObject:websiteToDelete];
+		
+		// if the deleted website is the selected one, update the selected one to nil.
+		if ( [[websiteListViewController delegate] website] == websiteToDelete ) {
+			[[websiteListViewController delegate] setWebsite:nil];
+		}
+
+		// Commit the change
+		NSError *error;
+		if (![managedObjectContext save:&error]) {
+			// handle Error
+			return;
+		}
+		
+		// update the array and the tableView
+		[websiteArray removeObjectAtIndex:indexPath.row];
+		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+		
+	}
+}
+
 
 #pragma mark UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

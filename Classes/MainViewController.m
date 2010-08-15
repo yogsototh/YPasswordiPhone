@@ -27,7 +27,11 @@
 		NSLog(@"  website in delegate: %@, %@", website.url, website.login);
 		[urlLabel setText:website.url];
 		[loginLabel setText:website.login];
+	} else {
+		[urlLabel setText:@"URL"];
+		[loginLabel setText:@"username"];
 	}
+
     [super viewWillAppear:animated];
 }
 
