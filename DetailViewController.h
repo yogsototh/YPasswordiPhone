@@ -32,6 +32,8 @@
 - (IBAction)sliderChanged:(id)sender;
 - (IBAction)segmentedControlChanged:(id)sender;
 - (IBAction)done:(id)sender;
+- (IBAction)urlTextFieldChanged:(id)sender;
+- (IBAction)loginTextFieldChanged:(id)sender;
 @end
 
 @protocol DetailViewControllerDelegate

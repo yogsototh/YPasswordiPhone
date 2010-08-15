@@ -18,30 +18,67 @@
 @synthesize website;
 
 - (IBAction)next:(id)sender {
-    NSLog(@"next");    
+    NSLog(@"next");
+	[website setValue:[NSNumber numberWithInt:([website.passwordNumber intValue] + 1)]  forKey:@"passwordNumber"];
+	[passwordNumberLabel setText:[[website passwordNumber] stringValue]];
+	NSError *error;
+	if (![managedObjectContext save:&error]) {
+		// handle error
+	};
 }
 
 - (IBAction)previous:(id)sender {
 	NSLog(@"previous");    
+	[website setValue:[NSNumber numberWithInt:([website.passwordNumber intValue] - 1)]  forKey:@"passwordNumber"];	
+	[passwordNumberLabel setText:[[website passwordNumber] stringValue]];
+	NSError *error;
+	if (![managedObjectContext save:&error]) {
+		// handle error
+	};
 }
 
 - (IBAction)reset:(id)sender {
 	NSLog(@"reset");
+	[website setValue:[NSNumber numberWithInt:0] forKey:@"passwordNumber"];
+	[passwordNumberLabel setText:[[website passwordNumber] stringValue]];
+	NSError *error;
+	if (![managedObjectContext save:&error]) {
+		// handle error
+	};
 }
 
 - (IBAction)sliderChanged:(id)sender {
 	NSLog(@"sliderChanged");
 	[lengthLabel setText:[NSString stringWithFormat:@"%d", (int)[slider value]]];
+	[website setValue:[NSNumber numberWithInt:(int)[slider value]] forKey:@"passwordLength"];
+	NSError *error;
+	if (![managedObjectContext save:&error]) {
+		// handle error
+	};
 }
 
 - (IBAction)segmentedControlChanged:(id)sender {
 	NSLog(@"segmentedControlChanged");
 	if (segmentedControl.selectedSegmentIndex == 0) {
 		NSLog(@"Base64");
+		int newValue=MIN(27.0,[website.passwordLength floatValue]);
+		NSLog(@"%d", (int)newValue);
+		[lengthLabel setText:[NSString stringWithFormat:@"%d", newValue]];
+		[website setValue:[NSNumber numberWithBool:YES] forKey:@"base64"];
+		// add .5 to the slider position to be aligned with the good value
+		[slider setValue:MIN(newValue+.5,27.0)];
 	} else {
 		NSLog(@"Base16");
+		// add .5 to the slider position to be aligned with the good value
+		[slider setValue:[website.passwordLength floatValue]+.5];
+		[lengthLabel setText:[NSString stringWithFormat:@"%d", [website.passwordLength intValue]]];
+		[website setValue:[NSNumber numberWithBool:NO] forKey:@"base64"];
 	}
-
+	NSLog(@"base64 %@, passwordLength %@", website.base64, website.passwordLength);
+	NSError *error;
+	if (![managedObjectContext save:&error]) {
+		// handle error
+	};
 }
 
 
@@ -49,25 +86,34 @@
 
 - (IBAction)urlTextFieldChanged:(id)sender {
 	NSLog(@"urlTextFieldChanged:");
+	[website setValue:[urlTextField text] forKey:@"url"];
+	NSError *error;
+	if (![managedObjectContext save:&error]) {
+		// handle error
+	};
 	
-	// add a new website
-	// Website *website=(Website *)[NSEntityDescription insertNewObjectForEntityForName:@"Website" inManagedObjectContext:managedObjectContext];
-	// [website setUrl:[urlTextField text]];
-	// [website setLogin:[loginTextField text]];
-	
-	// NSError *error;
-	// if (![managedObjectContext save:&error]) {
-	// 	// Handle the error
-	// 	NSLog(@"Error while saving new website");
-	// }
 }
 
 - (IBAction)loginTextFieldChanged:(id)sender {
 	NSLog(@"loginTextFieldChanged");
+	[website setValue:[loginTextField text] forKey:@"login"];
+	NSError *error;
+	if (![managedObjectContext save:&error]) {
+		// handle error
+	};
 }
 
 - (IBAction)done:(id)sender {
 	NSLog(@"done");
+	// save the password length another time in case of type changed
+	if ((website.base64 == [NSNumber numberWithBool:YES]) &&
+		([website.passwordLength intValue]>27)) {
+		[website setValue:[NSNumber numberWithInt:27] forKey:@"passwordLength"];
+		NSError *error;
+		if (![managedObjectContext save:&error]) {
+			// handle error
+		};
+	}
 	[self.delegate detailViewControllerDidFinish:self];
 }
 /*
@@ -83,11 +129,32 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	[urlTextField setText:website.url];
-	[loginTextField setText:website.login];
-	[lengthLabel setText:[website.passwordLength stringValue]];
-
-	[slider setValue:[website.passwordLength intValue]];
+	[slider setMaximumValue:40.0];
+	if (website == nil) {
+		[urlTextField setText:@"URL"];
+		[loginTextField setText:@"username"];
+		[lengthLabel setText:@"27"];
+		[slider setValue:27.0];
+		[passwordNumberLabel setText:@"0"];
+		[segmentedControl setSelectedSegmentIndex:0];
+	} else {
+		[urlTextField setText:website.url];
+		[loginTextField setText:website.login];
+		
+		[lengthLabel setText:[website.passwordLength stringValue]];
+		[slider setValue:[website.passwordLength intValue]];
+		
+		[passwordNumberLabel setText:[website.passwordNumber stringValue]];
+		
+		// initialize segmented control
+		int segmentedControlIndexToSelect;
+		if (website.base64 == [NSNumber numberWithBool:YES]) {
+			segmentedControlIndexToSelect=0;
+		} else {
+			segmentedControlIndexToSelect=1;
+		}
+		[segmentedControl setSelectedSegmentIndex:segmentedControlIndexToSelect];
+	}
 	
     [super viewDidLoad];
 }

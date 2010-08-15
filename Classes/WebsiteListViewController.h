@@ -12,7 +12,6 @@
 
 @protocol WebsiteListViewControllerDelegate;
 
-
 @interface WebsiteListViewController : UIViewController {
     IBOutlet id navigationController;
     IBOutlet id tableViewController;
