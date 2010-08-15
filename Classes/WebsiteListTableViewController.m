@@ -16,7 +16,6 @@
 
 - (IBAction)add:(id)sender {
     NSLog(@"WebsiteListTableViewController::add");
-	// ---------------- A REVOIR ----------- //
 
 	managedObjectContext = [websiteListViewController managedObjectContext];
 	
@@ -33,7 +32,6 @@
 	[self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
 						  withRowAnimation:UITableViewRowAnimationFade];
 	[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
-	// ---------------- A REVOIR ----------- //
 
 }
 
@@ -88,7 +86,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
 	
-	cell.textLabel.text=[[self websiteArray] objectAtIndex:indexPath.row];
+	cell.textLabel.text=[[[self websiteArray] objectAtIndex:indexPath.row] url];
 	return cell;
 }
 
