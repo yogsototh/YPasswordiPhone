@@ -85,9 +85,9 @@
 - (void)viewDidLoad {
 	[urlTextField setText:website.url];
 	[loginTextField setText:website.login];
-	[lengthLabel setText:[NSString stringWithFormat:@"%d", website.passwordLength]];
+	[lengthLabel setText:[website.passwordLength stringValue]];
 
-	[slider setValue:[website.passwordLength floatValue]];
+	[slider setValue:[website.passwordLength intValue]];
 	
     [super viewDidLoad];
 }
