@@ -22,14 +22,18 @@
 	IBOutlet UIButton *detailViewButton;
 	Website *website;
 	NSManagedObjectContext *managedObjectContext;
+	NSString *masterPassword;
 }
 
 @property (nonatomic, assign) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) Website *website;
+@property (nonatomic, retain) NSString *masterPassword;
 
 - (IBAction)showInfo:(id)sender;
 - (IBAction)adjustProperties:(id)sender;
 - (IBAction)addWebsite:(id)sender;
 - (IBAction)chooseWebsite:(id)sender;
+
+- (void)updatePassword;
 
 @end

@@ -13,6 +13,7 @@
 
 @interface FlipsideViewController : UIViewController {
     IBOutlet UITextField *masterPasswordTextField;
+	IBOutlet id doneButton;
 	id <FlipsideViewControllerDelegate> delegate;
 }
 
@@ -25,5 +26,7 @@
 
 @protocol FlipsideViewControllerDelegate
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
+- (NSString *)masterPassword;
+- (void)setMasterPassword:(NSString *)masterPassword;
 @end
 

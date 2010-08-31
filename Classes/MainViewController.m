@@ -8,18 +8,26 @@
 
 #import "MainViewController.h"
 
+
 @implementation MainViewController
 
 @synthesize managedObjectContext;
 @synthesize website;
+@synthesize masterPassword;
 
 
 /*
- // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
- */
+*/
+
+- (void)viewDidAppear:(BOOL)animated {
+	if (!masterPassword) {
+		[self showInfo:self];
+	}
+}
 
  // Implement viewWillAppear: to do additional setup before the view is presented. You might, for example, fetch objects from the managed object context if necessary.
 - (void)viewWillAppear:(BOOL)animated {
@@ -30,15 +38,23 @@
 		[urlLabel setText:website.url];
 		[loginLabel setText:website.login];
 		[detailViewButton setEnabled:YES];
+		[self updatePassword];
 	} else {
 		[urlLabel setText:@"URL"];
 		[loginLabel setText:@"username"];
 		[detailViewButton setEnabled:NO];
 	}
-
+	
     [super viewWillAppear:animated];
 }
 
+- (void)updatePassword {
+	NSString *baseString;
+	// notice by construction masterPassword is not null
+	// when entering this function
+	baseString=[NSString stringWithFormat:@"%@%@%@",masterPassword, [website.passwordNumber intValue]?[website.passwordNumber stringValue]:@"", website.url];
+	[passwordLabel setText:baseString];
+}
 
 // Filpside view
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {

@@ -16,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor viewFlipsideBackgroundColor];      
+    self.view.backgroundColor = [UIColor viewFlipsideBackgroundColor];
+	[masterPasswordTextField setText:[[self delegate] masterPassword]];
+	if ([[masterPasswordTextField text] length]) {
+		[doneButton setEnabled:YES];
+	} else {
+		[doneButton setEnabled:NO];
+	}
 }
 
 
@@ -25,7 +31,12 @@
 }
 
 - (IBAction)masterPasswordTextFieldChanged:(id)sender {
-    
+	if ([[masterPasswordTextField text] length]) {
+		[doneButton setEnabled:YES];
+		[[self delegate] setMasterPassword:[masterPasswordTextField text]];
+	} else {
+		[doneButton setEnabled:NO];
+	}
 }
 
 - (IBAction)clickedToWebSite:(id)sender {
@@ -61,5 +72,11 @@
     [super dealloc];
 }
 
+#pragma mark UITextField delegate
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+	[textField resignFirstResponder];
+	return NO;
+}
 
 @end
