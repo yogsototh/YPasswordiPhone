@@ -48,8 +48,7 @@
     [super viewWillAppear:animated];
 }
 
-- (unsigned char *)sha1:(NSString *)baseString {
-	unsigned char *result=(unsigned char *)malloc(CC_SHA1_DIGEST_LENGTH+1);
+- (unsigned char *)sha1:(NSString *)baseString result:(unsigned char *)result {
 	char *c_baseString=(char *)[baseString UTF8String];
 	CC_SHA1(c_baseString, strlen(c_baseString), result);
 	return result;
@@ -79,22 +78,32 @@
 	return password;
 }
 
+- (NSString *)b64_sha1:(NSString *)inputString {
+	unsigned char result[CC_SHA1_DIGEST_LENGTH+1];
+	[self sha1:inputString result:result];
+	return [self base64:result];
+}
+
+- (NSString *)hex_sha1:(NSString *)inputString {
+	unsigned char result[CC_SHA1_DIGEST_LENGTH+1];
+	[self sha1:inputString result:result];
+	return [self hexadecimalRepresentation:result];
+}
+
 - (void)updatePassword {
 	NSString *baseString;
 	// notice by construction masterPassword is not null
 	// when entering this function
 	baseString=[NSString stringWithFormat:@"%@%@%@",masterPassword, [website.passwordNumber intValue]?[website.passwordNumber stringValue]:@"", website.url];
-	unsigned char *result=[self sha1:baseString];
 	
 	NSString *password;
 	if (website.base64 == [NSNumber numberWithBool:NO]) {
-		password=[self hexadecimalRepresentation:result];
+		password=[self hex_sha1:baseString];
 	} else {
-		password=[self base64:result];
+		password=[self b64_sha1:baseString];
 	}
 	password=[password substringToIndex:MIN([website.passwordLength intValue],[password length])];
 
-	free(result);
 	[passwordLabel setText:password];
 }
 
