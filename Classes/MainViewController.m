@@ -7,7 +7,7 @@
 //
 
 #import "MainViewController.h"
-
+#import <CommonCrypto/CommonDigest.h>
 
 @implementation MainViewController
 
@@ -48,12 +48,54 @@
     [super viewWillAppear:animated];
 }
 
+- (unsigned char *)sha1:(NSString *)baseString {
+	unsigned char *result=(unsigned char *)malloc(CC_SHA1_DIGEST_LENGTH+1);
+	char *c_baseString=(char *)[baseString UTF8String];
+	CC_SHA1(c_baseString, strlen(c_baseString), result);
+	return result;
+}
+
+- (NSString *)base64:(unsigned char *)result {
+	NSString *password=[[NSString alloc] init];
+	static const unsigned char cb64[65]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+	for (int i=0; i<CC_SHA1_DIGEST_LENGTH; i+=3) {
+		password=[password stringByAppendingFormat:@"%c%c%c%c",
+				  cb64[(result[i] &0xFC)>>2],
+				  cb64[((result[i] & 0x03) << 4)
+					   | ((result[i + 1] & 0xF0) >> 4)],
+				  cb64[((result[i + 1] & 0x0F) << 2)
+					   | ((result[i + 2] & 0xC0) >> 6)],
+				  cb64[result[i+2]&0x3F]
+				  ];			
+	}
+	return password;
+}
+
+- (NSString *)hexadecimalRepresentation:(unsigned char *)result {
+	NSString *password=[[NSString alloc] init];
+	for (int i=0; i<CC_SHA1_DIGEST_LENGTH; i++) {
+		password=[password stringByAppendingFormat:@"%02x", result[i]];
+	}
+	return password;
+}
+
 - (void)updatePassword {
 	NSString *baseString;
 	// notice by construction masterPassword is not null
 	// when entering this function
 	baseString=[NSString stringWithFormat:@"%@%@%@",masterPassword, [website.passwordNumber intValue]?[website.passwordNumber stringValue]:@"", website.url];
-	[passwordLabel setText:baseString];
+	unsigned char *result=[self sha1:baseString];
+	
+	NSString *password;
+	if (website.base64 == [NSNumber numberWithBool:NO]) {
+		password=[self hexadecimalRepresentation:result];
+	} else {
+		password=[self base64:result];
+	}
+	password=[password substringToIndex:MIN([website.passwordLength intValue],[password length])];
+
+	free(result);
+	[passwordLabel setText:password];
 }
 
 // Filpside view
