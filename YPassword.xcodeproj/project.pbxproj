@@ -101,6 +101,7 @@
 		281C6CD70DB2D82200F60ACC /* Flipside View */ = {
 			isa = PBXGroup;
 			children = (
+				280E754A0DD40C5E005A515E /* FlipsideView.xib */,
 				289233AC0DB2D0DB0083E9F9 /* FlipsideViewController.h */,
 				289233AD0DB2D0DB0083E9F9 /* FlipsideViewController.m */,
 			);
@@ -110,6 +111,7 @@
 		289233A00DB2D0730083E9F9 /* Main View */ = {
 			isa = PBXGroup;
 			children = (
+				280E754B0DD40C5E005A515E /* MainView.xib */,
 				289233A80DB2D0DB0083E9F9 /* MainViewController.h */,
 				289233A90DB2D0DB0083E9F9 /* MainViewController.m */,
 			);
@@ -146,11 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				F8EB834611F37BF40035424C /* images */,
-				F82C93F211EDAA0300F00BF4 /* DetailView.xib */,
-				280E754A0DD40C5E005A515E /* FlipsideView.xib */,
 				280E754C0DD40C5E005A515E /* MainWindow.xib */,
-				280E754B0DD40C5E005A515E /* MainView.xib */,
-				F8420ADE11F8F3B5007979B0 /* WebsiteListView.xib */,
 				28193032112F806B00ECF9B4 /* YPassword.xcdatamodeld */,
 				8D1107310486CEB800E47090 /* YPassword-Info.plist */,
 			);
@@ -171,6 +169,7 @@
 		F82C93ED11EDA9CE00F00BF4 /* Detail View */ = {
 			isa = PBXGroup;
 			children = (
+				F82C93F211EDAA0300F00BF4 /* DetailView.xib */,
 				F82C93F011EDAA0300F00BF4 /* DetailViewController.h */,
 				F82C93F111EDAA0300F00BF4 /* DetailViewController.m */,
 			);
@@ -189,6 +188,7 @@
 		F8EB832E11F367AF0035424C /* Website List View */ = {
 			isa = PBXGroup;
 			children = (
+				F8420ADE11F8F3B5007979B0 /* WebsiteListView.xib */,
 				F8420AEA11F8F8BB007979B0 /* WebsiteListViewController.h */,
 				F8420AEB11F8F8BB007979B0 /* WebsiteListViewController.m */,
 				F8420AEE11F8F8C6007979B0 /* WebsiteListNavigationController.h */,
