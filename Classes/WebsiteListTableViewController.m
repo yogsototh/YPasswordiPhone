@@ -126,7 +126,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"WebsiteListTableViewController::didSelectRowAtIndexPath:");
 	Website *website = [websiteArray objectAtIndex:indexPath.row];
-	NSLog(@" ==> website = %@, %@", website.url, website.login);
+	NSLog(@" ==> website = %@, %@, %@, %@, %@", website.url, website.login, (website.base64==[NSNumber numberWithBool:YES])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
 	[[websiteListViewController delegate] setWebsite:website];
 	[[websiteListViewController delegate] websiteListViewControllerDidFinish:websiteListViewController];
 }
