@@ -23,8 +23,11 @@
 	[passwordNumberLabel setText:[[website passwordNumber] stringValue]];
 	NSError *error;
 	if (![managedObjectContext save:&error]) {
+		NSLog(@"ERROR : save error : DetailViewController::next");
 		// handle error
-	};
+	} else {
+		NSLog(@"DetailViewController::next : saved");
+	}
 }
 
 - (IBAction)previous:(id)sender {
@@ -33,6 +36,7 @@
 	[passwordNumberLabel setText:[[website passwordNumber] stringValue]];
 	NSError *error;
 	if (![managedObjectContext save:&error]) {
+		NSLog(@"ERROR : save error : DetailViewController::previous");
 		// handle error
 	};
 }
@@ -44,6 +48,7 @@
 	NSError *error;
 	if (![managedObjectContext save:&error]) {
 		// handle error
+		NSLog(@"ERROR : save error : DetailViewController::reset");
 	};
 }
 
@@ -54,13 +59,14 @@
 	NSError *error;
 	if (![managedObjectContext save:&error]) {
 		// handle error
+		NSLog(@"ERROR : save error : DetailViewController::sliderChanged");
 	};
 }
 
 - (IBAction)segmentedControlChanged:(id)sender {
 	NSLog(@"segmentedControlChanged");
 	if (segmentedControl.selectedSegmentIndex == 0) {
-		NSLog(@"Base64");
+		NSLog(@"base64");
 		int newValue=MIN(27.0,[website.passwordLength floatValue]);
 		NSLog(@"%d", (int)newValue);
 		[lengthLabel setText:[NSString stringWithFormat:@"%d", newValue]];
@@ -78,6 +84,7 @@
 	NSError *error;
 	if (![managedObjectContext save:&error]) {
 		// handle error
+		NSLog(@"ERROR : save error : DetailViewController::segmentedControlChanged");
 	};
 }
 
@@ -90,6 +97,7 @@
 	NSError *error;
 	if (![managedObjectContext save:&error]) {
 		// handle error
+		NSLog(@"ERROR : save error : DetailViewController::urlTextFieldChanged");
 	};
 	
 }
@@ -100,6 +108,7 @@
 	NSError *error;
 	if (![managedObjectContext save:&error]) {
 		// handle error
+		NSLog(@"ERROR : save error : DetailViewController::loginTextFieldChanged");
 	};
 }
 
@@ -112,6 +121,8 @@
 		NSError *error;
 		if (![managedObjectContext save:&error]) {
 			// handle error
+			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+			NSLog(@"ERROR : save error : DetailViewController::done");
 		};
 	}
 	[self.delegate detailViewControllerDidFinish:self];
