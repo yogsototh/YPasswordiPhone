@@ -33,6 +33,39 @@
 - (void)viewWillAppear:(BOOL)animated {
 	NSLog(@"MainViewController::viewWillAppear");
 	[detailViewButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+	[selectWebsiteButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+
+	if (website == nil) {
+		// verify if there are websites
+		// ----------------------------
+		// Create a request of Websites contained in the managedObjectContext
+		NSFetchRequest *request = [[NSFetchRequest alloc] init];
+		NSEntityDescription *entity = [NSEntityDescription entityForName:@"Website" inManagedObjectContext:managedObjectContext];
+		[request setEntity:entity];
+		
+		// sort the result by url name
+		NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"url" ascending:YES];
+		NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+		[request setSortDescriptors:sortDescriptors];
+		[sortDescriptors release];
+		[sortDescriptor release];
+		
+		// Execute the request
+		NSError *error;
+		NSMutableArray *mutableFetchResults=[[managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+		if ([mutableFetchResults count] == 0) {
+			[selectWebsiteButton setEnabled:NO];
+		} else {
+			[selectWebsiteButton setEnabled:YES];
+			website = [mutableFetchResults lastObject];
+		}
+	} else {
+		[selectWebsiteButton setEnabled:YES];
+	}
+
+	
+	// ----------------------------
+	
 	if ([self website] != nil) {
 		NSLog(@"  website in delegate: %@, %@", website.url, website.login);
 		[urlLabel setText:website.url];

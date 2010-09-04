@@ -20,6 +20,7 @@
     IBOutlet UILabel *urlLabel;
 	IBOutlet UILabel *passwordLabel;
 	IBOutlet UIButton *detailViewButton;
+	IBOutlet UIButton *selectWebsiteButton;
 	Website *website;
 	NSManagedObjectContext *managedObjectContext;
 	NSString *masterPassword;
