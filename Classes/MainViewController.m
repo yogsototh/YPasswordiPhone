@@ -77,7 +77,7 @@
 		[loginLabel setText:@"username"];
 		[detailViewButton setEnabled:NO];
 	}
-	
+
     [super viewWillAppear:animated];
 }
 
@@ -127,13 +127,17 @@
 	NSString *baseString;
 	// notice by construction masterPassword is not null
 	// when entering this function
+	NSLog(@" [mainViewController] ==> website = %@, %@, %@, %@, %@", website.url, website.login, (website.base64==[NSNumber numberWithBool:YES])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
+
 	baseString=[NSString stringWithFormat:@"%@%@%@",masterPassword, [website.passwordNumber intValue]?[website.passwordNumber stringValue]:@"", website.url];
-	
+
 	NSString *password;
-	if (website.base64 == [NSNumber numberWithBool:NO]) {
-		password=[self hex_sha1:baseString];
-	} else {
+	if (website.base64 == [NSNumber numberWithBool:YES]) {
+		NSLog(@"b64");
 		password=[self b64_sha1:baseString];
+	} else {
+		NSLog(@"b16");
+		password=[self hex_sha1:baseString];
 	}
 	password=[password substringToIndex:MIN([website.passwordLength intValue],[password length])];
 
@@ -163,8 +167,11 @@
 	self.website=newWebsite;
 	NSError *error;
 	if (![managedObjectContext save:&error]) {
-		// Handle the error.
+		NSLog(@"ERROR : save error : DetailViewController::next");
+	} else {
+		NSLog(@"MainViewController::addWebsite : saved");
 	}
+
 	
 	[self adjustProperties:self];
 }
@@ -217,14 +224,13 @@
 }
 
 
-/*
+
  // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
     // return (interfaceOrientation == UIInterfaceOrientationPortrait);
 	return YES;
 }
- */
 
 
 - (void)dealloc {
