@@ -127,11 +127,12 @@
 	NSString *baseString;
 	// notice by construction masterPassword is not null
 	// when entering this function
-	NSLog(@" [mainViewController] ==> website = %@, %@, %@, %@, %@", website.url, website.login, (website.base64==[NSNumber numberWithBool:YES])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
+    NSLog(@" [mainViewController::updatePassword] ==> website = %@, %@, %@, %@, %@", website.url, website.login, (website.base64==[NSNumber numberWithBool:YES])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
 
 	baseString=[NSString stringWithFormat:@"%@%@%@",masterPassword, [website.passwordNumber intValue]?[website.passwordNumber stringValue]:@"", website.url];
 
 	NSString *password;
+	NSLog(@"Update Password website.base64 = %@ %@",website.base64, [NSNumber numberWithBool:YES]);
 	if ([website.base64 isEqualToNumber:[NSNumber numberWithBool:YES]]) {
 		NSLog(@"b64");
 		password=[self b64_sha1:baseString];
@@ -159,19 +160,24 @@
     [controller release];
 }
 
+- (int) save {
+	NSError *error;
+	if (![managedObjectContext save:&error]) {
+		NSLog(@"ERROR : save error : DetailViewController::next");
+		return -1;
+	} else {
+        NSLog(@"saved: %@ %@ %@ len: %@ num: %@", website.url, website.login, (website.base64 == [NSNumber numberWithBool:YES])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
+		return 0;
+	}
+}
+
 // Add a new website
 - (IBAction)addWebsite:(id)sender {
 	Website *newWebsite=(Website *)[NSEntityDescription insertNewObjectForEntityForName:@"Website" inManagedObjectContext:managedObjectContext];
 	newWebsite.url=@"new.com";
 	newWebsite.login=@"username";
 	self.website=newWebsite;
-	NSError *error;
-	if (![managedObjectContext save:&error]) {
-		NSLog(@"ERROR : save error : DetailViewController::next");
-	} else {
-		NSLog(@"MainViewController::addWebsite : saved");
-	}
-
+    [self save];
 	
 	[self adjustProperties:self];
 }

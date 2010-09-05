@@ -17,50 +17,43 @@
 
 @synthesize website;
 
+- (int) save {
+	NSError *error;
+	if (![managedObjectContext save:&error]) {
+		NSLog(@"ERROR : save error : DetailViewController::next");
+		return -1;
+	} else {
+        NSLog(@"saved: %@ %@ %@ len: %@ num: %@", website.url, website.login, ([website.base64 isEqualToNumber:[NSNumber numberWithBool:YES]])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
+		return 0;
+	}
+}
+
 - (IBAction)next:(id)sender {
     NSLog(@"next");
 	[website setValue:[NSNumber numberWithInt:([website.passwordNumber intValue] + 1)]  forKey:@"passwordNumber"];
 	[passwordNumberLabel setText:[[website passwordNumber] stringValue]];
-	NSError *error;
-	if (![managedObjectContext save:&error]) {
-		NSLog(@"ERROR : save error : DetailViewController::next");
-		// handle error
-	} else {
-		NSLog(@"DetailViewController::next : saved");
-	}
+    [self save];
 }
 
 - (IBAction)previous:(id)sender {
 	NSLog(@"previous");    
 	[website setValue:[NSNumber numberWithInt:([website.passwordNumber intValue] - 1)]  forKey:@"passwordNumber"];	
 	[passwordNumberLabel setText:[[website passwordNumber] stringValue]];
-	NSError *error;
-	if (![managedObjectContext save:&error]) {
-		NSLog(@"ERROR : save error : DetailViewController::previous");
-		// handle error
-	};
+    [self save];
 }
 
 - (IBAction)reset:(id)sender {
 	NSLog(@"reset");
 	[website setValue:[NSNumber numberWithInt:0] forKey:@"passwordNumber"];
 	[passwordNumberLabel setText:[[website passwordNumber] stringValue]];
-	NSError *error;
-	if (![managedObjectContext save:&error]) {
-		// handle error
-		NSLog(@"ERROR : save error : DetailViewController::reset");
-	};
+    [self save];
 }
 
 - (IBAction)sliderChanged:(id)sender {
 	NSLog(@"sliderChanged");
 	[lengthLabel setText:[NSString stringWithFormat:@"%d", (int)[slider value]]];
 	[website setValue:[NSNumber numberWithInt:(int)[slider value]] forKey:@"passwordLength"];
-	NSError *error;
-	if (![managedObjectContext save:&error]) {
-		// handle error
-		NSLog(@"ERROR : save error : DetailViewController::sliderChanged");
-	};
+    [self save];
 }
 
 - (IBAction)segmentedControlChanged:(id)sender {
@@ -70,7 +63,7 @@
 		int newValue=MIN(27.0,[website.passwordLength floatValue]);
 		NSLog(@"%d", (int)newValue);
 		[lengthLabel setText:[NSString stringWithFormat:@"%d", newValue]];
-		[website setValue:[NSNumber numberWithBool:YES] forKey:@"base64"];
+		website.base64 = [NSNumber numberWithBool:YES];
 		// add .5 to the slider position to be aligned with the good value
 		[slider setValue:MIN(newValue+.5,27.0)];
 	} else {
@@ -78,14 +71,10 @@
 		// add .5 to the slider position to be aligned with the good value
 		[slider setValue:[website.passwordLength floatValue]+.5];
 		[lengthLabel setText:[NSString stringWithFormat:@"%d", [website.passwordLength intValue]]];
-		[website setValue:[NSNumber numberWithBool:NO] forKey:@"base64"];
+		website.base64 = [NSNumber numberWithBool:NO];
 	}
-	NSLog(@"base64 %@, passwordLength %@", website.base64, website.passwordLength);
-	NSError *error;
-	if (![managedObjectContext save:&error]) {
-		// handle error
-		NSLog(@"ERROR : save error : DetailViewController::segmentedControlChanged");
-	};
+	NSLog(@"[SAVED] base64 %@, passwordLength %@", website.base64, website.passwordLength);
+    [self save];
 }
 
 
@@ -94,22 +83,14 @@
 - (IBAction)urlTextFieldChanged:(id)sender {
 	NSLog(@"urlTextFieldChanged:");
 	[website setValue:[urlTextField text] forKey:@"url"];
-	NSError *error;
-	if (![managedObjectContext save:&error]) {
-		// handle error
-		NSLog(@"ERROR : save error : DetailViewController::urlTextFieldChanged");
-	};
+    [self save];
 	
 }
 
 - (IBAction)loginTextFieldChanged:(id)sender {
 	NSLog(@"loginTextFieldChanged");
 	[website setValue:[loginTextField text] forKey:@"login"];
-	NSError *error;
-	if (![managedObjectContext save:&error]) {
-		// handle error
-		NSLog(@"ERROR : save error : DetailViewController::loginTextFieldChanged");
-	};
+    [self save];
 }
 
 - (IBAction)done:(id)sender {
@@ -118,12 +99,7 @@
 	if (([website.base64 isEqualToNumber:[NSNumber numberWithBool:YES]]) &&
 		([website.passwordLength intValue]>27)) {
 		[website setValue:[NSNumber numberWithInt:27] forKey:@"passwordLength"];
-		NSError *error;
-		if (![managedObjectContext save:&error]) {
-			// handle error
-			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-			NSLog(@"ERROR : save error : DetailViewController::done");
-		};
+        [self save];
 	}
 	[self.delegate detailViewControllerDidFinish:self];
 }
