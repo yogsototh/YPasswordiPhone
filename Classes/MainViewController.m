@@ -132,7 +132,7 @@
 	baseString=[NSString stringWithFormat:@"%@%@%@",masterPassword, [website.passwordNumber intValue]?[website.passwordNumber stringValue]:@"", website.url];
 
 	NSString *password;
-	if (website.base64 == [NSNumber numberWithBool:YES]) {
+	if ([website.base64 isEqualToNumber:[NSNumber numberWithBool:YES]]) {
 		NSLog(@"b64");
 		password=[self b64_sha1:baseString];
 	} else {

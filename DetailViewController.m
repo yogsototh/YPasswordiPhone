@@ -115,7 +115,7 @@
 - (IBAction)done:(id)sender {
 	NSLog(@"done");
 	// save the password length another time in case of type changed
-	if ((website.base64 == [NSNumber numberWithBool:YES]) &&
+	if (([website.base64 isEqualToNumber:[NSNumber numberWithBool:YES]]) &&
 		([website.passwordLength intValue]>27)) {
 		[website setValue:[NSNumber numberWithInt:27] forKey:@"passwordLength"];
 		NSError *error;
@@ -159,7 +159,7 @@
 		
 		// initialize segmented control
 		int segmentedControlIndexToSelect;
-		if (website.base64 == [NSNumber numberWithBool:YES]) {
+		if ([website.base64 isEqualToNumber:[NSNumber numberWithBool:YES]]) {
 			segmentedControlIndexToSelect=0;
 		} else {
 			segmentedControlIndexToSelect=1;
