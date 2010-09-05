@@ -29,6 +29,34 @@
 	}
 }
 
+- (NSMutableArray *)arrayOfWebsites {
+	// ----------------------------
+	// Create a request of Websites contained in the managedObjectContext
+	NSFetchRequest *request = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Website" inManagedObjectContext:managedObjectContext];
+	[request setEntity:entity];
+	
+	// sort the result by url name
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"url" ascending:YES];
+	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+	[request setSortDescriptors:sortDescriptors];
+	[sortDescriptors release];
+	[sortDescriptor release];
+	
+	// Execute the request
+	NSError *error;
+	NSMutableArray *mutableFetchResults=[[managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+	return mutableFetchResults;
+}
+
+- (int)indexOfCurrentWebsite {
+	if (website == nil) {
+		return 0;
+	}
+	NSMutableArray *websitesArray=[self arrayOfWebsites];
+	return [websitesArray indexOfObject:website];
+}
+
  // Implement viewWillAppear: to do additional setup before the view is presented. You might, for example, fetch objects from the managed object context if necessary.
 - (void)viewWillAppear:(BOOL)animated {
 	NSLog(@"MainViewController::viewWillAppear");
@@ -36,28 +64,14 @@
 	[selectWebsiteButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
 
 	if (website == nil) {
-		// verify if there are websites
-		// ----------------------------
-		// Create a request of Websites contained in the managedObjectContext
-		NSFetchRequest *request = [[NSFetchRequest alloc] init];
-		NSEntityDescription *entity = [NSEntityDescription entityForName:@"Website" inManagedObjectContext:managedObjectContext];
-		[request setEntity:entity];
-		
-		// sort the result by url name
-		NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"url" ascending:YES];
-		NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-		[request setSortDescriptors:sortDescriptors];
-		[sortDescriptors release];
-		[sortDescriptor release];
-		
-		// Execute the request
-		NSError *error;
-		NSMutableArray *mutableFetchResults=[[managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+		NSMutableArray *mutableFetchResults=[self arrayOfWebsites];
 		if ([mutableFetchResults count] == 0) {
 			[selectWebsiteButton setEnabled:NO];
 		} else {
 			[selectWebsiteButton setEnabled:YES];
-			website = [mutableFetchResults lastObject];
+			int lastIndex=[[NSUserDefaults standardUserDefaults] integerForKey:@"lastSelectedIndex"];
+			// NSLog(@"[user default] selectedIndex = %@",[NSNumber numberWithInt:lastIndex]);
+			website = [mutableFetchResults objectAtIndex:lastIndex];
 		}
 	} else {
 		[selectWebsiteButton setEnabled:YES];
@@ -185,6 +199,8 @@
 // Modal view for details
 - (void)detailViewControllerDidFinish:(DetailViewController *)controller {
     [self dismissModalViewControllerAnimated:YES];
+	[[NSUserDefaults standardUserDefaults] setInteger:[self indexOfCurrentWebsite] forKey:@"lastSelectedIndex"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 - (IBAction)adjustProperties:(id)sender {
     DetailViewController *controller = [[DetailViewController alloc] initWithNibName:@"DetailView" bundle:nil];

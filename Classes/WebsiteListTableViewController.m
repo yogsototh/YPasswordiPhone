@@ -128,6 +128,9 @@
 	Website *website = [websiteArray objectAtIndex:indexPath.row];
 	// NSLog(@" ==> website = %@, %@, %@, %@, %@", website.url, website.login, (website.base64==[NSNumber numberWithBool:YES])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
 	[[websiteListViewController delegate] setWebsite:website];
+	// NSLog(@"[set user default] lastSelectedIndex = %@", [NSNumber numberWithInt:indexPath.row]);
+	[[NSUserDefaults standardUserDefaults] setInteger:indexPath.row forKey:@"lastSelectedIndex"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
 	[[websiteListViewController delegate] websiteListViewControllerDidFinish:websiteListViewController];
 }
 
