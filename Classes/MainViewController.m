@@ -49,7 +49,7 @@
 	return mutableFetchResults;
 }
 
-- (int)indexOfCurrentWebsite {
+- (NSUInteger)indexOfCurrentWebsite {
 	if (website == nil) {
 		return 0;
 	}
