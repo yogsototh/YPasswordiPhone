@@ -36,5 +36,6 @@
 - (IBAction)chooseWebsite:(id)sender;
 
 - (void)updatePassword;
+- (void)displayCopiedAnimation;
 
 @end

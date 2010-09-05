@@ -159,8 +159,17 @@
 		password=[self hex_sha1:baseString];
 	}
 	password=[password substringToIndex:MIN([website.passwordLength intValue],[password length])];
+	
+	UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+	pasteboard.string = password;
+	
+	[self displayCopiedAnimation];
 
 	[passwordLabel setText:password];
+}
+
+- (void) displayCopiedAnimation {
+	
 }
 
 // Filpside view
