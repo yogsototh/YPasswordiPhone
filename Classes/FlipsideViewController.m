@@ -23,6 +23,8 @@
 	} else {
 		[doneButton setEnabled:NO];
 	}
+	
+	[preferenceSwitch setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"saveMasterPassword"]];
 }
 
 
@@ -34,6 +36,12 @@
 	if ([[masterPasswordTextField text] length]) {
 		[doneButton setEnabled:YES];
 		[[self delegate] setMasterPassword:[masterPasswordTextField text]];
+		NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+		if ([defaults boolForKey:@"saveMasterPassword"]) {
+			[defaults setObject:[masterPasswordTextField text] forKey:@"masterPassword"];
+			[defaults synchronize];
+		}
+		
 	} else {
 		[doneButton setEnabled:NO];
 	}
@@ -43,6 +51,18 @@
     NSURL *target = [[NSURL alloc] initWithString:@"http://yannesposito.com"];
 	[[UIApplication sharedApplication] openURL:target];
 	[target release];
+}
+
+- (IBAction)switchedPreference:(UISwitch *)sender {
+	NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+	if (sender.on) {
+		[defaults setBool:YES forKey:@"saveMasterPassword"]; 
+		[defaults setObject:[masterPasswordTextField text] forKey:@"masterPassword"];
+	} else {
+		[defaults setBool:NO forKey:@"saveMasterPassword"];
+		[defaults setObject:nil forKey:@"masterPassword"];
+	}
+	[defaults synchronize];	
 }
 
 - (void)didReceiveMemoryWarning {

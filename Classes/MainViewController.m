@@ -63,6 +63,10 @@
 	[detailViewButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
 	[selectWebsiteButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
 
+	if (masterPassword == nil) {
+		masterPassword=[[NSUserDefaults standardUserDefaults] objectForKey:@"masterPassword"];
+	}
+	
 	if (website == nil) {
 		NSMutableArray *mutableFetchResults=[self arrayOfWebsites];
 		if ([mutableFetchResults count] == 0) {

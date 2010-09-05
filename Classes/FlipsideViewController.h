@@ -13,6 +13,7 @@
 
 @interface FlipsideViewController : UIViewController {
     IBOutlet UITextField *masterPasswordTextField;
+    IBOutlet UISwitch *preferenceSwitch;
 	IBOutlet id doneButton;
 	id <FlipsideViewControllerDelegate> delegate;
 }
@@ -21,6 +22,7 @@
 - (IBAction)done:(id)sender;
 - (IBAction)masterPasswordTextFieldChanged:(id)sender;
 - (IBAction)clickedToWebSite:(id)sender;
+- (IBAction)switchedPreference:(UISwitch *)sender;
 @end
 
 
