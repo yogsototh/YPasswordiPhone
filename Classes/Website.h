@@ -19,6 +19,9 @@
 @property (nonatomic, retain) NSNumber * passwordLength;
 @property (nonatomic, retain) NSNumber * passwordNumber;
 
+// Return the domainname from the url
+- (NSString *)domainName;
+
 @end
 
 

@@ -17,4 +17,35 @@
 @dynamic passwordLength;
 @dynamic passwordNumber;
 
+
+// Return the domainName of a string
+- (NSString *)domainName {
+	NSString *aUrlString=self.url;
+	NSString *searchSubstring = @"://";
+	NSRange range = [aUrlString rangeOfString : searchSubstring];
+	NSURL *url;
+	if (range.location == NSNotFound) {
+		url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://%@", aUrlString]];
+	} else {
+		url = [[NSURL alloc] initWithString:aUrlString];
+	}
+	
+	
+	if (! url) {
+		NSLog(@"domainName: not an url");		
+		[url release];
+		return aUrlString;
+	}
+	
+	NSString *host=url.host;
+	
+	NSArray *components=[host componentsSeparatedByString:@"."];
+	if (components.count > 1) {
+		return [NSString stringWithFormat:@"%@.%@",[components objectAtIndex:components.count-2], [components objectAtIndex:components.count-1]];		
+	} else {
+		return aUrlString;
+	}
+	[url release];
+}
+
 @end
