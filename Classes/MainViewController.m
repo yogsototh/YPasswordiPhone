@@ -147,7 +147,9 @@
 	// when entering this function
     NSLog(@" [mainViewController::updatePassword] ==> website = %@, %@, %@, %@, %@", website.url, website.login, (website.base64==[NSNumber numberWithBool:YES])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
 
-	baseString=[NSString stringWithFormat:@"%@%@%@",masterPassword, [website.passwordNumber intValue]?[website.passwordNumber stringValue]:@"", website.url];
+	baseString=[NSString stringWithFormat:@"%@%@%@",masterPassword, 
+				[website.passwordNumber intValue]?[website.passwordNumber stringValue]:@"", website.domainName];
+	NSLog(@"Update Password baseString = %@",baseString);
 
 	NSString *password;
 	NSLog(@"Update Password website.base64 = %@ %@",website.base64, [NSNumber numberWithBool:YES]);
