@@ -57,6 +57,24 @@
 	return [websitesArray indexOfObject:website];
 }
 
+/*
+- (void) setWebsiteFromPasteboardValue {
+	UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+	if (pasteboard.string.length == 0) {
+		return;
+	}
+	NSURL *url=[[NSURL alloc] initWithString:pasteboard.string];
+	if (url) {
+		Website *newWebsite=(Website *)[NSEntityDescription insertNewObjectForEntityForName:@"Website" inManagedObjectContext:managedObjectContext];
+		newWebsite.url=url.host;
+		newWebsite.login=url.user;
+		self.website=newWebsite;
+		[self save];
+	}
+	[url release];
+}
+*/
+
  // Implement viewWillAppear: to do additional setup before the view is presented. You might, for example, fetch objects from the managed object context if necessary.
 - (void)viewWillAppear:(BOOL)animated {
 	NSLog(@"MainViewController::viewWillAppear");
@@ -140,6 +158,7 @@
 	[self sha1:inputString result:result];
 	return [self hexadecimalRepresentation:result];
 }
+
 
 - (void)updatePassword {
 	NSString *baseString;
