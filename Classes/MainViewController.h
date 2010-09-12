@@ -37,5 +37,6 @@
 
 - (void)updatePassword;
 - (void)displayCopiedAnimation;
+- (int)save;
 
 @end
