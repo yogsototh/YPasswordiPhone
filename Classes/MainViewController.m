@@ -93,7 +93,12 @@
 			[selectWebsiteButton setEnabled:YES];
 			int lastIndex=[[NSUserDefaults standardUserDefaults] integerForKey:@"lastSelectedIndex"];
 			// NSLog(@"[user default] selectedIndex = %@",[NSNumber numberWithInt:lastIndex]);
-			website = [mutableFetchResults objectAtIndex:lastIndex];
+			if ([mutableFetchResults count]>lastIndex) {
+				website = [mutableFetchResults objectAtIndex:lastIndex];				
+			} else {
+				website = nil;
+			}
+
 		}
 	} else {
 		[selectWebsiteButton setEnabled:YES];

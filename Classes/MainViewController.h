@@ -21,6 +21,7 @@
 	IBOutlet UILabel *passwordLabel;
 	IBOutlet UIButton *detailViewButton;
 	IBOutlet UIButton *selectWebsiteButton;
+	IBOutlet UIButton *addButton;
 	Website *website;
 	NSManagedObjectContext *managedObjectContext;
 	NSString *masterPassword;

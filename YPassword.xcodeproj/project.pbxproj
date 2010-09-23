@@ -25,6 +25,9 @@
 		F8420AEC11F8F8BB007979B0 /* WebsiteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8420AEB11F8F8BB007979B0 /* WebsiteListViewController.m */; };
 		F8420AEF11F8F8C6007979B0 /* WebsiteListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8420AED11F8F8C6007979B0 /* WebsiteListNavigationController.m */; };
 		F8420AF211F8F8D0007979B0 /* WebsiteListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8420AF111F8F8D0007979B0 /* WebsiteListTableViewController.m */; };
+		F856D86B124BD79B0039CC19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F856D86A124BD79B0039CC19 /* QuartzCore.framework */; };
+		F856D87F124BDB160039CC19 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F856D87E124BDB160039CC19 /* CustomButton.m */; };
+		F8CBA055123ED7A0007A7B33 /* mainBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F8CBA054123ED7A0007A7B33 /* mainBack.png */; };
 		F8EB82AA11F31E8E0035424C /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EB82A911F31E8E0035424C /* Website.m */; };
 		F8EB831511F332910035424C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F8EB831411F332910035424C /* background.png */; };
 		F8EB831811F333BF0035424C /* backgroundClair.png in Resources */ = {isa = PBXBuildFile; fileRef = F8EB831711F333BF0035424C /* backgroundClair.png */; };
@@ -59,10 +62,14 @@
 		F8420AEE11F8F8C6007979B0 /* WebsiteListNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebsiteListNavigationController.h; path = Classes/WebsiteListNavigationController.h; sourceTree = "<group>"; };
 		F8420AF011F8F8D0007979B0 /* WebsiteListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebsiteListTableViewController.h; path = Classes/WebsiteListTableViewController.h; sourceTree = "<group>"; };
 		F8420AF111F8F8D0007979B0 /* WebsiteListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebsiteListTableViewController.m; path = Classes/WebsiteListTableViewController.m; sourceTree = "<group>"; };
+		F856D86A124BD79B0039CC19 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F856D87D124BDB160039CC19 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		F856D87E124BDB160039CC19 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		F8CBA054123ED7A0007A7B33 /* mainBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainBack.png; path = resources/mainBack.png; sourceTree = "<group>"; };
 		F8EB82A811F31E8E0035424C /* Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Website.h; path = Classes/Website.h; sourceTree = "<group>"; };
 		F8EB82A911F31E8E0035424C /* Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Website.m; path = Classes/Website.m; sourceTree = "<group>"; };
-		F8EB831411F332910035424C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		F8EB831711F333BF0035424C /* backgroundClair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundClair.png; sourceTree = "<group>"; };
+		F8EB831411F332910035424C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = resources/background.png; sourceTree = "<group>"; };
+		F8EB831711F333BF0035424C /* backgroundClair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundClair.png; path = resources/backgroundClair.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +81,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */,
 				2880DEA310926BF800CC57B2 /* CoreData.framework in Frameworks */,
+				F856D86B124BD79B0039CC19 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +139,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				F856D86A124BD79B0039CC19 /* QuartzCore.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -140,6 +149,8 @@
 			children = (
 				32CA4F630368D1EE00C91783 /* YPassword_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				F856D87D124BDB160039CC19 /* CustomButton.h */,
+				F856D87E124BDB160039CC19 /* CustomButton.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -202,6 +213,7 @@
 		F8EB834611F37BF40035424C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F8CBA054123ED7A0007A7B33 /* mainBack.png */,
 				F8EB831411F332910035424C /* background.png */,
 				F8EB831711F333BF0035424C /* backgroundClair.png */,
 			);
@@ -267,6 +279,7 @@
 				F8EB831511F332910035424C /* background.png in Resources */,
 				F8EB831811F333BF0035424C /* backgroundClair.png in Resources */,
 				F8420ADF11F8F3B5007979B0 /* WebsiteListView.xib in Resources */,
+				F8CBA055123ED7A0007A7B33 /* mainBack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +300,7 @@
 				F8420AEC11F8F8BB007979B0 /* WebsiteListViewController.m in Sources */,
 				F8420AEF11F8F8C6007979B0 /* WebsiteListNavigationController.m in Sources */,
 				F8420AF211F8F8D0007979B0 /* WebsiteListTableViewController.m in Sources */,
+				F856D87F124BDB160039CC19 /* CustomButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
