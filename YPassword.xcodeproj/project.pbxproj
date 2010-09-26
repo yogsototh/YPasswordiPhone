@@ -19,6 +19,9 @@
 		288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
 		289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233A90DB2D0DB0083E9F9 /* MainViewController.m */; };
 		289233B00DB2D0DB0083E9F9 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233AD0DB2D0DB0083E9F9 /* FlipsideViewController.m */; };
+		F80260E3124F2756007CE5A7 /* YShadowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F80260E2124F2756007CE5A7 /* YShadowLabel.m */; };
+		F8026220124F2BDA007CE5A7 /* mainBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F802621F124F2BDA007CE5A7 /* mainBack.png */; };
+		F8026222124F2C01007CE5A7 /* highlightedBox.png in Resources */ = {isa = PBXBuildFile; fileRef = F8026221124F2C01007CE5A7 /* highlightedBox.png */; };
 		F82C93F311EDAA0300F00BF4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82C93F111EDAA0300F00BF4 /* DetailViewController.m */; };
 		F82C93F411EDAA0300F00BF4 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F82C93F211EDAA0300F00BF4 /* DetailView.xib */; };
 		F8420ADF11F8F3B5007979B0 /* WebsiteListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8420ADE11F8F3B5007979B0 /* WebsiteListView.xib */; };
@@ -26,8 +29,7 @@
 		F8420AEF11F8F8C6007979B0 /* WebsiteListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8420AED11F8F8C6007979B0 /* WebsiteListNavigationController.m */; };
 		F8420AF211F8F8D0007979B0 /* WebsiteListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8420AF111F8F8D0007979B0 /* WebsiteListTableViewController.m */; };
 		F856D86B124BD79B0039CC19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F856D86A124BD79B0039CC19 /* QuartzCore.framework */; };
-		F856D87F124BDB160039CC19 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F856D87E124BDB160039CC19 /* CustomButton.m */; };
-		F8CBA055123ED7A0007A7B33 /* mainBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F8CBA054123ED7A0007A7B33 /* mainBack.png */; };
+		F856D87F124BDB160039CC19 /* YRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F856D87E124BDB160039CC19 /* YRoundedButton.m */; };
 		F8EB82AA11F31E8E0035424C /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EB82A911F31E8E0035424C /* Website.m */; };
 		F8EB831511F332910035424C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F8EB831411F332910035424C /* background.png */; };
 		F8EB831811F333BF0035424C /* backgroundClair.png in Resources */ = {isa = PBXBuildFile; fileRef = F8EB831711F333BF0035424C /* backgroundClair.png */; };
@@ -52,6 +54,10 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* YPassword_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPassword_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* YPassword-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "YPassword-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		F80260E1124F2756007CE5A7 /* YShadowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YShadowLabel.h; sourceTree = "<group>"; };
+		F80260E2124F2756007CE5A7 /* YShadowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YShadowLabel.m; sourceTree = "<group>"; };
+		F802621F124F2BDA007CE5A7 /* mainBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainBack.png; path = resources/mainBack.png; sourceTree = "<group>"; };
+		F8026221124F2C01007CE5A7 /* highlightedBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = highlightedBox.png; path = resources/highlightedBox.png; sourceTree = "<group>"; };
 		F82C93F011EDAA0300F00BF4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F82C93F111EDAA0300F00BF4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F82C93F211EDAA0300F00BF4 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
@@ -63,9 +69,8 @@
 		F8420AF011F8F8D0007979B0 /* WebsiteListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebsiteListTableViewController.h; path = Classes/WebsiteListTableViewController.h; sourceTree = "<group>"; };
 		F8420AF111F8F8D0007979B0 /* WebsiteListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebsiteListTableViewController.m; path = Classes/WebsiteListTableViewController.m; sourceTree = "<group>"; };
 		F856D86A124BD79B0039CC19 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		F856D87D124BDB160039CC19 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
-		F856D87E124BDB160039CC19 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
-		F8CBA054123ED7A0007A7B33 /* mainBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainBack.png; path = resources/mainBack.png; sourceTree = "<group>"; };
+		F856D87D124BDB160039CC19 /* YRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRoundedButton.h; sourceTree = "<group>"; };
+		F856D87E124BDB160039CC19 /* YRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRoundedButton.m; sourceTree = "<group>"; };
 		F8EB82A811F31E8E0035424C /* Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Website.h; path = Classes/Website.h; sourceTree = "<group>"; };
 		F8EB82A911F31E8E0035424C /* Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Website.m; path = Classes/Website.m; sourceTree = "<group>"; };
 		F8EB831411F332910035424C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = resources/background.png; sourceTree = "<group>"; };
@@ -149,8 +154,10 @@
 			children = (
 				32CA4F630368D1EE00C91783 /* YPassword_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
-				F856D87D124BDB160039CC19 /* CustomButton.h */,
-				F856D87E124BDB160039CC19 /* CustomButton.m */,
+				F856D87D124BDB160039CC19 /* YRoundedButton.h */,
+				F856D87E124BDB160039CC19 /* YRoundedButton.m */,
+				F80260E1124F2756007CE5A7 /* YShadowLabel.h */,
+				F80260E2124F2756007CE5A7 /* YShadowLabel.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -213,7 +220,8 @@
 		F8EB834611F37BF40035424C /* images */ = {
 			isa = PBXGroup;
 			children = (
-				F8CBA054123ED7A0007A7B33 /* mainBack.png */,
+				F802621F124F2BDA007CE5A7 /* mainBack.png */,
+				F8026221124F2C01007CE5A7 /* highlightedBox.png */,
 				F8EB831411F332910035424C /* background.png */,
 				F8EB831711F333BF0035424C /* backgroundClair.png */,
 			);
@@ -279,7 +287,8 @@
 				F8EB831511F332910035424C /* background.png in Resources */,
 				F8EB831811F333BF0035424C /* backgroundClair.png in Resources */,
 				F8420ADF11F8F3B5007979B0 /* WebsiteListView.xib in Resources */,
-				F8CBA055123ED7A0007A7B33 /* mainBack.png in Resources */,
+				F8026220124F2BDA007CE5A7 /* mainBack.png in Resources */,
+				F8026222124F2C01007CE5A7 /* highlightedBox.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +309,8 @@
 				F8420AEC11F8F8BB007979B0 /* WebsiteListViewController.m in Sources */,
 				F8420AEF11F8F8C6007979B0 /* WebsiteListNavigationController.m in Sources */,
 				F8420AF211F8F8D0007979B0 /* WebsiteListTableViewController.m in Sources */,
-				F856D87F124BDB160039CC19 /* CustomButton.m in Sources */,
+				F856D87F124BDB160039CC19 /* YRoundedButton.m in Sources */,
+				F80260E3124F2756007CE5A7 /* YShadowLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
