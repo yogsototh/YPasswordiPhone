@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="79"/>
+			<integer value="1"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -201,9 +201,9 @@
 						<int key="NSvFlags">301</int>
 						<string key="NSFrame">{{20, 392}, {88, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<object class="NSColor" key="IBUIBackgroundColor" id="398227435">
+						<object class="NSColor" key="IBUIBackgroundColor" id="916947081">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwIDAgMC4zMDAwMDAwMTE5AA</bytes>
+							<bytes key="NSRGB">MCAwIDAgMC4wNTAwMDAwMDA3NQA</bytes>
 						</object>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -233,7 +233,7 @@
 						<int key="NSvFlags">301</int>
 						<string key="NSFrame">{{212, 392}, {88, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="IBUIBackgroundColor" ref="398227435"/>
+						<reference key="IBUIBackgroundColor" ref="916947081"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -249,7 +249,7 @@
 						<int key="NSvFlags">301</int>
 						<string key="NSFrame">{{116, 392}, {88, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="IBUIBackgroundColor" ref="398227435"/>
+						<reference key="IBUIBackgroundColor" ref="916947081"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>

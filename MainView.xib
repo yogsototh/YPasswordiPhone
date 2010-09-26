@@ -93,11 +93,12 @@
 						<int key="NSvFlags">301</int>
 						<string key="NSFrame">{{20, 20}, {180, 36}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
-						<object class="NSColor" key="IBUIBackgroundColor" id="723378114">
+						<object class="NSColor" key="IBUIBackgroundColor" id="54364807">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwIDAgMC4zMDAwMDAwMTE5AA</bytes>
+							<bytes key="NSRGB">MCAwIDAgMC4wNTAwMDAwMDA3NQA</bytes>
 						</object>
 						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
@@ -116,9 +117,9 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
-						<object class="NSColor" key="IBUINormalTitleColor" id="474119845">
+						<object class="NSColor" key="IBUINormalTitleColor" id="782600239">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4wOTgwMzkyMTcyOSAwLjA5ODAzOTIxNzI5IDAuMDk4MDM5MjE3MjkAA</bytes>
+							<bytes key="NSRGB">MC4yOTgwMzkyMjc3IDAuMjk4MDM5MjI3NyAwLjI5ODAzOTIyNzcAA</bytes>
 						</object>
 						<object class="NSColor" key="IBUIHighlightedTitleShadowColor" id="152940903">
 							<int key="NSColorSpace">3</int>
@@ -137,11 +138,9 @@
 						<int key="NSvFlags">301</int>
 						<string key="NSFrame">{{257, 20}, {37, 37}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwIDAgMC4zMDAwMDAwMTE5AA</bytes>
-						</object>
+						<reference key="IBUIBackgroundColor" ref="54364807"/>
 						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
@@ -151,7 +150,7 @@
 						<reference key="IBUIHighlightedTitleColor" ref="434791292"/>
 						<reference key="IBUIDisabledTitleColor" ref="948767636"/>
 						<reference key="IBUISelectedTitleColor" ref="946510055"/>
-						<reference key="IBUINormalTitleColor" ref="474119845"/>
+						<reference key="IBUINormalTitleColor" ref="782600239"/>
 						<reference key="IBUIHighlightedTitleShadowColor" ref="152940903"/>
 						<reference key="IBUINormalTitleShadowColor" ref="811936051"/>
 					</object>
@@ -240,8 +239,9 @@
 						<int key="NSvFlags">301</int>
 						<string key="NSFrame">{{69, 351}, {180, 37}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
-						<reference key="IBUIBackgroundColor" ref="723378114"/>
+						<reference key="IBUIBackgroundColor" ref="54364807"/>
 						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
@@ -251,7 +251,7 @@
 						<reference key="IBUIHighlightedTitleColor" ref="434791292"/>
 						<reference key="IBUIDisabledTitleColor" ref="948767636"/>
 						<reference key="IBUISelectedTitleColor" ref="946510055"/>
-						<reference key="IBUINormalTitleColor" ref="474119845"/>
+						<reference key="IBUINormalTitleColor" ref="782600239"/>
 						<reference key="IBUIHighlightedTitleShadowColor" ref="152940903"/>
 						<reference key="IBUINormalTitleShadowColor" ref="811936051"/>
 					</object>
@@ -526,7 +526,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">89</int>
+			<int key="maxID">90</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
