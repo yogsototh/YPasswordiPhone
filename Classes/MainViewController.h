@@ -10,6 +10,7 @@
 #import "DetailViewController.h"
 #import "WebsiteListViewController.h"
 #import "Website.h"
+#import "YRoundedButton.h"
 #import <CoreData/CoreData.h>
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate, 
@@ -19,9 +20,9 @@
     IBOutlet UILabel *loginLabel;
     IBOutlet UILabel *urlLabel;
 	IBOutlet UILabel *passwordLabel;
-	IBOutlet UIButton *detailViewButton;
-	IBOutlet UIButton *selectWebsiteButton;
-	IBOutlet UIButton *addButton;
+	IBOutlet YRoundedButton *detailViewButton;
+	IBOutlet YRoundedButton *selectWebsiteButton;
+	IBOutlet YRoundedButton *addButton;
 	Website *website;
 	NSManagedObjectContext *managedObjectContext;
 	NSString *masterPassword;
@@ -39,5 +40,6 @@
 - (void)updatePassword;
 - (void)displayCopiedAnimation;
 - (int)save;
+
 
 @end

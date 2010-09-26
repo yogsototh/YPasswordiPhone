@@ -75,9 +75,22 @@
 }
 */
 
+- (void) awakeFromNib
+{
+	[detailViewButton setTopColor      : [UIColor whiteColor]];
+	[detailViewButton setBottomColor   : [UIColor grayColor]];
+	[addButton setTopColor             : [UIColor whiteColor]];
+	[addButton setBottomColor          : [UIColor grayColor]];
+	[selectWebsiteButton setTopColor   : [UIColor whiteColor]];
+	[selectWebsiteButton setBottomColor: [UIColor grayColor]];
+}
+
  // Implement viewWillAppear: to do additional setup before the view is presented. You might, for example, fetch objects from the managed object context if necessary.
 - (void)viewWillAppear:(BOOL)animated {
 	NSLog(@"MainViewController::viewWillAppear");
+
+	NSLog(@"button initialized");
+	
 	[detailViewButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
 	[selectWebsiteButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
 
