@@ -11,25 +11,30 @@
 
 @implementation YShadowLabel
 
+@synthesize blurRadius;
 
 - (id)initWithFrame:(CGRect)frame {
-    if ((self = [super initWithFrame:frame])) {
+	if ((self = [super initWithFrame:frame])) {
         // Initialization code
+		self.blurRadius = [NSNumber numberWithFloat:5.0];
     }
     return self;
 }
 
+- (void)awakeFromNib {
+	// Initialization code
+	self.blurRadius = [NSNumber numberWithFloat:5.0];
+}
+
 - (void) drawTextInRect:(CGRect)rect {
-    CGSize myShadowOffset = CGSizeMake(0, 0);
-    float myColorValues[] = {0.4, 1.0, 1.0, .8};
-	
     CGContextRef myContext = UIGraphicsGetCurrentContext();
     CGContextSaveGState(myContext);
 	
-    CGContextSetShadow (myContext, myShadowOffset, 1);
+    CGContextSetShadow (myContext, self.shadowOffset, 1);
     CGColorSpaceRef myColorSpace = CGColorSpaceCreateDeviceRGB();
-    CGColorRef myColor = CGColorCreate(myColorSpace, myColorValues);
-    CGContextSetShadowWithColor (myContext, myShadowOffset, 5, myColor);
+    CGColorRef myColor = [self.shadowColor CGColor];
+	NSLog(@"Blur: %@", self.blurRadius);
+    CGContextSetShadowWithColor (myContext, self.shadowOffset, (CGFloat)[self.blurRadius floatValue], myColor);
 	
     [super drawTextInRect:rect];
 	

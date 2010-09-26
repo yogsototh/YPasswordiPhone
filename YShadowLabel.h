@@ -10,7 +10,9 @@
 
 
 @interface YShadowLabel : UILabel {
-
+	NSNumber *blurRadius;
 }
+
+@property (nonatomic, retain) NSNumber *blurRadius;
 
 @end
