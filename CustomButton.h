@@ -1,5 +1,5 @@
 //
-//  CustomButton.h
+//  YRoundedButton.h
 //  YPassword
 //
 //  Created by Yann Esposito on 23/09/10.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface CustomButton : UIButton {
+@interface YRoundedButton : UIButton {
 
 }
 
