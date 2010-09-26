@@ -38,7 +38,6 @@
 	
     [super drawTextInRect:rect];
 	
-    CGColorRelease(myColor);
     CGColorSpaceRelease(myColorSpace); 
 	
     CGContextRestoreGState(myContext);
