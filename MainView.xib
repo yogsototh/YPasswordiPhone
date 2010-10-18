@@ -45,7 +45,7 @@
 					<object class="IBUIImageView" id="778925132">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{-1, -20}, {320, 480}}</string>
+						<string key="NSFrame">{{0, -20}, {320, 480}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -73,7 +73,7 @@
 							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
 						</object>
-						<int key="IBUIButtonType">4</int>
+						<int key="IBUIButtonType">3</int>
 						<bool key="IBUIShowsTouchWhenHighlighted">YES</bool>
 						<object class="NSColor" key="IBUIHighlightedTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -125,12 +125,9 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="NSColor" key="IBUINormalTitleShadowColor" id="811936051">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MC43NQA</bytes>
-							<object class="NSColorSpace" key="NSCustomColorSpace" id="418392751">
-								<int key="NSID">2</int>
-							</object>
+						<object class="NSColor" key="IBUINormalTitleShadowColor" id="470727306">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC42MDAwMDAwMjM4IDAuNjAwMDAwMDIzOCAwLjYwMDAwMDAyMzgAA</bytes>
 						</object>
 					</object>
 					<object class="IBUIButton" id="896124826">
@@ -152,7 +149,7 @@
 						<reference key="IBUISelectedTitleColor" ref="946510055"/>
 						<reference key="IBUINormalTitleColor" ref="782600239"/>
 						<reference key="IBUIHighlightedTitleShadowColor" ref="152940903"/>
-						<reference key="IBUINormalTitleShadowColor" ref="811936051"/>
+						<reference key="IBUINormalTitleShadowColor" ref="470727306"/>
 					</object>
 					<object class="IBUILabel" id="760101631">
 						<reference key="NSNextResponder" ref="883825266"/>
@@ -222,14 +219,9 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">URL</string>
 						<reference key="IBUIFont" ref="345593437"/>
-						<object class="NSColor" key="IBUITextColor">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MC41AA</bytes>
-							<reference key="NSCustomColorSpace" ref="418392751"/>
-						</object>
+						<reference key="IBUITextColor" ref="470727306"/>
 						<nil key="IBUIHighlightedColor"/>
-						<reference key="IBUIShadowColor" ref="946510055"/>
-						<string key="IBUIShadowOffset">{0, 1}</string>
+						<reference key="IBUIShadowColor" ref="434791292"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
@@ -242,6 +234,9 @@
 						<reference key="IBUIBackgroundColor" ref="54364807"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
+						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
+							<integer value="5" key="IBUIAccessibilityTraits"/>
+						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
@@ -253,12 +248,12 @@
 						<reference key="IBUISelectedTitleColor" ref="946510055"/>
 						<reference key="IBUINormalTitleColor" ref="782600239"/>
 						<reference key="IBUIHighlightedTitleShadowColor" ref="152940903"/>
-						<reference key="IBUINormalTitleShadowColor" ref="811936051"/>
+						<reference key="IBUINormalTitleShadowColor" ref="470727306"/>
 					</object>
 					<object class="IBUILabel" id="954827974">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{33, 269}, {250, 17}}</string>
+						<string key="NSFrame">{{33, 273}, {250, 17}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -286,7 +281,9 @@
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MC4yNQA</bytes>
-					<reference key="NSCustomColorSpace" ref="418392751"/>
+					<object class="NSColorSpace" key="NSCustomColorSpace">
+						<int key="NSID">2</int>
+					</object>
 				</object>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
@@ -408,13 +405,13 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="558454645"/>
 							<reference ref="760101631"/>
-							<reference ref="778925132"/>
 							<reference ref="924477413"/>
-							<reference ref="896124826"/>
-							<reference ref="745656760"/>
 							<reference ref="1007833097"/>
 							<reference ref="610213067"/>
 							<reference ref="954827974"/>
+							<reference ref="896124826"/>
+							<reference ref="745656760"/>
+							<reference ref="778925132"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -426,11 +423,6 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">44</int>
 						<reference key="object" ref="760101631"/>
-						<reference key="parent" ref="883825266"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">70</int>
-						<reference key="object" ref="896124826"/>
 						<reference key="parent" ref="883825266"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -461,6 +453,11 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">89</int>
 						<reference key="object" ref="954827974"/>
+						<reference key="parent" ref="883825266"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">70</int>
+						<reference key="object" ref="896124826"/>
 						<reference key="parent" ref="883825266"/>
 					</object>
 				</object>
@@ -526,7 +523,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">90</int>
+			<int key="maxID">94</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

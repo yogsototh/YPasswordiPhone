@@ -20,24 +20,30 @@
 	NSLog(@"YRoundedButton awakeFromNib");
 	gradientLayer=[[CAGradientLayer alloc] init];
 	[gradientLayer setBounds:[self bounds]];
-	[gradientLayer setPosition:CGPointMake([self bounds].size.width/2, [self bounds].size.height/2)];
-	
-	// [[self layer] insertSublayer:gradientLayer atIndex:0];
-	[[self layer] setCornerRadius: 8.0f];
-	[[self layer] setBorderColor:[[UIColor grayColor] CGColor]];
+	[gradientLayer setPosition:CGPointMake([self bounds].size.width/2, [self bounds].size.height/2)];	
+	[[self layer] insertSublayer:gradientLayer atIndex:0];
+	[[self layer] setBorderColor:[[[UIColor darkGrayColor] colorWithAlphaComponent:.8] CGColor]];
+	[[self layer] setCornerRadius: 4.0f];
 	[[self layer] setMasksToBounds:YES];
-	[[self layer] setBorderWidth:1.0f];
+	[[self layer] setBorderWidth:2.0f];
 }
-/*
+
 -(void)drawRect:(CGRect)rect
 {
 	if (topColor && bottomColor) {
+		NSLog(@"topColor and bottomColor setted");
 		[gradientLayer setColors:
 		 [NSArray arrayWithObjects:(id)[topColor CGColor], 
 								(id)[bottomColor CGColor], nil]];
+	} else {
+		[self setTopColor      : [[UIColor whiteColor] colorWithAlphaComponent:.5] ];
+		[self setBottomColor   : [[UIColor lightGrayColor]  colorWithAlphaComponent:.5] ];
+		[gradientLayer setColors:
+		 [NSArray arrayWithObjects:(id)[topColor CGColor], 
+		  (id)[bottomColor CGColor], nil]];
 	}
 	[super drawRect:rect];
-}*/
+}
 
 -(void)setTopColor:(UIColor *)aColor
 {
