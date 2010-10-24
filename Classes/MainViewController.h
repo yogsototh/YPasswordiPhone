@@ -20,6 +20,8 @@
     IBOutlet UILabel *loginLabel;
     IBOutlet UILabel *urlLabel;
 	IBOutlet UILabel *passwordLabel;
+	IBOutlet UIImageView *blueHighlightImage;
+	IBOutlet UIImageView *whiteHighlightImage;
 	IBOutlet YRoundedButton *detailViewButton;
 	IBOutlet YRoundedButton *selectWebsiteButton;
 	IBOutlet YRoundedButton *addButton;
@@ -36,9 +38,10 @@
 - (IBAction)adjustProperties:(id)sender;
 - (IBAction)addWebsite:(id)sender;
 - (IBAction)chooseWebsite:(id)sender;
+- (IBAction)copyPasswordToClipboard:(id)sender;
+- (IBAction)copyLoginToClipboard:(id)sender;
 
 - (void)updatePassword;
-- (void)displayCopiedAnimation;
 - (int)save;
 
 

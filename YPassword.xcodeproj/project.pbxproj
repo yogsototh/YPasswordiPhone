@@ -22,6 +22,9 @@
 		F80260E3124F2756007CE5A7 /* YShadowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F80260E2124F2756007CE5A7 /* YShadowLabel.m */; };
 		F8026220124F2BDA007CE5A7 /* mainBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F802621F124F2BDA007CE5A7 /* mainBack.png */; };
 		F8026222124F2C01007CE5A7 /* highlightedBox.png in Resources */ = {isa = PBXBuildFile; fileRef = F8026221124F2C01007CE5A7 /* highlightedBox.png */; };
+		F80B37EC1274E23600818FAF /* reverb520_51.png in Resources */ = {isa = PBXBuildFile; fileRef = F80B37EB1274E23600818FAF /* reverb520_51.png */; };
+		F80B37F01274E4C400818FAF /* blueHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = F80B37EF1274E4C400818FAF /* blueHighlight.png */; };
+		F80B37F31274E61700818FAF /* whiteHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = F80B37F21274E61700818FAF /* whiteHighlight.png */; };
 		F82C93F311EDAA0300F00BF4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82C93F111EDAA0300F00BF4 /* DetailViewController.m */; };
 		F82C93F411EDAA0300F00BF4 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F82C93F211EDAA0300F00BF4 /* DetailView.xib */; };
 		F8420ADF11F8F3B5007979B0 /* WebsiteListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8420ADE11F8F3B5007979B0 /* WebsiteListView.xib */; };
@@ -58,6 +61,9 @@
 		F80260E2124F2756007CE5A7 /* YShadowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YShadowLabel.m; sourceTree = "<group>"; };
 		F802621F124F2BDA007CE5A7 /* mainBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainBack.png; path = resources/mainBack.png; sourceTree = "<group>"; };
 		F8026221124F2C01007CE5A7 /* highlightedBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = highlightedBox.png; path = resources/highlightedBox.png; sourceTree = "<group>"; };
+		F80B37EB1274E23600818FAF /* reverb520_51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reverb520_51.png; path = resources/reverb520_51.png; sourceTree = "<group>"; };
+		F80B37EF1274E4C400818FAF /* blueHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueHighlight.png; path = resources/blueHighlight.png; sourceTree = "<group>"; };
+		F80B37F21274E61700818FAF /* whiteHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteHighlight.png; path = resources/whiteHighlight.png; sourceTree = "<group>"; };
 		F82C93F011EDAA0300F00BF4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F82C93F111EDAA0300F00BF4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F82C93F211EDAA0300F00BF4 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
@@ -220,6 +226,9 @@
 		F8EB834611F37BF40035424C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F80B37F21274E61700818FAF /* whiteHighlight.png */,
+				F80B37EF1274E4C400818FAF /* blueHighlight.png */,
+				F80B37EB1274E23600818FAF /* reverb520_51.png */,
 				F802621F124F2BDA007CE5A7 /* mainBack.png */,
 				F8026221124F2C01007CE5A7 /* highlightedBox.png */,
 				F8EB831411F332910035424C /* background.png */,
@@ -289,6 +298,9 @@
 				F8420ADF11F8F3B5007979B0 /* WebsiteListView.xib in Resources */,
 				F8026220124F2BDA007CE5A7 /* mainBack.png in Resources */,
 				F8026222124F2C01007CE5A7 /* highlightedBox.png in Resources */,
+				F80B37EC1274E23600818FAF /* reverb520_51.png in Resources */,
+				F80B37F01274E4C400818FAF /* blueHighlight.png in Resources */,
+				F80B37F31274E61700818FAF /* whiteHighlight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

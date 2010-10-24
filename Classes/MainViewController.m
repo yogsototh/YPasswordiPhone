@@ -177,6 +177,42 @@
 	return [self hexadecimalRepresentation:result];
 }
 
+- (IBAction)copyPasswordToClipboard:(id)sender {
+	NSLog(@"Copy Password");
+	if (passwordLabel.text == nil) {
+		return;
+	}
+	if ([passwordLabel.text isEqualToString:@""]) {
+		return;
+	}
+	UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+	pasteboard.string = passwordLabel.text;
+	[UIView beginAnimations:nil context:nil];
+	whiteHighlightImage.alpha=0.0;
+	blueHighlightImage.alpha=1.0;
+	[UIView commitAnimations];
+	NSLog(@"Copy Password done");
+
+}
+
+- (IBAction)copyLoginToClipboard:(id)sender {
+	NSLog(@"Copy Login");
+	if (loginLabel.text == nil) {
+		return;
+	}
+	if ([loginLabel.text isEqualToString:@""]) {
+		return;
+	}
+	UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+	pasteboard.string = loginLabel.text;
+	[UIView beginAnimations:nil context:nil];
+	whiteHighlightImage.alpha=1.0;
+	blueHighlightImage.alpha=0.0;
+	[UIView commitAnimations];
+	NSLog(@"Copy Login done");
+	
+}
+
 
 - (void)updatePassword {
 	NSString *baseString;
@@ -198,17 +234,8 @@
 		password=[self hex_sha1:baseString];
 	}
 	password=[password substringToIndex:MIN([website.passwordLength intValue],[password length])];
-	
-	UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-	pasteboard.string = password;
-	
-	[self displayCopiedAnimation];
-
+	// [self copyPasswordToClipboard];
 	[passwordLabel setText:password];
-}
-
-- (void) displayCopiedAnimation {
-	
 }
 
 // Filpside view
