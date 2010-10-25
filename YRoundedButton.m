@@ -22,10 +22,15 @@
 	[gradientLayer setBounds:[self bounds]];
 	[gradientLayer setPosition:CGPointMake([self bounds].size.width/2, [self bounds].size.height/2)];	
 	[[self layer] insertSublayer:gradientLayer atIndex:0];
-	[[self layer] setBorderColor:[[[UIColor darkGrayColor] colorWithAlphaComponent:.8] CGColor]];
-	[[self layer] setCornerRadius: 4.0f];
+	[[self layer] setBorderColor:[[[UIColor blackColor] colorWithAlphaComponent:.8] CGColor]];
+	[[self layer] setCornerRadius: 8.0f];
 	[[self layer] setMasksToBounds:YES];
-	[[self layer] setBorderWidth:2.0f];
+	[[self layer] setBorderWidth:1.5f];
+
+//	self.layer.shadowColor = [UIColor whiteColor].CGColor;
+//	self.layer.shadowOpacity=1.0;
+//	self.layer.shadowRadius=5.0;
+
 }
 
 -(void)drawRect:(CGRect)rect
@@ -36,13 +41,15 @@
 		 [NSArray arrayWithObjects:(id)[topColor CGColor], 
 								(id)[bottomColor CGColor], nil]];
 	} else {
-		[self setTopColor      : [[UIColor whiteColor] colorWithAlphaComponent:.5] ];
-		[self setBottomColor   : [[UIColor lightGrayColor]  colorWithAlphaComponent:.5] ];
+		[self setTopColor      : [[UIColor darkGrayColor] colorWithAlphaComponent:.5] ];
+		[self setBottomColor   : [[UIColor blackColor]  colorWithAlphaComponent:.5] ];
 		[gradientLayer setColors:
 		 [NSArray arrayWithObjects:(id)[topColor CGColor], 
 		  (id)[bottomColor CGColor], nil]];
 	}
+
 	[super drawRect:rect];
+		
 }
 
 -(void)setTopColor:(UIColor *)aColor

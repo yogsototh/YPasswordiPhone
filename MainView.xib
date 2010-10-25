@@ -94,9 +94,9 @@
 						<int key="NSvFlags">301</int>
 						<string key="NSFrame">{{20, 20}, {180, 36}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
-						<object class="NSColor" key="IBUIBackgroundColor" id="54364807">
+						<object class="NSColor" key="IBUIBackgroundColor" id="776701916">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwIDAgMC4wNTAwMDAwMDA3NQA</bytes>
+							<bytes key="NSRGB">MC40MDAwMDAwMDYgMC40MDAwMDAwMDYgMC40MDAwMDAwMDYAA</bytes>
 						</object>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -104,11 +104,11 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="1010960991"/>
-						<string key="IBUITitleShadowOffset">{0, 1}</string>
+						<string key="IBUITitleShadowOffset">{0, -1}</string>
 						<string key="IBUINormalTitle">Customize</string>
-						<object class="NSColor" key="IBUIHighlightedTitleColor" id="434791292">
+						<object class="NSColor" key="IBUIHighlightedTitleColor" id="474738758">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwIDAAA</bytes>
+							<bytes key="NSRGB">MC40OTUzMzQwODg4IDAuNzA1MzUwMTYwNiAwLjgzNTc5NjgzMwA</bytes>
 						</object>
 						<object class="NSColor" key="IBUIDisabledTitleColor" id="948767636">
 							<int key="NSColorSpace">3</int>
@@ -118,17 +118,21 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
-						<object class="NSColor" key="IBUINormalTitleColor" id="782600239">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4yOTgwMzkyMjc3IDAuMjk4MDM5MjI3NyAwLjI5ODAzOTIyNzcAA</bytes>
-						</object>
-						<object class="NSColor" key="IBUIHighlightedTitleShadowColor" id="152940903">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MC41AA</bytes>
-						</object>
-						<object class="NSColor" key="IBUINormalTitleShadowColor" id="470727306">
+						<object class="NSColor" key="IBUINormalTitleColor" id="613672229">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC42MDAwMDAwMjM4IDAuNjAwMDAwMDIzOCAwLjYwMDAwMDAyMzgAA</bytes>
+						</object>
+						<object class="NSColor" key="IBUIHighlightedTitleShadowColor" id="38719093">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MCAwLjAyMDQ1MjU4NjkzIDAuNDEzMjY1Mjg3OQA</bytes>
+						</object>
+						<object class="NSColor" key="IBUIDisabledTitleShadowColor" id="54364807">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MCAwIDAgMC4wNTAwMDAwMDA3NQA</bytes>
+						</object>
+						<object class="NSColor" key="IBUINormalTitleShadowColor" id="788108443">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4wNjY2NjY2NzAxNCAwLjA2NjY2NjY3MDE0IDAuMDY2NjY2NjcwMTQAA</bytes>
 						</object>
 					</object>
 					<object class="IBUIButton" id="896124826">
@@ -136,21 +140,22 @@
 						<int key="NSvFlags">301</int>
 						<string key="NSFrame">{{257, 20}, {37, 37}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
-						<reference key="IBUIBackgroundColor" ref="54364807"/>
+						<reference key="IBUIBackgroundColor" ref="776701916"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="1010960991"/>
-						<string key="IBUITitleShadowOffset">{0, 1}</string>
+						<string key="IBUITitleShadowOffset">{0, -1}</string>
 						<string key="IBUINormalTitle">+</string>
-						<reference key="IBUIHighlightedTitleColor" ref="434791292"/>
+						<reference key="IBUIHighlightedTitleColor" ref="474738758"/>
 						<reference key="IBUIDisabledTitleColor" ref="948767636"/>
 						<reference key="IBUISelectedTitleColor" ref="946510055"/>
-						<reference key="IBUINormalTitleColor" ref="782600239"/>
-						<reference key="IBUIHighlightedTitleShadowColor" ref="152940903"/>
-						<reference key="IBUINormalTitleShadowColor" ref="470727306"/>
+						<reference key="IBUINormalTitleColor" ref="613672229"/>
+						<reference key="IBUIHighlightedTitleShadowColor" ref="38719093"/>
+						<reference key="IBUIDisabledTitleShadowColor" ref="54364807"/>
+						<reference key="IBUINormalTitleShadowColor" ref="788108443"/>
 					</object>
 					<object class="IBUILabel" id="760101631">
 						<reference key="NSNextResponder" ref="883825266"/>
@@ -227,7 +232,10 @@
 							<bytes key="NSRGB">MSAxIDEgMC42MDAwMDAwMjM4AA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
-						<reference key="IBUIShadowColor" ref="434791292"/>
+						<object class="NSColor" key="IBUIShadowColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MCAwIDAAA</bytes>
+						</object>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
@@ -237,7 +245,7 @@
 						<int key="NSvFlags">301</int>
 						<string key="NSFrame">{{69, 351}, {180, 37}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
-						<reference key="IBUIBackgroundColor" ref="54364807"/>
+						<reference key="IBUIBackgroundColor" ref="776701916"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
@@ -247,14 +255,15 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="1010960991"/>
-						<string key="IBUITitleShadowOffset">{0, 1}</string>
+						<string key="IBUITitleShadowOffset">{0, -1}</string>
 						<string key="IBUINormalTitle">Select Website</string>
-						<reference key="IBUIHighlightedTitleColor" ref="434791292"/>
+						<reference key="IBUIHighlightedTitleColor" ref="474738758"/>
 						<reference key="IBUIDisabledTitleColor" ref="948767636"/>
 						<reference key="IBUISelectedTitleColor" ref="946510055"/>
-						<reference key="IBUINormalTitleColor" ref="782600239"/>
-						<reference key="IBUIHighlightedTitleShadowColor" ref="152940903"/>
-						<reference key="IBUINormalTitleShadowColor" ref="470727306"/>
+						<reference key="IBUINormalTitleColor" ref="613672229"/>
+						<reference key="IBUIHighlightedTitleShadowColor" ref="38719093"/>
+						<reference key="IBUIDisabledTitleShadowColor" ref="54364807"/>
+						<reference key="IBUINormalTitleShadowColor" ref="788108443"/>
 					</object>
 					<object class="IBUILabel" id="954827974">
 						<reference key="NSNextResponder" ref="883825266"/>
@@ -353,7 +362,10 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NiAwAA</bytes>
 						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="152940903"/>
+						<object class="NSColor" key="IBUINormalTitleShadowColor" id="152940903">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MC41AA</bytes>
+						</object>
 					</object>
 					<object class="IBUIButton" id="624120662">
 						<reference key="NSNextResponder" ref="883825266"/>
@@ -540,11 +552,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="558454645"/>
 							<reference ref="760101631"/>
-							<reference ref="924477413"/>
 							<reference ref="610213067"/>
 							<reference ref="954827974"/>
-							<reference ref="896124826"/>
-							<reference ref="745656760"/>
 							<reference ref="778925132"/>
 							<reference ref="728263477"/>
 							<reference ref="621109866"/>
@@ -553,6 +562,9 @@
 							<reference ref="1007833097"/>
 							<reference ref="642899072"/>
 							<reference ref="624120662"/>
+							<reference ref="924477413"/>
+							<reference ref="896124826"/>
+							<reference ref="745656760"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
