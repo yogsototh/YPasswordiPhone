@@ -310,7 +310,6 @@
 						<string key="NSFrame">{{10, 207.5}, {300, 90}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<bool key="IBUIOpaque">NO</bool>
-						<float key="IBUIAlpha">0.0</float>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
 							<integer value="260" key="IBUIAccessibilityTraits"/>
