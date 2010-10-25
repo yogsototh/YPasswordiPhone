@@ -41,6 +41,7 @@
 - (IBAction)copyPasswordToClipboard:(id)sender;
 - (IBAction)copyLoginToClipboard:(id)sender;
 
+- (void)hideHilight;
 - (void)updatePassword;
 - (int)save;
 

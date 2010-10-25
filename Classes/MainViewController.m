@@ -132,6 +132,7 @@
 		[detailViewButton setEnabled:NO];
 	}
 
+	[self hideHilight];
     [super viewWillAppear:animated];
 }
 
@@ -213,6 +214,12 @@
 	
 }
 
+- (void)hideHilight {
+	[UIView beginAnimations:nil context:nil];
+	whiteHighlightImage.alpha=0.0;
+	blueHighlightImage.alpha=0.0;
+	[UIView commitAnimations];
+}
 
 - (void)updatePassword {
 	NSString *baseString;
