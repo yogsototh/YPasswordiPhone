@@ -132,7 +132,7 @@
 		[detailViewButton setEnabled:NO];
 	}
 
-	[self hideHilight];
+	[self initHilight];
     [super viewWillAppear:animated];
 }
 
@@ -188,10 +188,7 @@
 	}
 	UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
 	pasteboard.string = passwordLabel.text;
-	[UIView beginAnimations:nil context:nil];
-	whiteHighlightImage.alpha=0.0;
-	blueHighlightImage.alpha=0.6;
-	[UIView commitAnimations];
+	[self highlightPassword];
 	NSLog(@"Copy Password done");
 
 }
@@ -206,14 +203,40 @@
 	}
 	UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
 	pasteboard.string = loginLabel.text;
-	[UIView beginAnimations:nil context:nil];
-	whiteHighlightImage.alpha=0.6;
-	blueHighlightImage.alpha=0.0;
-	[UIView commitAnimations];
+	[self highlightLogin];
 	NSLog(@"Copy Login done");
 	
 }
 
+- (void)initHilight {
+	UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+	
+	if (![loginLabel.text isEqualToString:@""] ) {
+		if ([pasteboard.string isEqualToString:loginLabel.text]) {
+			[self highlightLogin];
+			return;
+		}
+	}
+	if (![passwordLabel.text isEqualToString:@""] ) {
+		if ([pasteboard.string isEqualToString:passwordLabel.text]) {
+			[self highlightPassword];
+			return;
+		}
+	}
+	[self hideHilight];
+}
+- (void)highlightPassword {
+	[UIView beginAnimations:nil context:nil];
+	whiteHighlightImage.alpha=0.0;
+	blueHighlightImage.alpha=0.6;
+	[UIView commitAnimations];
+}
+- (void)highlightLogin {
+	[UIView beginAnimations:nil context:nil];
+	whiteHighlightImage.alpha=0.6;
+	blueHighlightImage.alpha=0.0;
+	[UIView commitAnimations];
+}
 - (void)hideHilight {
 	[UIView beginAnimations:nil context:nil];
 	whiteHighlightImage.alpha=0.0;
