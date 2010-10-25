@@ -189,7 +189,7 @@
 	pasteboard.string = passwordLabel.text;
 	[UIView beginAnimations:nil context:nil];
 	whiteHighlightImage.alpha=0.0;
-	blueHighlightImage.alpha=1.0;
+	blueHighlightImage.alpha=0.6;
 	[UIView commitAnimations];
 	NSLog(@"Copy Password done");
 
@@ -206,7 +206,7 @@
 	UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
 	pasteboard.string = loginLabel.text;
 	[UIView beginAnimations:nil context:nil];
-	whiteHighlightImage.alpha=1.0;
+	whiteHighlightImage.alpha=0.6;
 	blueHighlightImage.alpha=0.0;
 	[UIView commitAnimations];
 	NSLog(@"Copy Login done");
