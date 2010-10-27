@@ -226,22 +226,38 @@
 	[self hideHilight];
 }
 - (void)highlightPassword {
-	[UIView beginAnimations:nil context:nil];
-	whiteHighlightImage.alpha=0.0;
-	blueHighlightImage.alpha=0.6;
-	[UIView commitAnimations];
+    [UIView animateWithDuration:0.3 
+					 animations:^{
+						 whiteHighlightImage.alpha=0.0;
+						 blueHighlightImage.alpha=0.8;
+					 } 
+					 completion:^(BOOL finished){
+						 [UIView animateWithDuration:3.0 delay:0.0 
+											 options:UIViewAnimationOptionRepeat|UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionAutoreverse 
+										  animations:^{blueHighlightImage.alpha=0.3;} 
+										  completion:^(BOOL finished){}];
+					 }];
 }
 - (void)highlightLogin {
-	[UIView beginAnimations:nil context:nil];
-	whiteHighlightImage.alpha=0.6;
-	blueHighlightImage.alpha=0.0;
-	[UIView commitAnimations];
+	[UIView animateWithDuration:0.3 
+					 animations:^{
+						 blueHighlightImage.alpha=0.0;
+						 whiteHighlightImage.alpha=0.8;
+					 } 
+					 completion:^(BOOL finished){
+						 [UIView animateWithDuration:3.0 delay:0.0 
+											 options:UIViewAnimationOptionRepeat|UIViewAnimationOptionCurveEaseOut|UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionAutoreverse 
+										  animations:^{whiteHighlightImage.alpha=0.3;} 
+										  completion:^(BOOL finished){}];
+					 }];
 }
 - (void)hideHilight {
-	[UIView beginAnimations:nil context:nil];
-	whiteHighlightImage.alpha=0.0;
-	blueHighlightImage.alpha=0.0;
-	[UIView commitAnimations];
+	[UIView animateWithDuration:0.3 
+					 animations:^{
+						 whiteHighlightImage.alpha=0.0;
+						 blueHighlightImage.alpha=0.0;
+					 } 
+					 completion:^(BOOL finished){}];
 }
 
 - (void)updatePassword {
