@@ -32,6 +32,7 @@
 		F8420AEF11F8F8C6007979B0 /* WebsiteListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8420AED11F8F8C6007979B0 /* WebsiteListNavigationController.m */; };
 		F8420AF211F8F8D0007979B0 /* WebsiteListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8420AF111F8F8D0007979B0 /* WebsiteListTableViewController.m */; };
 		F842B9271278C1CB00120BFB /* detailBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F842B9261278C1CB00120BFB /* detailBack.png */; };
+		F842B98D1278D53900120BFB /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F842B98C1278D53900120BFB /* iAd.framework */; };
 		F856D86B124BD79B0039CC19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F856D86A124BD79B0039CC19 /* QuartzCore.framework */; };
 		F856D87F124BDB160039CC19 /* YRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F856D87E124BDB160039CC19 /* YRoundedButton.m */; };
 		F8EB82AA11F31E8E0035424C /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EB82A911F31E8E0035424C /* Website.m */; };
@@ -76,6 +77,7 @@
 		F8420AF011F8F8D0007979B0 /* WebsiteListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebsiteListTableViewController.h; path = Classes/WebsiteListTableViewController.h; sourceTree = "<group>"; };
 		F8420AF111F8F8D0007979B0 /* WebsiteListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebsiteListTableViewController.m; path = Classes/WebsiteListTableViewController.m; sourceTree = "<group>"; };
 		F842B9261278C1CB00120BFB /* detailBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = detailBack.png; path = resources/detailBack.png; sourceTree = "<group>"; };
+		F842B98C1278D53900120BFB /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		F856D86A124BD79B0039CC19 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F856D87D124BDB160039CC19 /* YRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRoundedButton.h; sourceTree = "<group>"; };
 		F856D87E124BDB160039CC19 /* YRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRoundedButton.m; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */,
 				2880DEA310926BF800CC57B2 /* CoreData.framework in Frameworks */,
 				F856D86B124BD79B0039CC19 /* QuartzCore.framework in Frameworks */,
+				F842B98D1278D53900120BFB /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +191,7 @@
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765580DF743DE002DB57D /* CoreGraphics.framework */,
 				2880DEA210926BF800CC57B2 /* CoreData.framework */,
+				F842B98C1278D53900120BFB /* iAd.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
