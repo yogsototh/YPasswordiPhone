@@ -31,6 +31,7 @@
 		F8420AEC11F8F8BB007979B0 /* WebsiteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8420AEB11F8F8BB007979B0 /* WebsiteListViewController.m */; };
 		F8420AEF11F8F8C6007979B0 /* WebsiteListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8420AED11F8F8C6007979B0 /* WebsiteListNavigationController.m */; };
 		F8420AF211F8F8D0007979B0 /* WebsiteListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8420AF111F8F8D0007979B0 /* WebsiteListTableViewController.m */; };
+		F842B9271278C1CB00120BFB /* detailBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F842B9261278C1CB00120BFB /* detailBack.png */; };
 		F856D86B124BD79B0039CC19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F856D86A124BD79B0039CC19 /* QuartzCore.framework */; };
 		F856D87F124BDB160039CC19 /* YRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F856D87E124BDB160039CC19 /* YRoundedButton.m */; };
 		F8EB82AA11F31E8E0035424C /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EB82A911F31E8E0035424C /* Website.m */; };
@@ -74,6 +75,7 @@
 		F8420AEE11F8F8C6007979B0 /* WebsiteListNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebsiteListNavigationController.h; path = Classes/WebsiteListNavigationController.h; sourceTree = "<group>"; };
 		F8420AF011F8F8D0007979B0 /* WebsiteListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebsiteListTableViewController.h; path = Classes/WebsiteListTableViewController.h; sourceTree = "<group>"; };
 		F8420AF111F8F8D0007979B0 /* WebsiteListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebsiteListTableViewController.m; path = Classes/WebsiteListTableViewController.m; sourceTree = "<group>"; };
+		F842B9261278C1CB00120BFB /* detailBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = detailBack.png; path = resources/detailBack.png; sourceTree = "<group>"; };
 		F856D86A124BD79B0039CC19 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F856D87D124BDB160039CC19 /* YRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRoundedButton.h; sourceTree = "<group>"; };
 		F856D87E124BDB160039CC19 /* YRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRoundedButton.m; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 		F8EB834611F37BF40035424C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F842B9261278C1CB00120BFB /* detailBack.png */,
 				F80B37F21274E61700818FAF /* whiteHighlight.png */,
 				F80B37EF1274E4C400818FAF /* blueHighlight.png */,
 				F80B37EB1274E23600818FAF /* reverb520_51.png */,
@@ -301,6 +304,7 @@
 				F80B37EC1274E23600818FAF /* reverb520_51.png in Resources */,
 				F80B37F01274E4C400818FAF /* blueHighlight.png in Resources */,
 				F80B37F31274E61700818FAF /* whiteHighlight.png in Resources */,
+				F842B9271278C1CB00120BFB /* detailBack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
