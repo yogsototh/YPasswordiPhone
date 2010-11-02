@@ -22,14 +22,10 @@
 	[gradientLayer setBounds:[self bounds]];
 	[gradientLayer setPosition:CGPointMake([self bounds].size.width/2, [self bounds].size.height/2)];	
 	[[self layer] insertSublayer:gradientLayer atIndex:0];
-	[[self layer] setBorderColor:[[[UIColor blackColor] colorWithAlphaComponent:.8] CGColor]];
-	[[self layer] setCornerRadius: 8.0f];
+	[[self layer] setBorderColor:[[[UIColor blackColor] colorWithAlphaComponent:.7] CGColor]];
+	[[self layer] setCornerRadius: 4.0f];
 	[[self layer] setMasksToBounds:YES];
-	[[self layer] setBorderWidth:1.5f];
-
-//	self.layer.shadowColor = [UIColor whiteColor].CGColor;
-//	self.layer.shadowOpacity=1.0;
-//	self.layer.shadowRadius=5.0;
+	[[self layer] setBorderWidth:1.0f];
 
 }
 

@@ -34,6 +34,8 @@
 		F842B9271278C1CB00120BFB /* detailBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F842B9261278C1CB00120BFB /* detailBack.png */; };
 		F856D86B124BD79B0039CC19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F856D86A124BD79B0039CC19 /* QuartzCore.framework */; };
 		F856D87F124BDB160039CC19 /* YRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F856D87E124BDB160039CC19 /* YRoundedButton.m */; };
+		F8E488C51280BAD400798F0B /* square_button.png in Resources */ = {isa = PBXBuildFile; fileRef = F8E488C31280BAD400798F0B /* square_button.png */; };
+		F8E488D31280BFD700798F0B /* button_1x3.png in Resources */ = {isa = PBXBuildFile; fileRef = F8E488D21280BFD700798F0B /* button_1x3.png */; };
 		F8EB82AA11F31E8E0035424C /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EB82A911F31E8E0035424C /* Website.m */; };
 		F8EB831511F332910035424C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F8EB831411F332910035424C /* background.png */; };
 		F8EB831811F333BF0035424C /* backgroundClair.png in Resources */ = {isa = PBXBuildFile; fileRef = F8EB831711F333BF0035424C /* backgroundClair.png */; };
@@ -79,6 +81,8 @@
 		F856D86A124BD79B0039CC19 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F856D87D124BDB160039CC19 /* YRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRoundedButton.h; sourceTree = "<group>"; };
 		F856D87E124BDB160039CC19 /* YRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRoundedButton.m; sourceTree = "<group>"; };
+		F8E488C31280BAD400798F0B /* square_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = square_button.png; path = resources/square_button.png; sourceTree = "<group>"; };
+		F8E488D21280BFD700798F0B /* button_1x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_1x3.png; path = resources/button_1x3.png; sourceTree = "<group>"; };
 		F8EB82A811F31E8E0035424C /* Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Website.h; path = Classes/Website.h; sourceTree = "<group>"; };
 		F8EB82A911F31E8E0035424C /* Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Website.m; path = Classes/Website.m; sourceTree = "<group>"; };
 		F8EB831411F332910035424C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = resources/background.png; sourceTree = "<group>"; };
@@ -228,6 +232,8 @@
 		F8EB834611F37BF40035424C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F8E488D21280BFD700798F0B /* button_1x3.png */,
+				F8E488C31280BAD400798F0B /* square_button.png */,
 				F842B9261278C1CB00120BFB /* detailBack.png */,
 				F80B37F21274E61700818FAF /* whiteHighlight.png */,
 				F80B37EF1274E4C400818FAF /* blueHighlight.png */,
@@ -305,6 +311,8 @@
 				F80B37F01274E4C400818FAF /* blueHighlight.png in Resources */,
 				F80B37F31274E61700818FAF /* whiteHighlight.png in Resources */,
 				F842B9271278C1CB00120BFB /* detailBack.png in Resources */,
+				F8E488C51280BAD400798F0B /* square_button.png in Resources */,
+				F8E488D31280BFD700798F0B /* button_1x3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

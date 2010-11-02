@@ -22,9 +22,9 @@
 	IBOutlet UILabel *passwordLabel;
 	IBOutlet UIImageView *blueHighlightImage;
 	IBOutlet UIImageView *whiteHighlightImage;
-	IBOutlet YRoundedButton *detailViewButton;
-	IBOutlet YRoundedButton *selectWebsiteButton;
-	IBOutlet YRoundedButton *addButton;
+	IBOutlet UIButton *detailViewButton;
+	IBOutlet UIButton *selectWebsiteButton;
+	IBOutlet UIButton *addButton;
 	Website *website;
 	NSManagedObjectContext *managedObjectContext;
 	NSString *masterPassword;
