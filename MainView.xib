@@ -92,7 +92,7 @@
 					<object class="IBUIButton" id="924477413">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">301</int>
-						<string key="NSFrame">{{28, 20}, {64, 64}}</string>
+						<string key="NSFrame">{{20, 11}, {64, 64}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -104,6 +104,7 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="1010960991"/>
+						<bool key="IBUIAdjustsImageWhenHighlighted">NO</bool>
 						<string key="IBUITitleShadowOffset">{0, 1}</string>
 						<string key="IBUINormalTitle">Edit</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="221937191">
@@ -134,6 +135,10 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC44MDAwMDAwMTE5IDAuODAwMDAwMDExOSAwLjgwMDAwMDAxMTkAA</bytes>
 						</object>
+						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="134990375">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">highlight_square_button.png</string>
+						</object>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="250966576">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">square_button.png</string>
@@ -142,7 +147,7 @@
 					<object class="IBUIButton" id="896124826">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">301</int>
-						<string key="NSFrame">{{228, 20}, {64, 64}}</string>
+						<string key="NSFrame">{{236, 11}, {64, 64}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -158,6 +163,7 @@
 							<double key="NSSize">24</double>
 							<int key="NSfFlags">16</int>
 						</object>
+						<bool key="IBUIAdjustsImageWhenHighlighted">NO</bool>
 						<string key="IBUITitleShadowOffset">{0, 1}</string>
 						<string key="IBUINormalTitle">+</string>
 						<reference key="IBUIHighlightedTitleColor" ref="221937191"/>
@@ -173,6 +179,7 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC44MDAwMDAwMTE5IDAuODAwMDAwMDExOSAwLjgwMDAwMDAxMTkAA</bytes>
 						</object>
+						<reference key="IBUIHighlightedBackgroundImage" ref="134990375"/>
 						<reference key="IBUINormalBackgroundImage" ref="250966576"/>
 					</object>
 					<object class="IBUILabel" id="760101631">
@@ -261,7 +268,7 @@
 					<object class="IBUIButton" id="745656760">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">301</int>
-						<string key="NSFrame">{{61, 319}, {196, 64}}</string>
+						<string key="NSFrame">{{62, 334}, {196, 64}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -276,6 +283,7 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="1010960991"/>
+						<bool key="IBUIAdjustsImageWhenHighlighted">NO</bool>
 						<string key="IBUITitleShadowOffset">{0, 1}</string>
 						<string key="IBUINormalTitle">List</string>
 						<reference key="IBUIHighlightedTitleColor" ref="221937191"/>
@@ -290,6 +298,10 @@
 						<object class="NSColor" key="IBUINormalTitleShadowColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC44MDAwMDAwMTE5IDAuODAwMDAwMDExOSAwLjgwMDAwMDAxMTkAA</bytes>
+						</object>
+						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">higlighted_button_1x3.png</string>
 						</object>
 						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
@@ -599,9 +611,9 @@
 							<reference ref="1007833097"/>
 							<reference ref="558454645"/>
 							<reference ref="964690342"/>
+							<reference ref="778925132"/>
 							<reference ref="896124826"/>
 							<reference ref="924477413"/>
-							<reference ref="778925132"/>
 							<reference ref="745656760"/>
 						</object>
 						<reference key="parent" ref="0"/>
@@ -1146,6 +1158,8 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>blueHighlight.png</string>
 				<string>button_1x3.png</string>
+				<string>highlight_square_button.png</string>
+				<string>higlighted_button_1x3.png</string>
 				<string>mainBack.png</string>
 				<string>reverb520_51.png</string>
 				<string>square_button.png</string>
@@ -1154,7 +1168,9 @@
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{600, 180}</string>
-				<string>{1536, 512}</string>
+				<string>{768, 256}</string>
+				<string>{512, 512}</string>
+				<string>{768, 256}</string>
 				<string>{640, 960}</string>
 				<string>{520, 51}</string>
 				<string>{512, 512}</string>

@@ -19,17 +19,6 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	/*
-	[detailViewButton setTopColor      : [UIColor whiteColor]];
-	[detailViewButton setBottomColor   : [UIColor grayColor]];
-
-	[addButton setTopColor             : [UIColor whiteColor]];
-	[addButton setBottomColor          : [UIColor grayColor]];
-
-	[selectWebsiteButton setTopColor   : [UIColor whiteColor]];
-	[selectWebsiteButton setBottomColor: [UIColor grayColor]];
-	NSLog(@"button initialized");
-	 */
 }
 - (void)viewDidAppear:(BOOL)animated {
 	if (!masterPassword) {
