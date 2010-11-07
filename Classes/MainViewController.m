@@ -11,47 +11,49 @@
 
 @implementation MainViewController
 
+#pragma mark standard
+
 @synthesize managedObjectContext;
 @synthesize website;
 @synthesize masterPassword;
 
 
+/*
+- (void)didReceiveMemoryWarning {
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc. that aren't in use.
+}
+ */
+
+/*
+
+- (void)viewDidUnload {
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+ 
+ */
+
+
+
+
+- (void)dealloc {
+    [managedObjectContext release];
+    [super dealloc];
+}
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+/*
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
+ */
 - (void)viewDidAppear:(BOOL)animated {
 	if (!masterPassword) {
 		[self showInfo:self];
 	}
-}
-
-- (NSMutableArray *)arrayOfWebsites {
-	// ----------------------------
-	// Create a request of Websites contained in the managedObjectContext
-	NSFetchRequest *request = [[NSFetchRequest alloc] init];
-	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Website" inManagedObjectContext:managedObjectContext];
-	[request setEntity:entity];
-	
-	// sort the result by url name
-	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"url" ascending:YES];
-	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-	[request setSortDescriptors:sortDescriptors];
-	[sortDescriptors release];
-	[sortDescriptor release];
-	
-	// Execute the request
-	NSError *error;
-	NSMutableArray *mutableFetchResults=[[managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
-	return mutableFetchResults;
-}
-
-- (NSUInteger)indexOfCurrentWebsite {
-	if (website == nil) {
-		return 0;
-	}
-	NSMutableArray *websitesArray=[self arrayOfWebsites];
-	return [websitesArray indexOfObject:website];
 }
 
 /*
@@ -122,6 +124,85 @@
     [super viewWillAppear:animated];
 }
 
+#pragma mark internal_functions
+
+
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations.
+    // return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return YES;
+}
+
+
+- (NSMutableArray *)arrayOfWebsites {
+	// ----------------------------
+	// Create a request of Websites contained in the managedObjectContext
+	NSFetchRequest *request = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Website" inManagedObjectContext:managedObjectContext];
+	[request setEntity:entity];
+	
+	// sort the result by url name
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"url" ascending:YES];
+	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+	[request setSortDescriptors:sortDescriptors];
+	[sortDescriptors release];
+	[sortDescriptor release];
+	
+	// Execute the request
+	NSError *error;
+	NSMutableArray *mutableFetchResults=[[managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+	return mutableFetchResults;
+}
+
+- (NSUInteger)indexOfCurrentWebsite {
+	if (website == nil) {
+		return 0;
+	}
+	NSMutableArray *websitesArray=[self arrayOfWebsites];
+	return [websitesArray indexOfObject:website];
+}
+
+
+
+- (void)updatePassword {
+	NSString *baseString;
+	// notice by construction masterPassword is not null
+	// when entering this function
+    NSLog(@" [mainViewController::updatePassword] ==> website = %@, %@, %@, %@, %@", website.url, website.login, (website.base64==[NSNumber numberWithBool:YES])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
+	
+	baseString=[NSString stringWithFormat:@"%@%@%@",masterPassword, 
+				[website.passwordNumber intValue]?[website.passwordNumber stringValue]:@"", website.domainName];
+	NSLog(@"Update Password baseString = %@",baseString);
+	
+	NSString *password;
+	NSLog(@"Update Password website.base64 = %@ %@",website.base64, [NSNumber numberWithBool:YES]);
+	if ([website.base64 isEqualToNumber:[NSNumber numberWithBool:YES]]) {
+		NSLog(@"b64");
+		password=[self b64_sha1:baseString];
+	} else {
+		NSLog(@"b16");
+		password=[self hex_sha1:baseString];
+	}
+	password=[password substringToIndex:MIN([website.passwordLength intValue],[password length])];
+	// [self copyPasswordToClipboard];
+	[passwordLabel setText:password];
+}
+
+
+- (int) save {
+	NSError *error;
+	if (![managedObjectContext save:&error]) {
+		NSLog(@"ERROR : save error : DetailViewController::next");
+		return -1;
+	} else {
+        NSLog(@"saved: %@ %@ %@ len: %@ num: %@", website.url, website.login, (website.base64 == [NSNumber numberWithBool:YES])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
+		return 0;
+	}
+}
+
+#pragma mark sha1_related
+
 - (unsigned char *)sha1:(NSString *)baseString result:(unsigned char *)result {
 	char *c_baseString=(char *)[baseString UTF8String];
 	CC_SHA1(c_baseString, strlen(c_baseString), result);
@@ -163,6 +244,8 @@
 	[self sha1:inputString result:result];
 	return [self hexadecimalRepresentation:result];
 }
+
+#pragma mark pasteboard
 
 - (IBAction)copyPasswordToClipboard:(id)sender {
 	NSLog(@"Copy Password");
@@ -246,29 +329,7 @@
 					 completion:^(BOOL finished){}];
 }
 
-- (void)updatePassword {
-	NSString *baseString;
-	// notice by construction masterPassword is not null
-	// when entering this function
-    NSLog(@" [mainViewController::updatePassword] ==> website = %@, %@, %@, %@, %@", website.url, website.login, (website.base64==[NSNumber numberWithBool:YES])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
-
-	baseString=[NSString stringWithFormat:@"%@%@%@",masterPassword, 
-				[website.passwordNumber intValue]?[website.passwordNumber stringValue]:@"", website.domainName];
-	NSLog(@"Update Password baseString = %@",baseString);
-
-	NSString *password;
-	NSLog(@"Update Password website.base64 = %@ %@",website.base64, [NSNumber numberWithBool:YES]);
-	if ([website.base64 isEqualToNumber:[NSNumber numberWithBool:YES]]) {
-		NSLog(@"b64");
-		password=[self b64_sha1:baseString];
-	} else {
-		NSLog(@"b16");
-		password=[self hex_sha1:baseString];
-	}
-	password=[password substringToIndex:MIN([website.passwordLength intValue],[password length])];
-	// [self copyPasswordToClipboard];
-	[passwordLabel setText:password];
-}
+#pragma mark actions_handling
 
 // Filpside view
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {
@@ -285,26 +346,27 @@
     [controller release];
 }
 
-- (int) save {
-	NSError *error;
-	if (![managedObjectContext save:&error]) {
-		NSLog(@"ERROR : save error : DetailViewController::next");
-		return -1;
-	} else {
-        NSLog(@"saved: %@ %@ %@ len: %@ num: %@", website.url, website.login, (website.base64 == [NSNumber numberWithBool:YES])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
-		return 0;
-	}
-}
 
 // Add a new website
 - (IBAction)addWebsite:(id)sender {
-	Website *newWebsite=(Website *)[NSEntityDescription insertNewObjectForEntityForName:@"Website" inManagedObjectContext:managedObjectContext];
-	newWebsite.url=@"new.com";
-	newWebsite.login=@"username";
-	self.website=newWebsite;
-    [self save];
+
+	AddViewController *controller = [[AddViewController alloc] initWithNibName:@"AddView" bundle:nil];
+	controller.delegate = self;
+	controller.managedObjectContext=managedObjectContext;
 	
-	[self adjustProperties:self];
+	controller.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+	[self presentModalViewController:controller animated:YES];
+	
+	[controller release];
+}
+
+// Modal view for details
+- (void)addViewControllerDidFinish:(AddViewController *)controller {
+	self.website= controller.website;
+	[self save];
+    [self dismissModalViewControllerAnimated:YES];
+	[[NSUserDefaults standardUserDefaults] setInteger:[self indexOfCurrentWebsite] forKey:@"lastSelectedIndex"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 // Modal view for details
@@ -338,37 +400,6 @@
 	[self presentModalViewController:controller animated:YES];
 	
 	[controller release];
-}
-
-
-#pragma mark standard
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc. that aren't in use.
-}
-
-
-- (void)viewDidUnload {
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-
-
- // Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    // return (interfaceOrientation == UIInterfaceOrientationPortrait);
-	return YES;
-}
-
-
-- (void)dealloc {
-    [managedObjectContext release];
-    [super dealloc];
 }
 
 

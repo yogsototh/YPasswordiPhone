@@ -6,15 +6,17 @@
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
+#import "Website.h"
 #import "FlipsideViewController.h"
+#import "AddViewController.h"
 #import "DetailViewController.h"
 #import "WebsiteListViewController.h"
-#import "Website.h"
 #import "YRoundedButton.h"
 #import <CoreData/CoreData.h>
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate, 
 													DetailViewControllerDelegate,
+													AddViewControllerDelegate,
 													WebsiteListViewControllerDelegate> 
 {
     IBOutlet UILabel *loginLabel;
@@ -47,6 +49,8 @@
 - (void)highlightPassword;
 - (void)updatePassword;
 - (int)save;
-
+- (NSMutableArray *)arrayOfWebsites ;
+- (NSString *)hex_sha1:(NSString *)inputString;
+- (NSString *)b64_sha1:(NSString *)inputString;
 
 @end

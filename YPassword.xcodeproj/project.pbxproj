@@ -34,6 +34,9 @@
 		F842B9271278C1CB00120BFB /* detailBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F842B9261278C1CB00120BFB /* detailBack.png */; };
 		F856D86B124BD79B0039CC19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F856D86A124BD79B0039CC19 /* QuartzCore.framework */; };
 		F856D87F124BDB160039CC19 /* YRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F856D87E124BDB160039CC19 /* YRoundedButton.m */; };
+		F8A8C3171286247E001F323F /* addBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F8A8C3161286247E001F323F /* addBackground.png */; };
+		F8A8C31B1286269A001F323F /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A8C31A1286269A001F323F /* AddViewController.m */; };
+		F8CC0745128610BD00978B79 /* AddView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8CC0744128610BD00978B79 /* AddView.xib */; };
 		F8DB1B9E12813813002C276B /* higlighted_button_1x3.png in Resources */ = {isa = PBXBuildFile; fileRef = F8DB1B9D12813813002C276B /* higlighted_button_1x3.png */; };
 		F8DB1BA61281398F002C276B /* highlight_square_button.png in Resources */ = {isa = PBXBuildFile; fileRef = F8DB1BA51281398F002C276B /* highlight_square_button.png */; };
 		F8E488C51280BAD400798F0B /* square_button.png in Resources */ = {isa = PBXBuildFile; fileRef = F8E488C31280BAD400798F0B /* square_button.png */; };
@@ -83,6 +86,10 @@
 		F856D86A124BD79B0039CC19 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F856D87D124BDB160039CC19 /* YRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRoundedButton.h; sourceTree = "<group>"; };
 		F856D87E124BDB160039CC19 /* YRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRoundedButton.m; sourceTree = "<group>"; };
+		F8A8C3161286247E001F323F /* addBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addBackground.png; path = resources/addBackground.png; sourceTree = "<group>"; };
+		F8A8C3191286269A001F323F /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		F8A8C31A1286269A001F323F /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		F8CC0744128610BD00978B79 /* AddView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddView.xib; sourceTree = "<group>"; };
 		F8DB1B9D12813813002C276B /* higlighted_button_1x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = higlighted_button_1x3.png; path = resources/higlighted_button_1x3.png; sourceTree = "<group>"; };
 		F8DB1BA51281398F002C276B /* highlight_square_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = highlight_square_button.png; path = resources/highlight_square_button.png; sourceTree = "<group>"; };
 		F8E488C31280BAD400798F0B /* square_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = square_button.png; path = resources/square_button.png; sourceTree = "<group>"; };
@@ -150,6 +157,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				F8CC07431286109100978B79 /* Add View */,
 				F8EB832E11F367AF0035424C /* Website List View */,
 				F8EB82B411F31EAA0035424C /* Entities */,
 				F82C93ED11EDA9CE00F00BF4 /* Detail View */,
@@ -210,6 +218,16 @@
 			name = "Detail View";
 			sourceTree = "<group>";
 		};
+		F8CC07431286109100978B79 /* Add View */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8C3191286269A001F323F /* AddViewController.h */,
+				F8A8C31A1286269A001F323F /* AddViewController.m */,
+				F8CC0744128610BD00978B79 /* AddView.xib */,
+			);
+			name = "Add View";
+			sourceTree = "<group>";
+		};
 		F8EB82B411F31EAA0035424C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +254,7 @@
 		F8EB834611F37BF40035424C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F8A8C3161286247E001F323F /* addBackground.png */,
 				F8DB1BA51281398F002C276B /* highlight_square_button.png */,
 				F8DB1B9D12813813002C276B /* higlighted_button_1x3.png */,
 				F8E488D21280BFD700798F0B /* button_1x3.png */,
@@ -321,6 +340,8 @@
 				F8E488D31280BFD700798F0B /* button_1x3.png in Resources */,
 				F8DB1B9E12813813002C276B /* higlighted_button_1x3.png in Resources */,
 				F8DB1BA61281398F002C276B /* highlight_square_button.png in Resources */,
+				F8CC0745128610BD00978B79 /* AddView.xib in Resources */,
+				F8A8C3171286247E001F323F /* addBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +364,7 @@
 				F8420AF211F8F8D0007979B0 /* WebsiteListTableViewController.m in Sources */,
 				F856D87F124BDB160039CC19 /* YRoundedButton.m in Sources */,
 				F80260E3124F2756007CE5A7 /* YShadowLabel.m in Sources */,
+				F8A8C31B1286269A001F323F /* AddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
