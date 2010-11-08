@@ -28,6 +28,7 @@
 		F83AFDAF12889E75004A18D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F83AFDAE12889E75004A18D5 /* QuartzCore.framework */; };
 		F83AFDB512889E8E004A18D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F83AFDB412889E8E004A18D5 /* UIKit.framework */; };
 		F83AFDBB12889E9A004A18D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F83AFDBA12889E9A004A18D5 /* Foundation.framework */; };
+		F83AFE021288AD6A004A18D5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F83AFE011288AD6A004A18D5 /* icon.png */; };
 		F8420ADF11F8F3B5007979B0 /* WebsiteListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8420ADE11F8F3B5007979B0 /* WebsiteListView.xib */; };
 		F8420AEC11F8F8BB007979B0 /* WebsiteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8420AEB11F8F8BB007979B0 /* WebsiteListViewController.m */; };
 		F8420AEF11F8F8C6007979B0 /* WebsiteListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8420AED11F8F8C6007979B0 /* WebsiteListNavigationController.m */; };
@@ -76,6 +77,7 @@
 		F83AFDAE12889E75004A18D5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F83AFDB412889E8E004A18D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F83AFDBA12889E9A004A18D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F83AFE011288AD6A004A18D5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = resources/icon.png; sourceTree = "<group>"; };
 		F8420ADE11F8F3B5007979B0 /* WebsiteListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebsiteListView.xib; sourceTree = "<group>"; };
 		F8420AEA11F8F8BB007979B0 /* WebsiteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebsiteListViewController.h; path = Classes/WebsiteListViewController.h; sourceTree = "<group>"; };
 		F8420AEB11F8F8BB007979B0 /* WebsiteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebsiteListViewController.m; path = Classes/WebsiteListViewController.m; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		F8EB834611F37BF40035424C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F83AFE011288AD6A004A18D5 /* icon.png */,
 				F8A8C3161286247E001F323F /* addBackground.png */,
 				F8DB1BA51281398F002C276B /* highlight_square_button.png */,
 				F8DB1B9D12813813002C276B /* higlighted_button_1x3.png */,
@@ -343,6 +346,7 @@
 				F8DB1BA61281398F002C276B /* highlight_square_button.png in Resources */,
 				F8CC0745128610BD00978B79 /* AddView.xib in Resources */,
 				F8A8C3171286247E001F323F /* addBackground.png in Resources */,
+				F83AFE021288AD6A004A18D5 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
