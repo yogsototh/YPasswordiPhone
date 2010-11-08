@@ -29,10 +29,11 @@
 
 - (void) _style_textField:(UITextField *)_textField {
 	_textField.layer.cornerRadius = 8.0f;
-	_textField.layer.shadowOpacity = 1.0;
+	_textField.layer.shadowOpacity = 0.9;
 	_textField.layer.shadowRadius = 0.0;
 	_textField.layer.shadowColor = [UIColor whiteColor].CGColor;  
 	_textField.layer.shadowOffset = CGSizeMake(0.0, 1.0);
+	// _textField.layer.shadowRadius = 2.0f;
 }
 
 - (void)viewDidLoad {
