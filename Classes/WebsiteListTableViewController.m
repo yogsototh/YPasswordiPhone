@@ -88,10 +88,12 @@
     // Dequeue or create a new cell
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
 	
-	cell.textLabel.text=[[[self websiteArray] objectAtIndex:indexPath.row] url];
+	Website *curWebsite=[[self websiteArray] objectAtIndex:indexPath.row];
+	cell.textLabel.text=[curWebsite url];
+	cell.detailTextLabel.text=[curWebsite login];
 	return cell;
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
