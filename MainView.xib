@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="86"/>
+			<integer value="34"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -247,7 +247,7 @@
 					<object class="IBUILabel" id="1007833097">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">301</int>
-						<string key="NSFrame">{{25, 88}, {269, 36}}</string>
+						<string key="NSFrame">{{33, 88}, {250, 36}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -442,6 +442,27 @@
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="152940903"/>
 					</object>
+					<object class="IBUIButton" id="215874210">
+						<reference key="NSNextResponder" ref="883825266"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{282, 97}, {27, 18}}</string>
+						<reference key="NSSuperview" ref="883825266"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIFont" ref="1010960991"/>
+						<reference key="IBUIHighlightedTitleColor" ref="946510055"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="152940903"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">arrow.png</string>
+						</object>
+					</object>
 				</object>
 				<string key="NSFrameSize">{320, 460}</string>
 				<reference key="NSSuperview"/>
@@ -578,6 +599,15 @@
 					</object>
 					<int key="connectionID">108</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">goToWebsite:</string>
+						<reference key="source" ref="215874210"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">110</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -615,10 +645,11 @@
 							<reference ref="1007833097"/>
 							<reference ref="558454645"/>
 							<reference ref="964690342"/>
-							<reference ref="778925132"/>
 							<reference ref="745656760"/>
 							<reference ref="924477413"/>
 							<reference ref="896124826"/>
+							<reference ref="778925132"/>
+							<reference ref="215874210"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -697,6 +728,11 @@
 						<reference key="object" ref="745656760"/>
 						<reference key="parent" ref="883825266"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">109</int>
+						<reference key="object" ref="215874210"/>
+						<reference key="parent" ref="883825266"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -707,6 +743,8 @@
 					<string>-2.CustomClassName</string>
 					<string>100.IBPluginDependency</string>
 					<string>103.IBPluginDependency</string>
+					<string>109.IBPluginDependency</string>
+					<string>109.IBViewBoundsToFrameTransform</string>
 					<string>34.IBEditorWindowLastContentRect</string>
 					<string>34.IBPluginDependency</string>
 					<string>36.IBPluginDependency</string>
@@ -720,6 +758,7 @@
 					<string>72.IBPluginDependency</string>
 					<string>72.IBViewBoundsToFrameTransform</string>
 					<string>86.IBPluginDependency</string>
+					<string>86.IBViewBoundsToFrameTransform</string>
 					<string>87.CustomClassName</string>
 					<string>87.IBPluginDependency</string>
 					<string>89.IBPluginDependency</string>
@@ -734,6 +773,10 @@
 					<string>UIResponder</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDiwAAwtoAAA</bytes>
+					</object>
 					<string>{{835, 481}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -753,6 +796,9 @@
 						<bytes key="NSTransformStruct">P4AAAL+AAABCbAAAw8IAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAw+UAAA</bytes>
+					</object>
 					<string>YShadowLabel</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -778,7 +824,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">108</int>
+			<int key="maxID">110</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -928,6 +974,17 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">MainViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">goToWebsite:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">goToWebsite:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">goToWebsite:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBUserSource</string>
 						<string key="minorKey"/>
@@ -1172,6 +1229,7 @@
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>arrow.png</string>
 				<string>blueHighlight.png</string>
 				<string>button_1x3.png</string>
 				<string>highlight_square_button.png</string>
@@ -1183,6 +1241,7 @@
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>{400, 300}</string>
 				<string>{600, 180}</string>
 				<string>{768, 256}</string>
 				<string>{512, 512}</string>

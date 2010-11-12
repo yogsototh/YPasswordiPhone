@@ -401,5 +401,19 @@
 	[controller release];
 }
 
+// go To website by copying the password into the pasteboard.
+- (IBAction)goToWebsite:(id)sender {
+	UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+	if (! (
+		   ( [pasteboard.string isEqualToString: passwordLabel.text] )
+		   || 
+		   ( [pasteboard.string isEqualToString: loginLabel.text] )
+		   ) ) {
+		[self copyPasswordToClipboard:self];
+	}
+	NSURL *url=[NSURL URLWithString:[NSString stringWithFormat:@"http://%@",website.url]];
+	[[UIApplication sharedApplication] openURL:url];
+
+}
 
 @end

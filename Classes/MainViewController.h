@@ -42,6 +42,7 @@
 - (IBAction)chooseWebsite:(id)sender;
 - (IBAction)copyPasswordToClipboard:(id)sender;
 - (IBAction)copyLoginToClipboard:(id)sender;
+- (IBAction)goToWebsite:(id)sender;
 
 - (void)initHilight;
 - (void)hideHilight;
