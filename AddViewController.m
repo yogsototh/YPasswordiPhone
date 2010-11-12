@@ -24,6 +24,13 @@
 	self.website=(Website *)[NSEntityDescription insertNewObjectForEntityForName:@"Website" inManagedObjectContext:managedObjectContext];
 	self.website.url=url.text;
 	self.website.login=login.text;
+
+	NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+	if ([defaults integerForKey:@"defaultMaxPasswordLength"]) {
+		self.website.passwordLength=
+			[NSNumber numberWithInt:[defaults integerForKey:@"defaultMaxPasswordLength"]];
+	}
+	
 	[delegate addViewControllerDidFinish:self];    
 }
 

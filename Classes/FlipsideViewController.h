@@ -15,6 +15,8 @@
     IBOutlet UITextField *masterPasswordTextField;
     IBOutlet UISwitch *preferenceSwitch;
 	IBOutlet id doneButton;
+	IBOutlet UILabel *defaultMaxPasswordLengthLabel;
+	IBOutlet UISlider *slider;
 	id <FlipsideViewControllerDelegate> delegate;
 }
 
@@ -23,6 +25,7 @@
 - (IBAction)masterPasswordTextFieldChanged:(id)sender;
 - (IBAction)clickedToWebSite:(id)sender;
 - (IBAction)switchedPreference:(UISwitch *)sender;
+- (IBAction)sliderChanged:(id)sender;
 @end
 
 

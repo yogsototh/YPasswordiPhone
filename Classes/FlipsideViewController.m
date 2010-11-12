@@ -24,7 +24,16 @@
 		[doneButton setEnabled:NO];
 	}
 	
-	[preferenceSwitch setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"saveMasterPassword"]];
+	NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+	
+	[preferenceSwitch setOn:[defaults boolForKey:@"saveMasterPassword"]];
+
+	int passLength=10;
+	if ([defaults integerForKey:@"defaultMaxPasswordLength"]) {
+		passLength=[defaults integerForKey:@"defaultMaxPasswordLength"];
+	}
+	[slider setValue:(float)passLength];
+	[defaultMaxPasswordLengthLabel setText:[NSString stringWithFormat:@"%d", passLength]];
 }
 
 
@@ -63,6 +72,12 @@
 		[defaults setObject:nil forKey:@"masterPassword"];
 	}
 	[defaults synchronize];	
+}
+
+- (IBAction)sliderChanged:(id)sender {
+	NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+	[defaults setInteger:(int)[slider value] forKey:@"defaultMaxPasswordLength"];
+	[defaultMaxPasswordLengthLabel setText:[NSString stringWithFormat:@"%d", (int)[slider value]]];	
 }
 
 - (void)didReceiveMemoryWarning {
