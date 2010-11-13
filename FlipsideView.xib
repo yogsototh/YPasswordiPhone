@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="59"/>
+			<integer value="40"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -242,7 +242,6 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<float key="IBUIValue">10</float>
 						<float key="IBUIMaxValue">27</float>
-						<bool key="IBUIContinuous">NO</bool>
 					</object>
 					<object class="IBUILabel" id="1012797758">
 						<reference key="NSNextResponder" ref="249263867"/>

@@ -32,6 +32,7 @@
 	if ([defaults integerForKey:@"defaultMaxPasswordLength"]) {
 		passLength=[defaults integerForKey:@"defaultMaxPasswordLength"];
 	}
+	oldslidervalue=passLength;
 	[slider setValue:(float)passLength];
 	[defaultMaxPasswordLengthLabel setText:[NSString stringWithFormat:@"%d", passLength]];
 }
@@ -75,9 +76,12 @@
 }
 
 - (IBAction)sliderChanged:(id)sender {
-	NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-	[defaults setInteger:(int)[slider value] forKey:@"defaultMaxPasswordLength"];
-	[defaultMaxPasswordLengthLabel setText:[NSString stringWithFormat:@"%d", (int)[slider value]]];	
+	if (oldslidervalue != (int)slider.value) {
+		NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+		[defaults setInteger:(int)[slider value] forKey:@"defaultMaxPasswordLength"];
+		[defaultMaxPasswordLengthLabel setText:[NSString stringWithFormat:@"%d", (int)[slider value]]];	
+		oldslidervalue=slider.value;
+	}
 }
 
 - (void)didReceiveMemoryWarning {

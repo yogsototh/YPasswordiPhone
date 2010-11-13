@@ -18,6 +18,7 @@
 	IBOutlet UILabel *defaultMaxPasswordLengthLabel;
 	IBOutlet UISlider *slider;
 	id <FlipsideViewControllerDelegate> delegate;
+	int oldslidervalue;
 }
 
 @property (nonatomic, assign) id <FlipsideViewControllerDelegate> delegate;
