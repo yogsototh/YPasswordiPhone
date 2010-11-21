@@ -47,6 +47,7 @@
 	[self _style_textField: url];
 	[self _style_textField: login];
 	doneButton.enabled=NO;
+	[url becomeFirstResponder];
 }
 
 - (IBAction)urlChanged:(id)sender {
