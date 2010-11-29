@@ -35,6 +35,9 @@
 		F8420AF211F8F8D0007979B0 /* WebsiteListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8420AF111F8F8D0007979B0 /* WebsiteListTableViewController.m */; };
 		F842B9271278C1CB00120BFB /* detailBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F842B9261278C1CB00120BFB /* detailBack.png */; };
 		F856D87F124BDB160039CC19 /* YRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F856D87E124BDB160039CC19 /* YRoundedButton.m */; };
+		F867436C12A43E0F00D22F59 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F867436B12A43E0F00D22F59 /* icon@2x.png */; };
+		F867439C12A4544800D22F59 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F867439B12A4544800D22F59 /* Default@2x.png */; };
+		F867439E12A4545B00D22F59 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F867439D12A4545B00D22F59 /* Default.png */; };
 		F8920E20128DFCA9003A7376 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F8920E1F128DFCA9003A7376 /* arrow.png */; };
 		F8A8C3171286247E001F323F /* addBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F8A8C3161286247E001F323F /* addBackground.png */; };
 		F8A8C31B1286269A001F323F /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A8C31A1286269A001F323F /* AddViewController.m */; };
@@ -89,6 +92,9 @@
 		F842B9261278C1CB00120BFB /* detailBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = detailBack.png; path = resources/detailBack.png; sourceTree = "<group>"; };
 		F856D87D124BDB160039CC19 /* YRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRoundedButton.h; sourceTree = "<group>"; };
 		F856D87E124BDB160039CC19 /* YRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRoundedButton.m; sourceTree = "<group>"; };
+		F867436B12A43E0F00D22F59 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "resources/icon@2x.png"; sourceTree = "<group>"; };
+		F867439B12A4544800D22F59 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "resources/Default@2x.png"; sourceTree = "<group>"; };
+		F867439D12A4545B00D22F59 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = resources/Default.png; sourceTree = "<group>"; };
 		F8920E1F128DFCA9003A7376 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = resources/arrow.png; sourceTree = "<group>"; };
 		F8A8C3161286247E001F323F /* addBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addBackground.png; path = resources/addBackground.png; sourceTree = "<group>"; };
 		F8A8C3191286269A001F323F /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
@@ -258,8 +264,11 @@
 		F8EB834611F37BF40035424C /* images */ = {
 			isa = PBXGroup;
 			children = (
-				F8920E1F128DFCA9003A7376 /* arrow.png */,
+				F867439D12A4545B00D22F59 /* Default.png */,
+				F867439B12A4544800D22F59 /* Default@2x.png */,
 				F83AFE011288AD6A004A18D5 /* icon.png */,
+				F867436B12A43E0F00D22F59 /* icon@2x.png */,
+				F8920E1F128DFCA9003A7376 /* arrow.png */,
 				F8A8C3161286247E001F323F /* addBackground.png */,
 				F8DB1BA51281398F002C276B /* highlight_square_button.png */,
 				F8DB1B9D12813813002C276B /* higlighted_button_1x3.png */,
@@ -351,6 +360,9 @@
 				F8A8C3171286247E001F323F /* addBackground.png in Resources */,
 				F83AFE021288AD6A004A18D5 /* icon.png in Resources */,
 				F8920E20128DFCA9003A7376 /* arrow.png in Resources */,
+				F867436C12A43E0F00D22F59 /* icon@2x.png in Resources */,
+				F867439C12A4544800D22F59 /* Default@2x.png in Resources */,
+				F867439E12A4545B00D22F59 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +442,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Release;
 		};
