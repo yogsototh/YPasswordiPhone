@@ -37,6 +37,8 @@
 		F8920E20128DFCA9003A7376 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F8920E1F128DFCA9003A7376 /* arrow.png */; };
 		F8A8C3171286247E001F323F /* addBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F8A8C3161286247E001F323F /* addBackground.png */; };
 		F8A8C31B1286269A001F323F /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A8C31A1286269A001F323F /* AddViewController.m */; };
+		F8BD863712D5202800738CF7 /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BD863612D5202800738CF7 /* Keychain.m */; };
+		F8BD866512D52FE300738CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BD866412D52FE300738CF7 /* Security.framework */; };
 		F8BDB94112D13A77008F599C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BDB93B12D13A77008F599C /* Icon.png */; };
 		F8BDB94212D13A77008F599C /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BDB93C12D13A77008F599C /* Icon-72.png */; };
 		F8BDB94312D13A77008F599C /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BDB93D12D13A77008F599C /* Icon-Small.png */; };
@@ -97,6 +99,9 @@
 		F8A8C3161286247E001F323F /* addBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addBackground.png; path = resources/addBackground.png; sourceTree = "<group>"; };
 		F8A8C3191286269A001F323F /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		F8A8C31A1286269A001F323F /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		F8BD863512D5202800738CF7 /* Keychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keychain.h; sourceTree = "<group>"; };
+		F8BD863612D5202800738CF7 /* Keychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keychain.m; sourceTree = "<group>"; };
+		F8BD866412D52FE300738CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F8BDB93B12D13A77008F599C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = resources/Icon.png; sourceTree = "<group>"; };
 		F8BDB93C12D13A77008F599C /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "resources/Icon-72.png"; sourceTree = "<group>"; };
 		F8BDB93D12D13A77008F599C /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "resources/Icon-Small.png"; sourceTree = "<group>"; };
@@ -124,6 +129,7 @@
 				F83AFDAF12889E75004A18D5 /* QuartzCore.framework in Frameworks */,
 				F83AFDB512889E8E004A18D5 /* UIKit.framework in Frameworks */,
 				F83AFDBB12889E9A004A18D5 /* Foundation.framework in Frameworks */,
+				F8BD866512D52FE300738CF7 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +201,8 @@
 				F856D87E124BDB160039CC19 /* YRoundedButton.m */,
 				F80260E1124F2756007CE5A7 /* YShadowLabel.h */,
 				F80260E2124F2756007CE5A7 /* YShadowLabel.m */,
+				F8BD863512D5202800738CF7 /* Keychain.h */,
+				F8BD863612D5202800738CF7 /* Keychain.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -218,6 +226,7 @@
 				F83AFDAE12889E75004A18D5 /* QuartzCore.framework */,
 				F83AFDB412889E8E004A18D5 /* UIKit.framework */,
 				F83AFDBA12889E9A004A18D5 /* Foundation.framework */,
+				F8BD866412D52FE300738CF7 /* Security.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -394,6 +403,7 @@
 				F856D87F124BDB160039CC19 /* YRoundedButton.m in Sources */,
 				F80260E3124F2756007CE5A7 /* YShadowLabel.m in Sources */,
 				F8A8C31B1286269A001F323F /* AddViewController.m in Sources */,
+				F8BD863712D5202800738CF7 /* Keychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

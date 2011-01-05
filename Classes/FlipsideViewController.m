@@ -7,6 +7,7 @@
 //
 
 #import "FlipsideViewController.h"
+#import "Keychain.h"
 
 
 @implementation FlipsideViewController
@@ -26,8 +27,6 @@
 	
 	NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
 	
-	[preferenceSwitch setOn:[defaults boolForKey:@"saveMasterPassword"]];
-
 	int passLength=10;
 	if ([defaults integerForKey:@"defaultMaxPasswordLength"]) {
 		passLength=[defaults integerForKey:@"defaultMaxPasswordLength"];
@@ -45,34 +44,22 @@
 - (IBAction)masterPasswordTextFieldChanged:(id)sender {
 	if ([[masterPasswordTextField text] length]) {
 		[doneButton setEnabled:YES];
-		[[self delegate] setMasterPassword:[masterPasswordTextField text]];
-		NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-		if ([defaults boolForKey:@"saveMasterPassword"]) {
-			[defaults setObject:[masterPasswordTextField text] forKey:@"masterPassword"];
-			[defaults synchronize];
-		}
-		
+		NSString *masterPassword=[masterPasswordTextField text];
+		[[self delegate] setMasterPassword:masterPassword];
+		[self saveMasterPassword:masterPassword];
 	} else {
 		[doneButton setEnabled:NO];
 	}
+}
+
+- (void)saveMasterPassword:(NSString *)masterPassword {
+	[Keychain saveString:masterPassword forKey:@"masterPassword"];
 }
 
 - (IBAction)clickedToWebSite:(id)sender {
     NSURL *target = [[NSURL alloc] initWithString:@"http://yannesposito.com"];
 	[[UIApplication sharedApplication] openURL:target];
 	[target release];
-}
-
-- (IBAction)switchedPreference:(UISwitch *)sender {
-	NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-	if (sender.on) {
-		[defaults setBool:YES forKey:@"saveMasterPassword"]; 
-		[defaults setObject:[masterPasswordTextField text] forKey:@"masterPassword"];
-	} else {
-		[defaults setBool:NO forKey:@"saveMasterPassword"];
-		[defaults setObject:nil forKey:@"masterPassword"];
-	}
-	[defaults synchronize];	
 }
 
 - (IBAction)sliderChanged:(id)sender {

@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "Keychain.h"
 
 @implementation MainViewController
 
@@ -83,7 +84,7 @@
 	[selectWebsiteButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
 
 	if (masterPassword == nil) {
-		masterPassword=[[NSUserDefaults standardUserDefaults] objectForKey:@"masterPassword"];
+		masterPassword=[Keychain getStringForKey:@"masterPassword"];
 	}
 	
 	if (website == nil) {
