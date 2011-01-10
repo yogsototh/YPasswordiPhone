@@ -41,6 +41,7 @@
 
 
 - (void)dealloc {
+    [masterPassword release];
     [managedObjectContext release];
     [super dealloc];
 }
@@ -84,7 +85,7 @@
 	[selectWebsiteButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
 
 	if (masterPassword == nil) {
-		masterPassword=[Keychain getStringForKey:@"masterPassword"];
+		masterPassword=[[NSString alloc] initWithString:[Keychain getStringForKey:@"masterPassword"]];
 	}
 	
 	if (website == nil) {
