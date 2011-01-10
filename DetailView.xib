@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
-		<int key="IBDocument.SystemTarget">1024</int>
-		<string key="IBDocument.SystemVersion">10F569</string>
-		<string key="IBDocument.InterfaceBuilderVersion">788</string>
-		<string key="IBDocument.AppKitVersion">1038.29</string>
+		<int key="IBDocument.SystemTarget">1056</int>
+		<string key="IBDocument.SystemVersion">10H574</string>
+		<string key="IBDocument.InterfaceBuilderVersion">823</string>
+		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">117</string>
+			<string key="NS.object.0">132</string>
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="1"/>
+			<integer value="89"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -129,7 +129,10 @@
 								<reference key="IBUIFont" ref="600418099"/>
 								<reference key="IBUITextColor" ref="56931910"/>
 								<nil key="IBUIHighlightedColor"/>
-								<reference key="IBUIShadowColor" ref="1044459031"/>
+								<object class="NSColor" key="IBUIShadowColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC44MDAwMDAwMTE5IDAuODAwMDAwMDExOSAwLjgwMDAwMDAxMTkAA</bytes>
+								</object>
 								<string key="IBUIShadowOffset">{0, 1}</string>
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
@@ -154,7 +157,10 @@
 						<reference key="IBUIFont" ref="600418099"/>
 						<reference key="IBUITextColor" ref="56931910"/>
 						<nil key="IBUIHighlightedColor"/>
-						<reference key="IBUIShadowColor" ref="1044459031"/>
+						<object class="NSColor" key="IBUIShadowColor" id="786050429">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC45MDE5NjA3OTAyIDAuOTAxOTYwNzkwMiAwLjkwMTk2MDc5MDIAA</bytes>
+						</object>
 						<string key="IBUIShadowOffset">{0, 1}</string>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -180,13 +186,10 @@
 						<string key="IBUITitleShadowOffset">{0, -1}</string>
 						<string key="IBUINormalTitle">Previous</string>
 						<reference key="IBUIHighlightedTitleColor" ref="1044459031"/>
-						<object class="NSColor" key="IBUINormalTitleColor" id="550989435">
+						<reference key="IBUINormalTitleColor" ref="786050429"/>
+						<object class="NSColor" key="IBUINormalTitleShadowColor" id="855490935">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC45Mjg1NzE0MDMgMC45Mjg1NzE0MDMgMC45Mjg1NzE0MDMAA</bytes>
-						</object>
-						<object class="NSColor" key="IBUINormalTitleShadowColor" id="784407576">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4wNjY2NjY2NzAxNCAwLjA2NjY2NjY3MDE0IDAuMDY2NjY2NjcwMTQAA</bytes>
+							<bytes key="NSRGB">MC4yOTgwMzkyMjc3IDAuMjk4MDM5MjI3NyAwLjI5ODAzOTIyNzcAA</bytes>
 						</object>
 					</object>
 					<object class="IBUIButton" id="422924812">
@@ -203,8 +206,8 @@
 						<string key="IBUITitleShadowOffset">{0, -1}</string>
 						<string key="IBUINormalTitle">Next</string>
 						<reference key="IBUIHighlightedTitleColor" ref="1044459031"/>
-						<reference key="IBUINormalTitleColor" ref="550989435"/>
-						<reference key="IBUINormalTitleShadowColor" ref="784407576"/>
+						<reference key="IBUINormalTitleColor" ref="786050429"/>
+						<reference key="IBUINormalTitleShadowColor" ref="855490935"/>
 					</object>
 					<object class="IBUIButton" id="761288390">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -220,8 +223,8 @@
 						<string key="IBUITitleShadowOffset">{0, -1}</string>
 						<string key="IBUINormalTitle">Reset</string>
 						<reference key="IBUIHighlightedTitleColor" ref="1044459031"/>
-						<reference key="IBUINormalTitleColor" ref="550989435"/>
-						<reference key="IBUINormalTitleShadowColor" ref="784407576"/>
+						<reference key="IBUINormalTitleColor" ref="786050429"/>
+						<reference key="IBUINormalTitleShadowColor" ref="855490935"/>
 					</object>
 					<object class="IBUILabel" id="681834276">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -917,6 +920,20 @@
 					<string key="className">NSObject</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSArchiver.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSClassDescription.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">Foundation.framework/Headers/NSError.h</string>
 					</object>
 				</object>
@@ -959,7 +976,49 @@
 					<string key="className">NSObject</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSObjectScripting.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSPortCoder.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">Foundation.framework/Headers/NSRunLoop.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSScriptClassDescription.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSScriptKeyValueCoding.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSScriptObjectSpecifiers.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSScriptWhoseTests.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -987,6 +1046,13 @@
 					<string key="className">NSObject</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Foundation.framework/Headers/NSURLDownload.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">QuartzCore.framework/Headers/CAAnimation.h</string>
 					</object>
 				</object>
@@ -995,6 +1061,13 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">QuartzCore.framework/Headers/CALayer.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">QuartzCore.framework/Headers/CIImageProvider.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -1126,6 +1199,13 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">UIView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">UIKit.framework/Headers/UIPrintFormatter.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">UIView</string>
 					<reference key="sourceIdentifier" ref="761743656"/>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -1178,7 +1258,7 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
-			<integer value="1024" key="NS.object.0"/>
+			<integer value="1056" key="NS.object.0"/>
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.InterfaceBuilder3</string>
@@ -1191,6 +1271,6 @@
 			<string key="NS.key.0">detailBack.png</string>
 			<string key="NS.object.0">{640, 832}</string>
 		</object>
-		<string key="IBCocoaTouchPluginVersion">117</string>
+		<string key="IBCocoaTouchPluginVersion">132</string>
 	</data>
 </archive>
