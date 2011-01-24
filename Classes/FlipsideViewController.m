@@ -57,7 +57,7 @@
 }
 
 - (IBAction)clickedToWebSite:(id)sender {
-    NSURL *target = [[NSURL alloc] initWithString:@"http://yannesposito.com"];
+    NSURL *target = [[NSURL alloc] initWithString:@"http://ypassword.espozito.com"];
 	[[UIApplication sharedApplication] openURL:target];
 	[target release];
 }
