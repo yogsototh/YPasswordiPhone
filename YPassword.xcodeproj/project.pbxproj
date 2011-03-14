@@ -55,6 +55,8 @@
 		F8A8C31B1286269A001F323F /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A8C31A1286269A001F323F /* AddViewController.m */; };
 		F8BD863712D5202800738CF7 /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BD863612D5202800738CF7 /* Keychain.m */; };
 		F8CC0745128610BD00978B79 /* AddView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8CC0744128610BD00978B79 /* AddView.xib */; };
+		F8E4490E132EC919001614E8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8E4490D132EC919001614E8 /* Icon@2x.png */; };
+		F8E44910132EC922001614E8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F8E4490F132EC922001614E8 /* Icon.png */; };
 		F8EB82AA11F31E8E0035424C /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EB82A911F31E8E0035424C /* Website.m */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +117,8 @@
 		F8CC0744128610BD00978B79 /* AddView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddView.xib; sourceTree = "<group>"; };
 		F8DB1B9D12813813002C276B /* higlighted_button_1x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = higlighted_button_1x3.png; path = resources/higlighted_button_1x3.png; sourceTree = "<group>"; };
 		F8DB1BA51281398F002C276B /* highlight_square_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = highlight_square_button.png; path = resources/highlight_square_button.png; sourceTree = "<group>"; };
+		F8E4490D132EC919001614E8 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		F8E4490F132EC922001614E8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		F8E488C31280BAD400798F0B /* square_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = square_button.png; path = resources/square_button.png; sourceTree = "<group>"; };
 		F8E488D21280BFD700798F0B /* button_1x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_1x3.png; path = resources/button_1x3.png; sourceTree = "<group>"; };
 		F8EB82A811F31E8E0035424C /* Website.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Website.h; path = Classes/Website.h; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				F8E4490F132EC922001614E8 /* Icon.png */,
+				F8E4490D132EC919001614E8 /* Icon@2x.png */,
 				F8CC07431286109100978B79 /* Add View */,
 				F8EB832E11F367AF0035424C /* Website List View */,
 				F8EB82B411F31EAA0035424C /* Entities */,
@@ -404,6 +410,8 @@
 				F86F59A2131C77EF00CCF4F4 /* backgroundClair.png in Resources */,
 				F86F59A3131C77EF00CCF4F4 /* MainWindow.xib in Resources */,
 				F86F59A5131C77EF00CCF4F4 /* YPassword-Info.plist in Resources */,
+				F8E4490E132EC919001614E8 /* Icon@2x.png in Resources */,
+				F8E44910132EC922001614E8 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +452,6 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YPassword_Prefix.pch;
-				INFOPLIST_FILE = "YPassword-Info.plist";
 				PRODUCT_NAME = YPassword;
 			};
 			name = Debug;
@@ -456,7 +463,6 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YPassword_Prefix.pch;
-				INFOPLIST_FILE = "YPassword-Info.plist";
 				PRODUCT_NAME = YPassword;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -510,7 +516,6 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = YPassword_Prefix.pch;
-				INFOPLIST_FILE = "YPassword-Info.plist";
 				PRODUCT_NAME = YPassword;
 				VALIDATE_PRODUCT = YES;
 			};
