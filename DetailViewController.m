@@ -20,60 +20,50 @@
 - (int) save {
 	NSError *error;
 	if (![managedObjectContext save:&error]) {
-		NSLog(@"ERROR : save error : DetailViewController::next");
+		NSLog(@"ERROR : save error : DetailViewController::save");
 		return -1;
 	} else {
-        NSLog(@"saved: %@ %@ %@ len: %@ num: %@", website.url, website.login, ([website.base64 isEqualToNumber:[NSNumber numberWithBool:YES]])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
 		return 0;
 	}
 }
 
 - (IBAction)next:(id)sender {
-    NSLog(@"next");
 	[website setValue:[NSNumber numberWithInt:([website.passwordNumber intValue] + 1)]  forKey:@"passwordNumber"];
 	[passwordNumberLabel setText:[[website passwordNumber] stringValue]];
     [self save];
 }
 
 - (IBAction)previous:(id)sender {
-	NSLog(@"previous");    
 	[website setValue:[NSNumber numberWithInt:([website.passwordNumber intValue] - 1)]  forKey:@"passwordNumber"];	
 	[passwordNumberLabel setText:[[website passwordNumber] stringValue]];
     [self save];
 }
 
 - (IBAction)reset:(id)sender {
-	NSLog(@"reset");
 	[website setValue:[NSNumber numberWithInt:0] forKey:@"passwordNumber"];
 	[passwordNumberLabel setText:[[website passwordNumber] stringValue]];
     [self save];
 }
 
 - (IBAction)sliderChanged:(id)sender {
-	NSLog(@"sliderChanged");
 	[lengthLabel setText:[NSString stringWithFormat:@"%d", (int)[slider value]]];
 	[website setValue:[NSNumber numberWithInt:(int)[slider value]] forKey:@"passwordLength"];
     [self save];
 }
 
 - (IBAction)segmentedControlChanged:(id)sender {
-	NSLog(@"segmentedControlChanged");
 	if (segmentedControl.selectedSegmentIndex == 0) {
-		NSLog(@"base64");
 		int newValue=MIN(27.0,[website.passwordLength floatValue]);
-		NSLog(@"%d", (int)newValue);
 		[lengthLabel setText:[NSString stringWithFormat:@"%d", newValue]];
 		website.base64 = [NSNumber numberWithBool:YES];
 		// add .5 to the slider position to be aligned with the good value
 		[slider setValue:MIN(newValue+.5,27.0)];
 	} else {
-		NSLog(@"Base16");
 		// add .5 to the slider position to be aligned with the good value
 		[slider setValue:[website.passwordLength floatValue]+.5];
 		[lengthLabel setText:[NSString stringWithFormat:@"%d", [website.passwordLength intValue]]];
 		website.base64 = [NSNumber numberWithBool:NO];
 	}
-	NSLog(@"[SAVED] base64 %@, passwordLength %@", website.base64, website.passwordLength);
     [self save];
 }
 
@@ -81,20 +71,16 @@
 #pragma mark Action With Entities
 
 - (IBAction)urlTextFieldChanged:(id)sender {
-	NSLog(@"urlTextFieldChanged:");
 	[website setValue:[urlTextField text] forKey:@"url"];
-    [self save];
-	
+    [self save];	
 }
 
 - (IBAction)loginTextFieldChanged:(id)sender {
-	NSLog(@"loginTextFieldChanged");
 	[website setValue:[loginTextField text] forKey:@"login"];
     [self save];
 }
 
 - (IBAction)done:(id)sender {
-	NSLog(@"done");
 	// save the password length another time in case of type changed
 	if (([website.base64 isEqualToNumber:[NSNumber numberWithBool:YES]]) &&
 		([website.passwordLength intValue]>27)) {

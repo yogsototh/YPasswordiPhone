@@ -79,8 +79,6 @@
 
  // Implement viewWillAppear: to do additional setup before the view is presented. You might, for example, fetch objects from the managed object context if necessary.
 - (void)viewWillAppear:(BOOL)animated {
-	NSLog(@"MainViewController::viewWillAppear");
-
 		
 	[detailViewButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
 	[selectWebsiteButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
@@ -96,7 +94,6 @@
 		} else {
 			[selectWebsiteButton setEnabled:YES];
 			int lastIndex=[[NSUserDefaults standardUserDefaults] integerForKey:@"lastSelectedIndex"];
-			// NSLog(@"[user default] selectedIndex = %@",[NSNumber numberWithInt:lastIndex]);
 			if ([mutableFetchResults count]>lastIndex) {
 				website = [mutableFetchResults objectAtIndex:lastIndex];				
 			} else {
@@ -112,7 +109,6 @@
 	// ----------------------------
 	
 	if ([self website] != nil) {
-		NSLog(@"  website in delegate: %@, %@", website.url, website.login);
 		[urlLabel setText:website.url];
 		[loginLabel setText:website.login];
 		[detailViewButton setEnabled:YES];
@@ -171,19 +167,13 @@
 	NSString *baseString;
 	// notice by construction masterPassword is not null
 	// when entering this function
-    NSLog(@" [mainViewController::updatePassword] ==> website = %@, %@, %@, %@, %@", website.url, website.login, (website.base64==[NSNumber numberWithBool:YES])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
-	
 	baseString=[NSString stringWithFormat:@"%@%@%@",masterPassword, 
 				[website.passwordNumber intValue]?[website.passwordNumber stringValue]:@"", website.domainName];
-	NSLog(@"Update Password baseString = %@",baseString);
 	
 	NSString *password;
-	NSLog(@"Update Password website.base64 = %@ %@",website.base64, [NSNumber numberWithBool:YES]);
 	if ([website.base64 isEqualToNumber:[NSNumber numberWithBool:YES]]) {
-		NSLog(@"b64");
 		password=[self b64_sha1:baseString];
 	} else {
-		NSLog(@"b16");
 		password=[self hex_sha1:baseString];
 	}
 	password=[password substringToIndex:MIN([website.passwordLength intValue],[password length])];
@@ -195,10 +185,9 @@
 - (int) save {
 	NSError *error;
 	if (![managedObjectContext save:&error]) {
-		NSLog(@"ERROR : save error : DetailViewController::next");
+		NSLog(@"ERROR : save error : MainViewController::save");
 		return -1;
 	} else {
-        NSLog(@"saved: %@ %@ %@ len: %@ num: %@", website.url, website.login, (website.base64 == [NSNumber numberWithBool:YES])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
 		return 0;
 	}
 }
@@ -250,7 +239,6 @@
 #pragma mark pasteboard
 
 - (IBAction)copyPasswordToClipboard:(id)sender {
-	NSLog(@"Copy Password");
 	if (passwordLabel.text == nil) {
 		return;
 	}
@@ -260,12 +248,9 @@
 	UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
 	pasteboard.string = passwordLabel.text;
 	[self highlightPassword];
-	NSLog(@"Copy Password done");
-
 }
 
 - (IBAction)copyLoginToClipboard:(id)sender {
-	NSLog(@"Copy Login");
 	if (loginLabel.text == nil) {
 		return;
 	}
@@ -274,9 +259,7 @@
 	}
 	UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
 	pasteboard.string = loginLabel.text;
-	[self highlightLogin];
-	NSLog(@"Copy Login done");
-	
+	[self highlightLogin];	
 }
 
 - (void)initHilight {

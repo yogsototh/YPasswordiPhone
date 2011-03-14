@@ -15,8 +15,6 @@
 
 
 - (IBAction)add:(id)sender {
-    // NSLog(@"WebsiteListTableViewController::add");
-
 	managedObjectContext = [websiteListViewController managedObjectContext];
 	
 	Website *website=(Website *)[NSEntityDescription insertNewObjectForEntityForName:@"Website" inManagedObjectContext:managedObjectContext];
@@ -36,7 +34,6 @@
 }
 
 - (IBAction)cancel:(id)sender {
-    // NSLog(@"WebsiteListTableViewController::cancel");
 	[[websiteListViewController delegate] websiteListViewControllerDidFinish:websiteListViewController];
 }
 
@@ -76,14 +73,11 @@
 #pragma mark UITableViewDataSource
 // required
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	// NSLog(@"WebsiteListTableViewController::numberOfRowsInSection");
 	return [[self websiteArray] count];
 }
 
 // required
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	// NSLog(@"WebsiteListTableViewController::cellForRowAtIndexPath:");
-
 	static NSString *CellIdentifier = @"Cell";
     // Dequeue or create a new cell
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -126,11 +120,8 @@
 
 #pragma mark UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // NSLog(@"WebsiteListTableViewController::didSelectRowAtIndexPath:");
 	Website *website = [websiteArray objectAtIndex:indexPath.row];
-	// NSLog(@" ==> website = %@, %@, %@, %@, %@", website.url, website.login, (website.base64==[NSNumber numberWithBool:YES])?@"base64":@"base16", website.passwordLength, website.passwordNumber);
 	[[websiteListViewController delegate] setWebsite:website];
-	// NSLog(@"[set user default] lastSelectedIndex = %@", [NSNumber numberWithInt:indexPath.row]);
 	[[NSUserDefaults standardUserDefaults] setInteger:indexPath.row forKey:@"lastSelectedIndex"];
 	[[NSUserDefaults standardUserDefaults] synchronize];
 	[[websiteListViewController delegate] websiteListViewControllerDidFinish:websiteListViewController];
