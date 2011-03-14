@@ -26,12 +26,10 @@
 		F856D87F124BDB160039CC19 /* YRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F856D87E124BDB160039CC19 /* YRoundedButton.m */; };
 		F86F598E131C77EF00CCF4F4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F867439D12A4545B00D22F59 /* Default.png */; };
 		F86F598F131C77EF00CCF4F4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BF252312DB8D0A0006C646 /* Default@2x.png */; };
-		F86F5990131C77EF00CCF4F4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BDB93B12D13A77008F599C /* Icon.png */; };
 		F86F5991131C77EF00CCF4F4 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BDB93C12D13A77008F599C /* Icon-72.png */; };
 		F86F5992131C77EF00CCF4F4 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BDB93D12D13A77008F599C /* Icon-Small.png */; };
 		F86F5993131C77EF00CCF4F4 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BDB93E12D13A77008F599C /* Icon-Small-50.png */; };
 		F86F5994131C77EF00CCF4F4 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BDB93F12D13A77008F599C /* Icon-Small@2x.png */; };
-		F86F5995131C77EF00CCF4F4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BDB94012D13A77008F599C /* Icon@2x.png */; };
 		F86F5996131C77EF00CCF4F4 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F8920E1F128DFCA9003A7376 /* arrow.png */; };
 		F86F5997131C77EF00CCF4F4 /* addBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F8A8C3161286247E001F323F /* addBackground.png */; };
 		F86F5998131C77EF00CCF4F4 /* highlight_square_button.png in Resources */ = {isa = PBXBuildFile; fileRef = F8DB1BA51281398F002C276B /* highlight_square_button.png */; };
@@ -107,12 +105,10 @@
 		F8A8C31A1286269A001F323F /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		F8BD863512D5202800738CF7 /* Keychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keychain.h; sourceTree = "<group>"; };
 		F8BD863612D5202800738CF7 /* Keychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keychain.m; sourceTree = "<group>"; };
-		F8BDB93B12D13A77008F599C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = resources/Icon.png; sourceTree = "<group>"; };
 		F8BDB93C12D13A77008F599C /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "resources/Icon-72.png"; sourceTree = "<group>"; };
 		F8BDB93D12D13A77008F599C /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "resources/Icon-Small.png"; sourceTree = "<group>"; };
 		F8BDB93E12D13A77008F599C /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "resources/Icon-Small-50.png"; sourceTree = "<group>"; };
 		F8BDB93F12D13A77008F599C /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "resources/Icon-Small@2x.png"; sourceTree = "<group>"; };
-		F8BDB94012D13A77008F599C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "resources/Icon@2x.png"; sourceTree = "<group>"; };
 		F8BF252312DB8D0A0006C646 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "resources/Default@2x.png"; sourceTree = "<group>"; };
 		F8CC0744128610BD00978B79 /* AddView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddView.xib; sourceTree = "<group>"; };
 		F8DB1B9D12813813002C276B /* higlighted_button_1x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = higlighted_button_1x3.png; path = resources/higlighted_button_1x3.png; sourceTree = "<group>"; };
@@ -185,6 +181,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				F867439D12A4545B00D22F59 /* Default.png */,
+				F8BF252312DB8D0A0006C646 /* Default@2x.png */,
 				F8E4490F132EC922001614E8 /* Icon.png */,
 				F8E4490D132EC919001614E8 /* Icon@2x.png */,
 				F8CC07431286109100978B79 /* Add View */,
@@ -254,12 +252,10 @@
 		F84FC82212DA7E3300C7A1D6 /* Icon */ = {
 			isa = PBXGroup;
 			children = (
-				F8BDB93B12D13A77008F599C /* Icon.png */,
 				F8BDB93C12D13A77008F599C /* Icon-72.png */,
 				F8BDB93D12D13A77008F599C /* Icon-Small.png */,
 				F8BDB93E12D13A77008F599C /* Icon-Small-50.png */,
 				F8BDB93F12D13A77008F599C /* Icon-Small@2x.png */,
-				F8BDB94012D13A77008F599C /* Icon@2x.png */,
 			);
 			name = Icon;
 			sourceTree = "<group>";
@@ -267,8 +263,6 @@
 		F84FC82312DA7E3F00C7A1D6 /* DefaultImage */ = {
 			isa = PBXGroup;
 			children = (
-				F867439D12A4545B00D22F59 /* Default.png */,
-				F8BF252312DB8D0A0006C646 /* Default@2x.png */,
 			);
 			name = DefaultImage;
 			sourceTree = "<group>";
@@ -389,12 +383,10 @@
 				F8CC0745128610BD00978B79 /* AddView.xib in Resources */,
 				F86F598E131C77EF00CCF4F4 /* Default.png in Resources */,
 				F86F598F131C77EF00CCF4F4 /* Default@2x.png in Resources */,
-				F86F5990131C77EF00CCF4F4 /* Icon.png in Resources */,
 				F86F5991131C77EF00CCF4F4 /* Icon-72.png in Resources */,
 				F86F5992131C77EF00CCF4F4 /* Icon-Small.png in Resources */,
 				F86F5993131C77EF00CCF4F4 /* Icon-Small-50.png in Resources */,
 				F86F5994131C77EF00CCF4F4 /* Icon-Small@2x.png in Resources */,
-				F86F5995131C77EF00CCF4F4 /* Icon@2x.png in Resources */,
 				F86F5996131C77EF00CCF4F4 /* arrow.png in Resources */,
 				F86F5997131C77EF00CCF4F4 /* addBackground.png in Resources */,
 				F86F5998131C77EF00CCF4F4 /* highlight_square_button.png in Resources */,
@@ -476,6 +468,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "YPassword-Info.plist";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
@@ -489,6 +482,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "YPassword-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
@@ -503,6 +497,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "YPassword-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
