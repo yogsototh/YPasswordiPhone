@@ -46,6 +46,8 @@
 		F86F59A3131C77EF00CCF4F4 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280E754C0DD40C5E005A515E /* MainWindow.xib */; };
 		F86F59A4131C77EF00CCF4F4 /* YPassword.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 2880DEA010926BE500CC57B2 /* YPassword.xcdatamodel */; };
 		F86F59A5131C77EF00CCF4F4 /* YPassword-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D1107310486CEB800E47090 /* YPassword-Info.plist */; };
+		F879405E1334AD6B00B5E363 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F879405D1334AD6B00B5E363 /* Default@2x.png */; };
+		F87940601334AEB300B5E363 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F879405F1334AEB300B5E363 /* Default.png */; };
 		F8A7244512DA7BEA0008A210 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A7244412DA7BEA0008A210 /* CoreData.framework */; };
 		F8A7246312DA7C0C0008A210 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A7246212DA7C0C0008A210 /* QuartzCore.framework */; };
 		F8A7249C12DA7C290008A210 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A7249B12DA7C290008A210 /* Security.framework */; };
@@ -95,6 +97,8 @@
 		F856D87D124BDB160039CC19 /* YRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRoundedButton.h; sourceTree = "<group>"; };
 		F856D87E124BDB160039CC19 /* YRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRoundedButton.m; sourceTree = "<group>"; };
 		F867439D12A4545B00D22F59 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = resources/Default.png; sourceTree = "<group>"; };
+		F879405D1334AD6B00B5E363 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F879405F1334AEB300B5E363 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F8920E1F128DFCA9003A7376 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = resources/arrow.png; sourceTree = "<group>"; };
 		F8A7244412DA7BEA0008A210 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		F8A7246212DA7C0C0008A210 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
@@ -181,6 +185,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				F879405F1334AEB300B5E363 /* Default.png */,
+				F879405D1334AD6B00B5E363 /* Default@2x.png */,
 				F867439D12A4545B00D22F59 /* Default.png */,
 				F8BF252312DB8D0A0006C646 /* Default@2x.png */,
 				F8E4490F132EC922001614E8 /* Icon.png */,
@@ -404,6 +410,8 @@
 				F86F59A5131C77EF00CCF4F4 /* YPassword-Info.plist in Resources */,
 				F8E4490E132EC919001614E8 /* Icon@2x.png in Resources */,
 				F8E44910132EC922001614E8 /* Icon.png in Resources */,
+				F879405E1334AD6B00B5E363 /* Default@2x.png in Resources */,
+				F87940601334AEB300B5E363 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +476,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "YPassword-Info.plist";
+				INFOPLIST_FILE = "";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
@@ -482,7 +490,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "YPassword-Info.plist";
+				INFOPLIST_FILE = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
@@ -497,7 +505,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "YPassword-Info.plist";
+				INFOPLIST_FILE = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
