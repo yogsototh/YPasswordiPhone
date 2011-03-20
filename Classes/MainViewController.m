@@ -84,6 +84,10 @@
 
 	if (masterPassword == nil) {
 		[self setMasterPassword:[Keychain getStringForKey:@"masterPassword"]];
+        if ([masterPassword isEqualToString:@" "]) {
+            [masterPassword release];
+            masterPassword = nil;
+        }
 	}
 	
 	if (website == nil) {
@@ -116,6 +120,7 @@
 		[urlLabel setText:@"URL"];
 		[loginLabel setText:@"username"];
 		[detailViewButton setEnabled:NO];
+        [passwordLabel setText:@""];
 	}
 
 	[self initHilight];
@@ -388,6 +393,7 @@
 
 // go To website by copying the password into the pasteboard.
 - (IBAction)goToWebsite:(id)sender {
+    if ((!website) || (!website.url)) return;
 	UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
 	if (! (
 		   ( [pasteboard.string isEqualToString: passwordLabel.text] )
