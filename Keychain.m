@@ -73,7 +73,7 @@
 	
 	OSStatus status = SecItemDelete((CFDictionaryRef)query);
 	if (status != errSecSuccess) {
-		NSLog(@"SecItemDelete failed: %d", status);
+		NSLog(@"SecItemDelete failed: %ld", status);
 	}
 }
 
