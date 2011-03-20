@@ -33,7 +33,6 @@
     CGContextSetShadow (myContext, self.shadowOffset, 1);
     CGColorSpaceRef myColorSpace = CGColorSpaceCreateDeviceRGB();
     CGColorRef myColor = [self.shadowColor CGColor];
-	NSLog(@"Blur: %@", self.blurRadius);
     CGContextSetShadowWithColor (myContext, self.shadowOffset, (CGFloat)[self.blurRadius floatValue], myColor);
 	
     [super drawTextInRect:rect];
