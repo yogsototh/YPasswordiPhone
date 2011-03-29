@@ -20,13 +20,13 @@
 													WebsiteListViewControllerDelegate> 
 {
     IBOutlet UILabel *loginLabel;
-    IBOutlet UILabel *urlLabel;
+    IBOutlet UINavigationItem *urlLabel;
 	IBOutlet UILabel *passwordLabel;
 	IBOutlet UIImageView *blueHighlightImage;
 	IBOutlet UIImageView *whiteHighlightImage;
-	IBOutlet UIButton *detailViewButton;
+	IBOutlet UIBarButtonItem *detailViewButton;
 	IBOutlet UIButton *selectWebsiteButton;
-	IBOutlet UIButton *addButton;
+	IBOutlet UIBarButtonItem *addButton;
 	Website *website;
 	NSManagedObjectContext *managedObjectContext;
 	NSString *masterPassword;

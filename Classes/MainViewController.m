@@ -79,7 +79,7 @@
  // Implement viewWillAppear: to do additional setup before the view is presented. You might, for example, fetch objects from the managed object context if necessary.
 - (void)viewWillAppear:(BOOL)animated {
 		
-	[detailViewButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+	// [detailViewButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
 	[selectWebsiteButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
 
 	if (masterPassword == nil) {
@@ -112,12 +112,12 @@
 	// ----------------------------
 	
 	if ([self website] != nil) {
-		[urlLabel setText:website.url];
+		[urlLabel setTitle:website.url];
 		[loginLabel setText:website.login];
 		[detailViewButton setEnabled:YES];
 		[self updatePassword];
 	} else {
-		[urlLabel setText:@"URL"];
+		[urlLabel setTitle:@"URL"];
 		[loginLabel setText:@"username"];
 		[detailViewButton setEnabled:NO];
         [passwordLabel setText:@""];
