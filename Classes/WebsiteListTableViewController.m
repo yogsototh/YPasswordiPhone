@@ -33,6 +33,22 @@
 
 }
 
+- (IBAction)edit:(UIBarButtonItem *)sender {
+    [self.tableView setEditing:YES animated:YES];
+    sender.title = NSLocalizedString(@"Done", @"Done");
+    sender.style = UIBarButtonItemStyleDone;
+    sender.target = self;
+    sender.action = @selector(done:);
+}
+
+- (IBAction)done:(UIBarButtonItem *)sender {
+    [self.tableView setEditing:NO animated:YES];
+    sender.title = NSLocalizedString(@"Edit", @"Edit");
+    sender.style = UIBarButtonItemStylePlain;
+    sender.target = self;
+    sender.action = @selector(edit:);
+}
+
 - (IBAction)cancel:(id)sender {
 	[[websiteListViewController delegate] websiteListViewControllerDidFinish:websiteListViewController];
 }

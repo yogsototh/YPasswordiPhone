@@ -9,9 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface WebsiteListNavigationController : UINavigationController {
-    IBOutlet UIBarButtonItem *addButton;
-    IBOutlet UIBarButtonItem *editButton;
     IBOutlet id websiteListViewController;
+    IBOutlet id websiteListTableViewController;
 }
 
 @end

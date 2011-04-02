@@ -9,15 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import "WebsiteListViewController.h"
+#import "WebsiteListNavigationController.h"
 
 @interface WebsiteListTableViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate> {
     IBOutlet WebsiteListViewController *websiteListViewController;
+    IBOutlet WebsiteListNavigationController *navbarController;
     NSManagedObjectContext *managedObjectContext;
 	NSMutableArray *websiteArray;
 }
 
 @property (nonatomic, retain) NSMutableArray *websiteArray;
 @property (nonatomic, assign) NSManagedObjectContext *managedObjectContext;
-- (IBAction)add:(id)sender;
-- (IBAction)cancel:(id)sender;
+- (IBAction)add:(UIBarButtonItem *)sender;
+- (IBAction)cancel:(UIBarButtonItem *)sender;
+- (IBAction)edit:(UIBarButtonItem *)sender;
+- (IBAction)done:(UIBarButtonItem *)sender;
 @end
