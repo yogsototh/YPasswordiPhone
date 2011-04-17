@@ -140,7 +140,15 @@
 					<bool key="IBUIClipsSubviews">YES</bool>
 					<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+					<double key="IBUIContentInset.top">0.0</double>
+					<double key="IBUIContentInset.bottom">44</double>
+					<double key="IBUIContentInset.left">0.0</double>
+					<double key="IBUIContentInset.right">0.0</double>
 					<bool key="IBUIAlwaysBounceVertical">YES</bool>
+					<double key="IBUIScrollIndicatorInsets.top">0.0</double>
+					<double key="IBUIScrollIndicatorInsets.bottom">44</double>
+					<double key="IBUIScrollIndicatorInsets.left">0.0</double>
+					<double key="IBUIScrollIndicatorInsets.right">0.0</double>
 					<int key="IBUISeparatorStyle">1</int>
 					<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
 					<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
