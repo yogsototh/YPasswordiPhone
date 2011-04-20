@@ -69,7 +69,7 @@
 		Website *newWebsite=(Website *)[NSEntityDescription insertNewObjectForEntityForName:@"Website" inManagedObjectContext:managedObjectContext];
 		newWebsite.url=url.host;
 		newWebsite.login=url.user;
-		self.website=newWebsite;
+		[self setWebsite:newWebsite];
 		[self save];
 	}
 	[url release];
@@ -91,7 +91,7 @@
 	}
 	
 	if (website == nil) {
-		NSMutableArray *mutableFetchResults=[self arrayOfWebsites];
+		NSMutableArray *mutableFetchResults=[[self arrayOfWebsites] retain];
 		if ([mutableFetchResults count] == 0) {
 			[selectWebsiteButton setEnabled:NO];
 		} else {
@@ -104,6 +104,7 @@
 			}
 
 		}
+        [mutableFetchResults release];
 	} else {
 		[selectWebsiteButton setEnabled:YES];
 	}
@@ -154,6 +155,8 @@
 	// Execute the request
 	NSError *error;
 	NSMutableArray *mutableFetchResults=[[managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+    [request release];
+    [mutableFetchResults autorelease];
 	return mutableFetchResults;
 }
 
@@ -205,10 +208,10 @@
 }
 
 - (NSString *)base64:(unsigned char *)result {
-	NSString *password=[[NSString alloc] init];
+	NSMutableString *password=[[NSMutableString alloc] init];
 	static const unsigned char cb64[65]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 	for (int i=0; i<CC_SHA1_DIGEST_LENGTH; i+=3) {
-		password=[password stringByAppendingFormat:@"%c%c%c%c",
+		[password appendFormat:@"%c%c%c%c",
 				  cb64[(result[i] &0xFC)>>2],
 				  cb64[((result[i] & 0x03) << 4)
 					   | ((result[i + 1] & 0xF0) >> 4)],
@@ -217,15 +220,17 @@
 				  cb64[result[i+2]&0x3F]
 				  ];			
 	}
-	return password;
+    [password autorelease];
+	return [password copy];
 }
 
 - (NSString *)hexadecimalRepresentation:(unsigned char *)result {
-	NSString *password=[[NSString alloc] init];
+	NSMutableString *password=[[NSMutableString alloc] init];
 	for (int i=0; i<CC_SHA1_DIGEST_LENGTH; i++) {
-		password=[password stringByAppendingFormat:@"%02x", result[i]];
+		[password appendFormat:@"%02x", result[i]];
 	}
-	return password;
+    [password autorelease];
+	return [password copy];
 }
 
 - (NSString *)b64_sha1:(NSString *)inputString {

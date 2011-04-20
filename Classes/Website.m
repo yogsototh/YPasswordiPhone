@@ -38,14 +38,13 @@
 	}
 	
 	NSString *host=url.host;
-	
 	NSArray *components=[host componentsSeparatedByString:@"."];
+    [url autorelease];
 	if (components.count > 1) {
 		return [NSString stringWithFormat:@"%@.%@",[components objectAtIndex:components.count-2], [components objectAtIndex:components.count-1]];		
 	} else {
 		return aUrlString;
 	}
-	[url release];
 }
 
 @end
