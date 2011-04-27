@@ -23,9 +23,9 @@
 	id <DetailViewControllerDelegate> delegate;
     NSManagedObjectContext *managedObjectContext;	
 }
-@property (nonatomic,assign) id delegate;
-@property (nonatomic, assign) Website *website;
-@property (nonatomic, assign) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) id delegate;
+@property (nonatomic, retain) Website *website;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 - (IBAction)next:(id)sender;
 - (IBAction)previous:(id)sender;
 - (IBAction)reset:(id)sender;

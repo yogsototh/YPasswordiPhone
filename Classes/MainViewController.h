@@ -32,7 +32,7 @@
 	NSString *masterPassword;
 }
 
-@property (nonatomic, assign) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) Website *website;
 @property (nonatomic, retain) NSString *masterPassword;
 

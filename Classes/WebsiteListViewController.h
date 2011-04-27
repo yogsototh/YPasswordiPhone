@@ -18,12 +18,13 @@
 	id <WebsiteListViewControllerDelegate> delegate;
     NSManagedObjectContext *managedObjectContext;
 }
-@property (nonatomic,assign) id delegate;
-@property (nonatomic, assign) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) id delegate;
+@property (nonatomic, retain) Website *website;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @end
 
 @protocol WebsiteListViewControllerDelegate
 - (void)websiteListViewControllerDidFinish:(WebsiteListViewController *)controller;
-- (Website *)website;
-- (void)setWebsite:(Website *)website;
+// - (Website *)website;
+// - (void)setWebsite:(Website *)website;
 @end

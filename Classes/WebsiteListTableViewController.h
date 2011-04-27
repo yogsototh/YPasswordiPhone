@@ -19,7 +19,7 @@
 }
 
 @property (nonatomic, retain) NSMutableArray *websiteArray;
-@property (nonatomic, assign) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 - (IBAction)add:(UIBarButtonItem *)sender;
 - (IBAction)cancel:(UIBarButtonItem *)sender;
 - (IBAction)edit:(UIBarButtonItem *)sender;

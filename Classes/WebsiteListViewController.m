@@ -11,6 +11,7 @@
 @implementation WebsiteListViewController
 @synthesize delegate;
 @synthesize managedObjectContext;
+@synthesize website;
 - (void)viewDidLoad {
 	[self.view addSubview:[navigationController view]];
 }

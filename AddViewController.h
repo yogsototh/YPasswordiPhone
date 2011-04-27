@@ -26,9 +26,9 @@
 - (IBAction)done:(id)sender;
 - (IBAction)urlChanged:(id)sender;
 
-@property (nonatomic,assign) id delegate;
-@property (nonatomic, assign) Website *website;
-@property (nonatomic, assign) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, assign) id delegate;
+@property (nonatomic, retain) Website *website;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end
 

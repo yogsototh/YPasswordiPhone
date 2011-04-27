@@ -17,8 +17,8 @@
 	
 }
 
-@property (assign) UIColor *topColor;
-@property (assign) UIColor *bottomColor;
+@property (retain) UIColor *topColor;
+@property (retain) UIColor *bottomColor;
 @property (nonatomic, retain) CAGradientLayer *gradientLayer;
 
 -(void)setTopColor:(UIColor *)aColor;

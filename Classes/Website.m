@@ -23,23 +23,23 @@
 	NSString *aUrlString=self.url;
 	NSString *searchSubstring = @"://";
 	NSRange range = [aUrlString rangeOfString : searchSubstring];
-	NSURL *url;
+	NSURL *lurl;
 	if (range.location == NSNotFound) {
-		url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://%@", aUrlString]];
+		lurl = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://%@", aUrlString]];
 	} else {
-		url = [[NSURL alloc] initWithString:aUrlString];
+		lurl = [[NSURL alloc] initWithString:aUrlString];
 	}
 	
 	
-	if (! url) {
+	if (! lurl) {
 		NSLog(@"domainName: not an url");		
-		[url release];
+		[lurl release];
 		return aUrlString;
 	}
 	
-	NSString *host=url.host;
+	NSString *host=lurl.host;
 	NSArray *components=[host componentsSeparatedByString:@"."];
-    [url autorelease];
+    // [lurl autorelease];
 	if (components.count > 1) {
 		return [NSString stringWithFormat:@"%@.%@",[components objectAtIndex:components.count-2], [components objectAtIndex:components.count-1]];		
 	} else {
