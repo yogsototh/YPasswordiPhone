@@ -116,11 +116,17 @@
 		[urlLabel setTitle:website.url];
 		[loginLabel setText:website.login];
 		[detailViewButton setEnabled:YES];
+        if ([website isRealWebsite]) {
+            [goToWebsiteButton setEnabled:YES];
+        } else {
+            [goToWebsiteButton setEnabled:YES];        
+        }
 		[self updatePassword];
 	} else {
 		[urlLabel setTitle:@"URL"];
 		[loginLabel setText:@"username"];
 		[detailViewButton setEnabled:NO];
+        [goToWebsiteButton setEnabled:NO];
         [passwordLabel setText:@""];
 	}
 

@@ -21,7 +21,7 @@
 
 // Return the domainname from the url
 - (NSString *)domainName;
-
+- (BOOL) isRealWebsite;
 @end
 
 

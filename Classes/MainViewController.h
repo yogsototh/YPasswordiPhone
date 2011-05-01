@@ -26,6 +26,7 @@
 	IBOutlet UIImageView *whiteHighlightImage;
 	IBOutlet UIBarButtonItem *detailViewButton;
 	IBOutlet UIButton *selectWebsiteButton;
+	IBOutlet UIButton *goToWebsiteButton;
 	IBOutlet UIBarButtonItem *addButton;
 	Website *website;
 	NSManagedObjectContext *managedObjectContext;

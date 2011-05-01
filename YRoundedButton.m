@@ -17,7 +17,6 @@
 
 -(void) awakeFromNib 
 {
-	NSLog(@"YRoundedButton awakeFromNib");
 	gradientLayer=[[CAGradientLayer alloc] init];
 	[gradientLayer setBounds:[self bounds]];
 	[gradientLayer setPosition:CGPointMake([self bounds].size.width/2, [self bounds].size.height/2)];	
@@ -32,7 +31,6 @@
 -(void)drawRect:(CGRect)rect
 {
 	if (topColor && bottomColor) {
-		NSLog(@"topColor and bottomColor setted");
 		[gradientLayer setColors:
 		 [NSArray arrayWithObjects:(id)[topColor CGColor], 
 								(id)[bottomColor CGColor], nil]];
