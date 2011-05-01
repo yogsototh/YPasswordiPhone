@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1024</int>
-		<string key="IBDocument.SystemVersion">10J567</string>
+		<string key="IBDocument.SystemVersion">10J869</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1306</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
-		<string key="IBDocument.HIToolboxVersion">462.00</string>
+		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">301</string>
@@ -50,7 +50,6 @@
 				<string key="NSFrameSize">{320, 436}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -62,12 +61,9 @@
 			</object>
 			<object class="IBUINavigationController" id="82490471">
 				<object class="IBUISimulatedNavigationBarMetrics" key="IBUISimulatedTopBarMetrics">
-					<int key="IBUIBarStyle">1</int>
 					<bool key="IBUIPrompted">NO</bool>
 				</object>
-				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics">
-					<int key="IBUIStatusBarStyle">2</int>
-				</object>
+				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 					<int key="IBUIInterfaceOrientation">1</int>
 					<int key="interfaceOrientation">1</int>
@@ -82,7 +78,6 @@
 					<bool key="IBUIClipsSubviews">YES</bool>
 					<bool key="IBUIMultipleTouchEnabled">YES</bool>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-					<int key="IBUIBarStyle">1</int>
 				</object>
 				<object class="IBUIToolbar" key="IBUIToolbar" id="112734616">
 					<nil key="NSNextResponder"/>
@@ -131,7 +126,6 @@
 					<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
-					<reference key="NSNextKeyView"/>
 					<object class="NSColor" key="IBUIBackgroundColor">
 						<int key="NSColorSpace">3</int>
 						<bytes key="NSWhite">MQA</bytes>
