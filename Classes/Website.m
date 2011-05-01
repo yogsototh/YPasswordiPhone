@@ -19,8 +19,14 @@
 
 // Private method that return an NSURL from the url NSString
 - (NSURL *) urlObject {
+    // Verify it it contains at least one dot
+    NSRange range;
+    range = [self.url rangeOfString:@"."];
+    if (range.location == NSNotFound) {
+        return nil;
+    }
     // Verify if it contains ://
-	NSRange range = [self.url rangeOfString:@"://"];
+    range = [self.url rangeOfString:@"://"];
 	NSString *aUrlString;
     if (range.location == NSNotFound) {
 		aUrlString = [NSString stringWithFormat:@"http://%@", self.url];
@@ -35,7 +41,6 @@
 - (NSString *)domainName {
     NSURL *lurl = [self urlObject];
 	if (! lurl) {
-		NSLog(@"domainName: not an url");		
 		return self.url;
 	}
 	

@@ -119,7 +119,7 @@
         if ([website isRealWebsite]) {
             [goToWebsiteButton setEnabled:YES];
         } else {
-            [goToWebsiteButton setEnabled:YES];        
+            [goToWebsiteButton setEnabled:NO];        
         }
 		[self updatePassword];
 	} else {
