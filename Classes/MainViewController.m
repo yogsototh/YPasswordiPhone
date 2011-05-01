@@ -98,7 +98,7 @@
 			[selectWebsiteButton setEnabled:YES];
 			int lastIndex=[[NSUserDefaults standardUserDefaults] integerForKey:@"lastSelectedIndex"];
 			if ([mutableFetchResults count]>lastIndex) {
-				website = [mutableFetchResults objectAtIndex:lastIndex];				
+				website = [[mutableFetchResults objectAtIndex:lastIndex] retain];				
 			} else {
 				website = nil;
 			}
