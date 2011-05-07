@@ -1,6 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:.."
+      name = "..">
+      <FileRef
+         location = "group:AddView.xib">
+      </FileRef>
+      <FileRef
+         location = "group:AddViewController.h">
+      </FileRef>
+      <FileRef
+         location = "group:AddViewController.m">
+      </FileRef>
+      <Group
+         location = "group:build"
+         name = "build">
+      </Group>
+      <Group
+         location = "group:Classes"
+         name = "Classes">
+         <FileRef
+            location = "group:FlipsideViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:FlipsideViewController.m">
+         </FileRef>
+         <FileRef
+            location = "group:MainViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:MainViewController.m">
+         </FileRef>
+         <FileRef
+            location = "group:Website.h">
+         </FileRef>
+         <FileRef
+            location = "group:Website.m">
+         </FileRef>
+         <FileRef
+            location = "group:WebsiteListNavigationController.h">
+         </FileRef>
+         <FileRef
+            location = "group:WebsiteListNavigationController.m">
+         </FileRef>
+         <FileRef
+            location = "group:WebsiteListTableViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:WebsiteListTableViewController.m">
+         </FileRef>
+         <FileRef
+            location = "group:WebsiteListViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:WebsiteListViewController.m">
+         </FileRef>
+         <FileRef
+            location = "group:YPasswordAppDelegate.h">
+         </FileRef>
+         <FileRef
+            location = "group:YPasswordAppDelegate.m">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:Default.png">
+      </FileRef>
+      <FileRef
+         location = "group:Default@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:DetailView.xib">
+      </FileRef>
+      <FileRef
+         location = "group:DetailViewController.h">
+      </FileRef>
+      <FileRef
+         location = "group:DetailViewController.m">
+      </FileRef>
+      <FileRef
+         location = "group:FlipsideView.xib">
+      </FileRef>
+      <FileRef
+         location = "group:Icon.png">
+      </FileRef>
+      <FileRef
+         location = "group:Icon@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:Info.plist">
+      </FileRef>
+      <FileRef
+         location = "group:Keychain.h">
+      </FileRef>
+      <FileRef
+         location = "group:Keychain.m">
+      </FileRef>
+      <FileRef
+         location = "group:main.m">
+      </FileRef>
+      <FileRef
+         location = "group:MainView.xib">
+      </FileRef>
+      <FileRef
+         location = "group:MainWindow.xib">
+      </FileRef>
+      <FileRef
+         location = "group:README.md">
+      </FileRef>
+      <Group
+         location = "group:resources"
+         name = "resources">
+         <FileRef
+            location = "group:addBackground.drawit">
+         </FileRef>
+         <FileRef
+            location = "group:addBackground.png">
+         </FileRef>
+         <FileRef
+            location = "group:background.png">
+         </FileRef>
+         <FileRef
+            location = "group:backgroundClair.png">
+         </FileRef>
+         <FileRef
+            location = "group:blueHighlight.drawit">
+         </FileRef>
+         <FileRef
+            location = "group:blueHighlight.png">
+         </FileRef>
+         <FileRef
+            location = "group:button.drawit">
+         </FileRef>
+         <FileRef
+            location = "group:button_5x1.png">
+         </FileRef>
+         <FileRef
+            location = "group:Default.drawit">
+         </FileRef>
+         <FileRef
+            location = "group:detailBack.drawit">
+         </FileRef>
+         <FileRef
+            location = "group:detailBack.png">
+         </FileRef>
+         <FileRef
+            location = "group:Icon-512.png">
+         </FileRef>
+         <FileRef
+            location = "group:Icon-72.png">
+         </FileRef>
+         <FileRef
+            location = "group:Icon-Small-50.png">
+         </FileRef>
+         <FileRef
+            location = "group:Icon-Small.png">
+         </FileRef>
+         <FileRef
+            location = "group:Icon-Small@2x.png">
+         </FileRef>
+         <FileRef
+            location = "group:icon.drawit">
+         </FileRef>
+         <FileRef
+            location = "group:Icon.png">
+         </FileRef>
+         <FileRef
+            location = "group:Icon@2x.png">
+         </FileRef>
+         <FileRef
+            location = "group:large-icon.drawit">
+         </FileRef>
+         <FileRef
+            location = "group:mainBack.drawit">
+         </FileRef>
+         <FileRef
+            location = "group:mainBack.png">
+         </FileRef>
+         <FileRef
+            location = "group:pushed_button_5x1.png">
+         </FileRef>
+         <FileRef
+            location = "group:reverb520_51.png">
+         </FileRef>
+         <FileRef
+            location = "group:whiteHighlight.drawit">
+         </FileRef>
+         <FileRef
+            location = "group:whiteHighlight.png">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:WebsiteListView.xib">
+      </FileRef>
+      <FileRef
+         location = "group:YPassword.xcdatamodeld">
+      </FileRef>
+      <FileRef
+         location = "group:YPassword.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:YPassword_Prefix.pch">
+      </FileRef>
+      <FileRef
+         location = "group:YRoundedButton.h">
+      </FileRef>
+      <FileRef
+         location = "group:YRoundedButton.m">
+      </FileRef>
+      <FileRef
+         location = "group:YShadowLabel.h">
+      </FileRef>
+      <FileRef
+         location = "group:YShadowLabel.m">
+      </FileRef>
+   </Group>
    <FileRef
       location = "self:YPassword.xcodeproj">
    </FileRef>
