@@ -241,12 +241,14 @@
 
 - (NSString *)b64_sha1:(NSString *)inputString {
 	unsigned char result[CC_SHA1_DIGEST_LENGTH+1];
+    result[CC_SHA1_DIGEST_LENGTH]='\0';
 	[self sha1:inputString result:result];
 	return [self base64:result];
 }
 
 - (NSString *)hex_sha1:(NSString *)inputString {
 	unsigned char result[CC_SHA1_DIGEST_LENGTH+1];
+    result[CC_SHA1_DIGEST_LENGTH]='\0';
 	[self sha1:inputString result:result];
 	return [self hexadecimalRepresentation:result];
 }
